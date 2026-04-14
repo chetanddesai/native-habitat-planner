@@ -1,0 +1,2865 @@
+[
+  {
+    "id": "quercus-lobata",
+    "commonNames": [
+      "Valley Oak"
+    ],
+    "scientificName": "Quercus lobata",
+    "synonyms": [],
+    "category": "large-tree",
+    "isKeystone": true,
+    "wildlifeSpeciesSupported": 334,
+    "description": "The largest North American oak and a foothill-to-valley keystone: hundreds of native caterpillar species convert its foliage into bird food, while acorns and cavities structure food webs for mammals, woodpeckers, and jays. In Tallamy terms, oaks are foundational hubs because so many specialist herbivores and frugivores are oak-obligate or oak-strongly associated.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Quercus-lobata-(Valley-Oak)",
+    "iNaturalistData": {
+      "taxonId": 49011,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=49011&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun",
+      "slopeRequirements": "Deep soils on gentle to moderate slopes; tolerates seasonal flooding in deeper pockets; avoid thin, baking ridgetops unless soil is deep enough",
+      "soilRequirements": "Deep loam to clay; tolerates heavy clay where drainage is not stagnant; pH adaptable"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "No supplemental summer irrigation once established; frequent summer watering near the trunk increases Phytophthora root-rot risk. Watering only the first 2\u20133 years, in cool months, if needed.",
+      "pruningMonths": [
+        12,
+        1
+      ],
+      "pruningTask": "Remove deadwood, broken branches, and minor crown cleaning",
+      "pruningNotes": "Prune during full winter dormancy. Avoid warm-season pruning wounds that can attract oak pests and complicate disease management.",
+      "specialNotes": "Maintain a mulch-free collar 12\u201324 inches from the trunk; do not irrigate within the drip line of established trees."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          3,
+          4
+        ],
+        "colors": [
+          "green",
+          "yellow"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          9,
+          10,
+          11
+        ],
+        "description": "Acorns mature in fall; a staple for jays, woodpeckers, squirrels, and deer, and a seed bank for stand regeneration"
+      },
+      "ecologicalValue": "Exceptional caterpillar diversity supports nesting songbirds; acorns drive autumn-winter energy budgets; bark and cavities provide nesting and roosting structure."
+    },
+    "wildlife": [
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "Polyphemus moth",
+        "activity": "caterpillar-host",
+        "notes": "Large silk-moth larvae commonly feed on oak foliage; oak-rich neighborhoods export moth biomass to bats and birds.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "California Sister butterfly",
+        "activity": "caterpillar-host",
+        "notes": "Oak-feeding nymphalid whose caterpillars tie leaves with silk; part of the oak-specialist guild that fuels insectivorous birds.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "species": "Acorn Woodpecker",
+        "activity": "nesting",
+        "notes": "Colonial cavity nester that centers territories on oaks for acorn storage and granary trees.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          1,
+          2,
+          3,
+          11,
+          12
+        ],
+        "species": "Nuttall's Woodpecker",
+        "activity": "shelter",
+        "notes": "Forages on oak bark for insects year-round; uses oak woodlands for cover and nesting substrate.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "quercus-douglasii",
+    "commonNames": [
+      "Blue Oak"
+    ],
+    "scientificName": "Quercus douglasii",
+    "synonyms": [],
+    "category": "large-tree",
+    "isKeystone": true,
+    "wildlifeSpeciesSupported": 320,
+    "description": "A drought-deciduous foothill oak that anchors blue-oak woodland food webs with massive insect productivity and reliable mast in mast years. Tallamy-style habitat gains come from its long-lived canopy and the specialist herbivores that treat oak foliage as primary food.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Quercus-douglasii-(Blue-Oak)",
+    "iNaturalistData": {
+      "taxonId": 49009,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=49009&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun, Partial Shade",
+      "slopeRequirements": "Best on dry, well-drained slopes and foothill benches; avoid cold-air pockets and poorly drained bottoms",
+      "soilRequirements": "Tolerant of many mineral soils if drainage is fast; pH roughly 6.0\u20138.0; rocky foothill soils are typical"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "Calscape lists very low water and caps summer irrigation for established trees (at most about once monthly if truly needed). Default is none\u2014especially near the trunk.",
+      "pruningMonths": [
+        12,
+        1
+      ],
+      "pruningTask": "Remove deadwood and structurally weak branches",
+      "pruningNotes": "Winter pruning only; minimize crown wounding during warm months.",
+      "specialNotes": "Slow-growing; plan for decades-scale development; protect root zone from grade changes and summer lawn irrigation."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          2,
+          3,
+          4
+        ],
+        "colors": [
+          "green",
+          "yellow"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          8,
+          9,
+          10
+        ],
+        "description": "Acorns ripen late summer into fall; important seasonal food where crops are large enough to attract granivores and scatter-hoarders"
+      },
+      "ecologicalValue": "High caterpillar loads support breeding birds; acorns support jays, woodpeckers, and mammals; canopy shade moderates understory microclimates."
+    },
+    "wildlife": [
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "species": "California Oak Moth",
+        "activity": "caterpillar-host",
+        "notes": "Specialist oak defoliator whose larvae feed on blue oak foliage; part of the oak insect guild that supports insectivorous birds.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "Western Tiger Swallowtail",
+        "activity": "nectar-pollen",
+        "notes": "Adults nectar widely; oaks contribute landscape structure used for movement and thermal cover near nectar sources.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "species": "Acorn Woodpecker",
+        "activity": "eating-seeds",
+        "notes": "Stores acorns when mast is available; tightly linked to oak woodlands for winter calories.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "species": "Oak Titmouse",
+        "activity": "nesting",
+        "notes": "Cavity nester of oak woodlands that forages on insects gleaned from oak bark and foliage.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "quercus-wislizeni",
+    "commonNames": [
+      "Interior Live Oak"
+    ],
+    "scientificName": "Quercus wislizeni",
+    "synonyms": [],
+    "category": "large-tree",
+    "isKeystone": true,
+    "wildlifeSpeciesSupported": 310,
+    "description": "Evergreen foothill oak that bridges chaparral and oak woodland, sustaining a dense canopy of insect herbivory year-round. It functions like other western oaks as a community-scale food factory for insectivorous birds and small mammals.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Quercus-wislizeni-(Interior-Live-Oak)",
+    "iNaturalistData": {
+      "taxonId": 51089,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=51089&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun, Partial Shade",
+      "slopeRequirements": "Common on foothill slopes and rocky sites; tolerates thin soils better than valley oak if drainage is adequate",
+      "soilRequirements": "Well-drained rocky to loamy soils; drought-tolerant once established"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "Avoid regular summer irrigation after establishment; keep supplemental water rare, localized, and away from the trunk.",
+      "pruningMonths": [
+        12,
+        1
+      ],
+      "pruningTask": "Deadwood removal and light crown cleaning",
+      "pruningNotes": "Dormant-season pruning reduces stress and disease-entry risks compared with summer cuts.",
+      "specialNotes": "Evergreen foliage supports winter-active insectivores when deciduous neighbors are bare."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          3,
+          4,
+          5
+        ],
+        "colors": [
+          "green",
+          "yellow"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          9,
+          10,
+          11
+        ],
+        "description": "Acorns mature in autumn; consumed by birds and mammals and cached for dispersal"
+      },
+      "ecologicalValue": "Year-round canopy fuels caterpillars and other insects; acorns extend autumn mast; dense foliage provides thermal cover."
+    },
+    "wildlife": [
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "California Tortoiseshell",
+        "activity": "nectar-pollen",
+        "notes": "Often nectars in oak woodland edges; landscape connectivity increases use near foothill gardens.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "species": "California Oak Moth",
+        "activity": "caterpillar-host",
+        "notes": "Oak-specialist caterpillars feed on new foliage; a classic interior live oak herbivore in foothill woodlands.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "species": "Acorn Woodpecker",
+        "activity": "nesting",
+        "notes": "Uses live oaks for granaries and nesting where acorn crops and suitable snags or limbs exist.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "species": "Black-headed Grosbeak",
+        "activity": "browsing",
+        "notes": "Forages for insects and tender plant material in oak woodlands during the breeding season.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "aesculus-californica",
+    "commonNames": [
+      "California Buckeye"
+    ],
+    "scientificName": "Aesculus californica",
+    "synonyms": [],
+    "category": "large-tree",
+    "isKeystone": false,
+    "wildlifeSpeciesSupported": 72,
+    "description": "A dramatic early-season nectar fountain in foothill landscapes, but not a classical keystone like oaks because its seasonal leaf-drop and chemistry narrow the guilds it supports. Still valuable in Tallamy framing as a pulse resource that feeds diverse native pollinators early, while honey bees can be harmed by toxic nectar compounds that many native bees tolerate better.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Aesculus-californica-(California-Buckeye)",
+    "iNaturalistData": {
+      "taxonId": 53348,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=53348&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun, Partial Shade",
+      "slopeRequirements": "Naturally on dry slopes and canyon bottoms; avoid soggy soils",
+      "soilRequirements": "Tolerates a range of soils with decent drainage; drought-deciduous strategy means summer soils should dry down"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "Respect its summer dormancy: little to no irrigation when leafless. Overwatering in summer can favor pathogens and weaken the natural cycle.",
+      "pruningMonths": [
+        12,
+        1
+      ],
+      "pruningTask": "Shape young trees; remove dead twigs",
+      "pruningNotes": "Prune in winter dormancy; minimize heavy summer pruning on stressed trees.",
+      "specialNotes": "Nectar contains compounds toxic to western honey bees; many native bees are comparatively resistant\u2014site away from managed hives if that is a concern."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          4,
+          5,
+          6
+        ],
+        "colors": [
+          "cream",
+          "pink"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          8,
+          9,
+          10
+        ],
+        "description": "Large shiny seeds mature late summer into fall; important for some rodents when handled carefully due to toxicity if eaten raw"
+      },
+      "ecologicalValue": "Early-season nectar and pollen for native bees and hummingbirds; seeds for scatter-hoarding rodents where safe; summer bare branches still provide perch structure."
+    },
+    "wildlife": [
+      {
+        "months": [
+          4,
+          5,
+          6
+        ],
+        "species": "Anna's Hummingbird",
+        "activity": "nectar-pollen",
+        "notes": "Visits buckeye inflorescences during the big spring bloom pulse in foothill gardens.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "species": "Bombus vosnesenskii (Yellow-faced Bumble Bee)",
+        "activity": "nectar-pollen",
+        "notes": "Common native bumble bee on buckeye flowers; native bees are generally less impacted by buckeye nectar toxicity than managed honey bees.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "White-lined Sphinx",
+        "activity": "nectar-pollen",
+        "notes": "A widespread hawkmoth that nectars at night and dusk; buckeye adds early-season volume to moth energy budgets.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          8,
+          9,
+          10
+        ],
+        "species": "California Scrub-Jay",
+        "activity": "eating-seeds",
+        "notes": "Caches large seeds when available; movement links individual trees to broader landscape seed dynamics.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heteromeles-arbutifolia",
+    "commonNames": [
+      "Toyon"
+    ],
+    "scientificName": "Heteromeles arbutifolia",
+    "synonyms": [],
+    "category": "large-shrub",
+    "isKeystone": true,
+    "wildlifeSpeciesSupported": 58,
+    "description": "Evergreen chaparral and woodland shrub whose winter berry crops stitch together bird food webs when many other fruits are gone. In Tallamy terms it is a keystone fruiting shrub because its berries are accessible, abundant, and timed to support migratory and resident frugivores.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Heteromeles-arbutifolia-(Toyon)",
+    "iNaturalistData": {
+      "taxonId": 53405,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=53405&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun, Partial Shade",
+      "slopeRequirements": "Excellent on slopes; tolerates chaparral exposure once established",
+      "soilRequirements": "Well-drained soils typical of foothills; tolerates drought and lean mineral soils"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "No regular summer water once established; occasional deep soak the first year only if planting in extreme heat.",
+      "pruningMonths": [
+        12,
+        1,
+        2
+      ],
+      "pruningTask": "Thin for air flow; reduce crowding on structures",
+      "pruningNotes": "Winter/early spring shaping preserves summer berries and reduces stress.",
+      "specialNotes": "Leave fruiting wood if the goal is wildlife; heavy shearing removes winter food."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          6,
+          7,
+          8
+        ],
+        "colors": [
+          "white"
+        ]
+      },
+      "berry": {
+        "months": [
+          11,
+          12,
+          1,
+          2
+        ],
+        "colors": [
+          "red"
+        ],
+        "description": "Bright red pomes peak in winter, bridging the hungry season for thrushes, waxwings, and other fruit specialists"
+      },
+      "seed": null,
+      "ecologicalValue": "Winter fruit pulse; dense evergreen cover; insect substrate on leaves and bark supports insectivores."
+    },
+    "wildlife": [
+      {
+        "months": [
+          11,
+          12,
+          1,
+          2
+        ],
+        "species": "Hermit Thrush",
+        "activity": "eating-berries",
+        "notes": "Wintering thrushes rely heavily on persistent native fruits like toyon in foothill woodlands.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          11,
+          12,
+          1,
+          2
+        ],
+        "species": "Cedar Waxwing",
+        "activity": "eating-berries",
+        "notes": "Forms flocks on toyon when crops are heavy; classic winter spectacle in California.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          6,
+          7,
+          8
+        ],
+        "species": "Anna's Hummingbird",
+        "activity": "nectar-pollen",
+        "notes": "Uses small white flowers during summer bloom.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          11,
+          12,
+          1,
+          2,
+          3
+        ],
+        "species": "Northern Mockingbird",
+        "activity": "eating-berries",
+        "notes": "Defends fruiting shrubs; toyon increases winter carrying capacity in residential edges.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "ceanothus-cuneatus",
+    "commonNames": [
+      "Buck Brush"
+    ],
+    "scientificName": "Ceanothus cuneatus",
+    "synonyms": [],
+    "category": "large-shrub",
+    "isKeystone": true,
+    "wildlifeSpeciesSupported": 52,
+    "description": "A nitrogen-fixing chaparral shrub whose spring nectar blitz feeds early pollinators and supports a distinctive set of insect herbivores. Tallamy-style value comes from tight coupling between early-season resources and pollinator population build-up before summer dryness.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Ceanothus-cuneatus-(Buck-Brush)",
+    "iNaturalistData": {
+      "taxonId": 49673,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=49673&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun",
+      "slopeRequirements": "Best on slopes with excellent air drainage; classic chaparral exposure",
+      "soilRequirements": "Fast-draining, lean soils; intolerant of prolonged summer wet around the crown"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "No summer irrigation once established; first-year watering should be infrequent and deep, tapering off quickly.",
+      "pruningMonths": [
+        12,
+        1
+      ],
+      "pruningTask": "Remove dead interior wood after establishment; avoid heavy shearing",
+      "pruningNotes": "If shaping is needed, do minimal cuts in cool months; over-pruning removes flower buds.",
+      "specialNotes": "Root disturbance during planting is common\u2014prefer small containers and avoid circling roots."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          3,
+          4,
+          5
+        ],
+        "colors": [
+          "white",
+          "cream"
+        ]
+      },
+      "berry": {
+        "months": [
+          6,
+          7
+        ],
+        "colors": [
+          "brown"
+        ],
+        "description": "Dry capsules mature in early summer; small seeds for granivores and soil seed banks"
+      },
+      "seed": {
+        "months": [
+          6,
+          7,
+          8
+        ],
+        "description": "Capsules release small seeds after bloom; heat and smoke can cue germination in natural systems"
+      },
+      "ecologicalValue": "Spring nectar hotspot; foliage supports specialist herbivores; seeds extend early-summer food for small birds and rodents."
+    },
+    "wildlife": [
+      {
+        "months": [
+          3,
+          4,
+          5
+        ],
+        "species": "Bombus vosnesenskii (Yellow-faced Bumble Bee)",
+        "activity": "nectar-pollen",
+        "notes": "Heavy use of Ceanothus inflorescences during the spring nectar peak.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "species": "California Tortoiseshell",
+        "activity": "nectar-pollen",
+        "notes": "Nectars on early-season shrubs; Ceanothus is part of the foothill spring corridor.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          4,
+          5,
+          6
+        ],
+        "species": "White-lined Sphinx",
+        "activity": "nectar-pollen",
+        "notes": "Night-flying hawkmoth that tracks big floral displays in warm foothill nights.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "species": "Lesser Goldfinch",
+        "activity": "eating-seeds",
+        "notes": "Feeds on small seeds and uses shrubby structure for cover near food plants.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "arctostaphylos-viscida",
+    "commonNames": [
+      "Sticky Whiteleaf Manzanita",
+      "Whiteleaf Manzanita"
+    ],
+    "scientificName": "Arctostaphylos viscida",
+    "synonyms": [],
+    "category": "large-shrub",
+    "isKeystone": true,
+    "wildlifeSpeciesSupported": 44,
+    "description": "A foothill manzanita whose urn-shaped winter-spring flowers feed early pollinators while evergreen foliage supports insect gleaning for birds. It behaves as a chaparral keystone shrub by extending forage and cover through the dry season.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Arctostaphylos-viscida-(Whiteleaf-Manzanita)",
+    "iNaturalistData": {
+      "taxonId": 55135,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=55135&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun, Partial Shade",
+      "slopeRequirements": "Slopes and ridges with excellent drainage; intolerant of basin plantings with summer moisture",
+      "soilRequirements": "Lean, acidic to circumneutral rocky soils typical of Sierra foothill chaparral"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "Establish with occasional deep water in cool months only; avoid sprinklers hitting foliage in summer.",
+      "pruningMonths": [
+        5,
+        6
+      ],
+      "pruningTask": "Remove dead wood; lightly thin if needed for structure",
+      "pruningNotes": "Minimal pruning after bloom if you want maximum fruit for wildlife; avoid heavy shearing.",
+      "specialNotes": "Do not amend planting holes with rich compost that holds summer moisture against roots."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "colors": [
+          "white",
+          "pink"
+        ]
+      },
+      "berry": {
+        "months": [
+          6,
+          7,
+          8
+        ],
+        "colors": [
+          "red"
+        ],
+        "description": "Small mealy berries (madrone bears) feed birds and mammals in summer"
+      },
+      "seed": null,
+      "ecologicalValue": "Early nectar for bees, hummingbirds, and spring butterflies; summer fruit for birds; evergreen cover for chaparral birds."
+    },
+    "wildlife": [
+      {
+        "months": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "species": "Anna's Hummingbird",
+        "activity": "nectar-pollen",
+        "notes": "Uses manzanita flowers during winter-spring when hummingbird territories expand.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "species": "California Tortoiseshell",
+        "activity": "nectar-pollen",
+        "notes": "Early-season nymphalid that uses manzanita and other chaparral flowers during late-winter nectar gaps.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          6,
+          7,
+          8
+        ],
+        "species": "Wrentit",
+        "activity": "eating-berries",
+        "notes": "Skulking chaparral endemic that uses dense shrubs for cover and forages on small fruits.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "species": "Bombus vosnesenskii (Yellow-faced Bumble Bee)",
+        "activity": "nectar-pollen",
+        "notes": "Buzz-pollinates urn-shaped flowers where vibration releases pollen.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "sambucus-nigra-subsp-caerulea",
+    "commonNames": [
+      "Blue Elderberry"
+    ],
+    "scientificName": "Sambucus nigra subsp. caerulea",
+    "synonyms": [
+      "Sambucus cerulea"
+    ],
+    "category": "large-shrub",
+    "isKeystone": true,
+    "wildlifeSpeciesSupported": 68,
+    "description": "Fast-growing riparian and edge shrub producing heavy clusters of blue berries that fuel late-summer and fall frugivores. It is a keystone fruiting node in Tallamy framing because it supports both generalist birds and a federally listed specialist beetle tied to elder stems in Central Valley riparian systems.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Sambucus-nigra-subsp.-caerulea-(Blue-Elderberry)",
+    "iNaturalistData": {
+      "taxonId": 143799,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=143799&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun, Partial Shade",
+      "slopeRequirements": "Best with some afternoon shade in hottest sites; tolerates seasonally moist draws",
+      "soilRequirements": "Rich loams to sandy loams; tolerates seasonal moisture better than most chaparral shrubs"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 1,
+        "jun": 1,
+        "jul": 1,
+        "aug": 1,
+        "sep": 1,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "More moisture-tolerant than oak/chaparral dominants, but avoid constant soggy soil. In hot foothill gardens, 1\u00d7 monthly deep water through dry months can support fruiting once established.",
+      "pruningMonths": [
+        12,
+        1,
+        2
+      ],
+      "pruningTask": "Remove oldest canes after fruiting to encourage vigorous shoots; rejuvenation style pruning",
+      "pruningNotes": "Prune in dormant season to maximize flowers and berries next cycle.",
+      "specialNotes": "Stems can be habitat for the threatened Valley Elderberry Longhorn Beetle where populations and regulations apply\u2014learn local rules before removing large stems."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          5,
+          6,
+          7
+        ],
+        "colors": [
+          "white",
+          "cream"
+        ]
+      },
+      "berry": {
+        "months": [
+          7,
+          8,
+          9
+        ],
+        "colors": [
+          "blue",
+          "black"
+        ],
+        "description": "Heavy clusters of blue-black berries ripen mid-to-late summer into early fall"
+      },
+      "seed": null,
+      "ecologicalValue": "Nectar for insects; berries for birds; hollow pithy stems can host specialized beetles in appropriate watershed contexts."
+    },
+    "wildlife": [
+      {
+        "months": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "Valley Elderberry Longhorn Beetle",
+        "activity": "shelter",
+        "notes": "Threatened longhorn beetle whose larvae bore in living elder stems in Central Valley elderberry galleries; a flagship species for protecting mature canes near water.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          7,
+          8,
+          9
+        ],
+        "species": "Western Bluebird",
+        "activity": "eating-berries",
+        "notes": "Readily consumes elderberries when available in open woodland edges.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "species": "California Scrub-Jay",
+        "activity": "eating-berries",
+        "notes": "Caches berries and uses shrubby edges for movement corridors.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          5,
+          6,
+          7
+        ],
+        "species": "White-lined Sphinx",
+        "activity": "nectar-pollen",
+        "notes": "Nectars at elder inflorescences during warm nights in riparian edges.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "rhamnus-ilicifolia",
+    "commonNames": [
+      "Hollyleaf Redberry"
+    ],
+    "scientificName": "Rhamnus ilicifolia",
+    "synonyms": [],
+    "category": "large-shrub",
+    "isKeystone": false,
+    "wildlifeSpeciesSupported": 30,
+    "description": "Spiny evergreen shrub of dry foothills that provides cover and modest fruit for birds without matching the community-wide support of oaks or big nectar shrubs. Useful Tallamy context: it increases structural diversity and winter persistence in harsh sites where softer-leaved plants fail.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Rhamnus-ilicifolia-(Hollyleaf-Redberry)",
+    "iNaturalistData": {
+      "taxonId": 58308,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=58308&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun, Partial Shade",
+      "slopeRequirements": "Excellent on dry rocky slopes; good for erosion-prone chaparral edges",
+      "soilRequirements": "Well-drained mineral soils; drought-tolerant"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "No summer irrigation once established; tolerates harsh exposure typical of buckbrush-oak ecotones.",
+      "pruningMonths": [
+        12,
+        1
+      ],
+      "pruningTask": "Remove dead twigs; thin if blocking paths",
+      "pruningNotes": "Winter shaping minimizes stress; spiny foliage\u2014wear gloves.",
+      "specialNotes": "Berries are small but persistent into winter for some birds; avoid planting where pets chew unknown fruits."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          3,
+          4,
+          5
+        ],
+        "colors": [
+          "green",
+          "white"
+        ]
+      },
+      "berry": {
+        "months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "colors": [
+          "red"
+        ],
+        "description": "Small red drupes ripen through summer; eaten by birds when crops are accessible"
+      },
+      "seed": null,
+      "ecologicalValue": "Cover for small birds; modest fruit; insect foraging substrate on evergreen leaves."
+    },
+    "wildlife": [
+      {
+        "months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "species": "California Thrasher",
+        "activity": "eating-berries",
+        "notes": "Uses chaparral shrubs for fruit and insect foraging in foothill mosaics.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          11,
+          12,
+          1,
+          2
+        ],
+        "species": "Hermit Thrush",
+        "activity": "eating-berries",
+        "notes": "Wintering thrushes take small persistent fruits in mixed chaparral-oak understories.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "species": "Gray Hairstreak",
+        "activity": "nectar-pollen",
+        "notes": "Generalist hairstreak that nectars at small flowers in warm foothill gardens.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          1,
+          2,
+          3,
+          11,
+          12
+        ],
+        "species": "Wrentit",
+        "activity": "shelter",
+        "notes": "Uses dense evergreen shrubs for year-round cover in chaparral patches.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "eriogonum-nudum",
+    "commonNames": [
+      "Naked Buckwheat"
+    ],
+    "scientificName": "Eriogonum nudum",
+    "synonyms": [],
+    "category": "small-shrub",
+    "isKeystone": true,
+    "wildlifeSpeciesSupported": 38,
+    "description": "A long-blooming buckwheat whose flat-topped inflorescences are pollinator magnets across the dry season, linking early bees to late-season butterflies. In Tallamy framing, buckwheats are keystone forage plants because they provide sustained nectar and pollen when many shrubs have finished flowering.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Eriogonum-nudum-(Naked-Buckwheat)",
+    "iNaturalistData": {
+      "taxonId": 53046,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=53046&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun",
+      "slopeRequirements": "Excellent on well-drained slopes and rocky openings; intolerant of heavy clay that stays wet",
+      "soilRequirements": "Lean, fast-draining soils; typical of serpentine and rocky foothill openings"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "No summer irrigation once established; overwatering shortens life in wild-type plantings.",
+      "pruningMonths": [
+        11,
+        12
+      ],
+      "pruningTask": "Remove spent flowering stems after seeds drop if tidiness is desired",
+      "pruningNotes": "Late fall cleanup preserves seeds for granivores; skip if you want maximum self-sowing.",
+      "specialNotes": "Flower color varies among populations; expect cream to yellow forms common in foothill gardens."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "colors": [
+          "white",
+          "yellow",
+          "cream"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          9,
+          10,
+          11
+        ],
+        "description": "Small achenes mature in fall; valuable to small seed-eating birds and for local regeneration"
+      },
+      "ecologicalValue": "Long-season nectar and pollen; host relationships for blues and hairstreaks; seeds for finches."
+    },
+    "wildlife": [
+      {
+        "months": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "Acmon Blue",
+        "activity": "caterpillar-host",
+        "notes": "Buckwheats are classic host plants for blues in California; supports local population persistence.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "species": "White-lined Sphinx",
+        "activity": "nectar-pollen",
+        "notes": "Tracks summer buckwheat blooms during warm-season nectar gaps.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "species": "Gray Hairstreak",
+        "activity": "nectar-pollen",
+        "notes": "Common generalist at small flat-topped inflorescences in sunny openings.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "Bombus vosnesenskii (Yellow-faced Bumble Bee)",
+        "activity": "nectar-pollen",
+        "notes": "Works buckwheat heads through the dry season when many garden exotics are not useful.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "salvia-sonomensis",
+    "commonNames": [
+      "Sonoma Sage"
+    ],
+    "scientificName": "Salvia sonomensis",
+    "synonyms": [],
+    "category": "small-shrub",
+    "isKeystone": true,
+    "wildlifeSpeciesSupported": 44,
+    "description": "Mat-forming foothill sage whose long lavender flower spikes extend the sagebrush\u2013oak woodland nectar corridor into late spring and early summer. It behaves as a keystone small shrub in Tallamy framing because it couples durable evergreen foliage (high caterpillar and insect gleaning value) with reliable pollen and nectar for early-season native bees and hummingbirds when many chaparral dominants are between floral peaks.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Salvia-sonomensis-(Sonoma-Sage)",
+    "iNaturalistData": {
+      "taxonId": 63964,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=63964&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Partial Shade, Full Sun",
+      "slopeRequirements": "Best on gentle slopes or terraces with afternoon shade in hot interior foothills; avoid heat-reflecting walls without relief",
+      "soilRequirements": "Well-drained loam to sandy loam; tolerates lean soils; intolerant of prolonged summer wet around the crown"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "Calscape lists very low water; avoid regular lawn-style sprinklers. In Auburn\u2019s hot season, partial shade matters more than irrigation\u2014overwatering promotes rot and shortens life compared with dry-season rest.",
+      "pruningMonths": [
+        7,
+        8
+      ],
+      "pruningTask": "Deadhead spent spikes if desired; lightly thin crowded stems after peak bloom",
+      "pruningNotes": "Summer shaping preserves late-spring display; avoid heavy shearing that removes next season\u2019s wood.",
+      "specialNotes": "Fragrant foliage resists deer browsing for many sites; pair with dappled oak shade rather than baking pavement reflected heat."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "colors": [
+          "lavender",
+          "purple"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          7,
+          8,
+          9
+        ],
+        "description": "Small nutlets mature after bloom; modest local self-sowing possible in open mineral soil near parent plants"
+      },
+      "ecologicalValue": "Extended spring\u2013early-summer nectar and pollen; aromatic foliage supports insect herbivory and gleaning by songbirds at shrub edges."
+    },
+    "wildlife": [
+      {
+        "months": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "species": "Anna's Hummingbird",
+        "activity": "nectar-pollen",
+        "notes": "Works the tubular corollas during the foothill bloom pulse when sage resources are concentrated.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "California Sister butterfly",
+        "activity": "nectar-pollen",
+        "notes": "Adults nectar widely along woodland edges while larvae remain tied to oaks nearby.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "White-lined Sphinx",
+        "activity": "nectar-pollen",
+        "notes": "Night-flying hawkmoth that tracks pale to medium-purple sage inflorescences in warm foothill nights.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "species": "Bombus vosnesenskii (Yellow-faced Bumble Bee)",
+        "activity": "nectar-pollen",
+        "notes": "Buzz-forages sage whorls, transferring pollen efficiently on structurally complex flowers.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "artemisia-douglasiana",
+    "commonNames": [
+      "Mugwort",
+      "California Mugwort"
+    ],
+    "scientificName": "Artemisia douglasiana",
+    "synonyms": [],
+    "category": "small-shrub",
+    "isKeystone": true,
+    "wildlifeSpeciesSupported": 46,
+    "description": "Rhizomatous perennial \u2018shrublet\u2019 of moist oak woodland margins and seeps whose late-season wind-pollinated flowers still anchor a distinctive insect herbivore community on aromatic foliage. Tallamy-style keystone value is less about showy nectar and more about biomass: abundant soft leaves feed a wide guild of moth and butterfly larvae while dense stems provide cover for ground-foraging birds near water.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Artemisia-douglasiana-(Mugwort)",
+    "iNaturalistData": {
+      "taxonId": 52854,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=52854&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun, Partial Shade",
+      "slopeRequirements": "Natural along draws and seasonal channels; avoid planting in stagnant low spots unless you want aggressive spread",
+      "soilRequirements": "Loamy to silty soils with reliable winter moisture but summer dry-down; tolerates a wide pH band where drainage is adequate"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 1,
+        "jun": 1,
+        "jul": 1,
+        "aug": 1,
+        "sep": 1,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "Calscape allows up to about monthly summer irrigation once established; more water increases spread by rhizomes. In naturalistic plantings, bias toward cool-season moisture and dry summer crowns unless you are managing a wet meadow aesthetic.",
+      "pruningMonths": [
+        12,
+        1
+      ],
+      "pruningTask": "Cut rangy stems to near ground after dormancy; remove frost-burned tops",
+      "pruningNotes": "Winter cleanup reduces thatch and refreshes spring growth without removing autumn insect shelter if delayed until true dormancy.",
+      "specialNotes": "Can outcompete delicate neighbors in irrigated beds\u2014use as a structural matrix along bioswales, not in tiny mixed borders."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          8,
+          9,
+          10
+        ],
+        "colors": [
+          "cream",
+          "yellow"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          9,
+          10,
+          11
+        ],
+        "description": "Light wind-dispersed achenes; local expansion is often vegetative via rhizomes rather than heavy seed rain"
+      },
+      "ecologicalValue": "High leaf area for generalist herbivores; seasonal stems add vertical structure for dragonflies and songbirds near moist edges."
+    },
+    "wildlife": [
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "Painted Lady butterfly",
+        "activity": "caterpillar-host",
+        "notes": "Vanessa cardui larvae are documented on many Asteraceae, including Artemisia, adding flexible host capacity in foothill gardens.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          8,
+          9,
+          10
+        ],
+        "species": "Song Sparrow",
+        "activity": "shelter",
+        "notes": "Uses dense herbaceous tangles along moist woodland edges for nesting cover and foraging lanes.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          7,
+          8,
+          9
+        ],
+        "species": "Western Tiger Swallowtail butterfly",
+        "activity": "nectar-pollen",
+        "notes": "Papilio rutulus adults nectar at available late-season composites and streamside resources near mugwort stands.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "species": "Pasimachus californicus (Big-headed Ground Beetle)",
+        "activity": "shelter",
+        "notes": "Large native carabid predators hunt in moist litter and thatch layers maintained by mugwort\u2019s spreading habit.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "eriodictyon-californicum",
+    "commonNames": [
+      "Yerba Santa",
+      "California Yerba Santa"
+    ],
+    "scientificName": "Eriodictyon californicum",
+    "synonyms": [],
+    "category": "small-shrub",
+    "isKeystone": false,
+    "wildlifeSpeciesSupported": 29,
+    "description": "Resinous evergreen shrub of sun-baked chaparral and oak openings whose white-to-lavender flowers offer nectar during early summer dryness. It is not a classical keystone like oaks, but it is a Tallamy-relevant \u2018tough-structure\u2019 plant: sticky foliage reduces ungulate browsing while still supporting specialist pollinators adapted to glandular surfaces.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Eriodictyon-californicum-(California-Yerba-Santa)",
+    "iNaturalistData": {
+      "taxonId": 57095,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=57095&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun, Partial Shade",
+      "slopeRequirements": "Excellent on rocky, well-drained slopes; intolerant of summer-wet clay bowls",
+      "soilRequirements": "Lean mineral soils; tolerates drought; avoid rich compost pockets that hold moisture against the crown"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "No regular summer irrigation once established; occasional deep soak only the first cool season after planting on severe sites.",
+      "pruningMonths": [
+        12,
+        1
+      ],
+      "pruningTask": "Remove dead twigs; thin interior only if airflow is poor",
+      "pruningNotes": "Minimal pruning preserves resinous foliage chemistry and spring flower buds formed on older wood.",
+      "specialNotes": "Rhizomatous spread can produce thickets\u2014plan for footprint expansion on embankments."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          5,
+          6,
+          7
+        ],
+        "colors": [
+          "white",
+          "lavender"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          8,
+          9,
+          10
+        ],
+        "description": "Small capsules release seed after midsummer bloom; germination often tied to open mineral soil between shrubs"
+      },
+      "ecologicalValue": "Mid-summer nectar for bees and hummingbirds; evergreen leaves add vertical structure for chaparral birds."
+    },
+    "wildlife": [
+      {
+        "months": [
+          5,
+          6,
+          7
+        ],
+        "species": "Anna's Hummingbird",
+        "activity": "nectar-pollen",
+        "notes": "Visits clustered bell-shaped flowers during the dry-season nectar gap in foothill openings.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "California Tortoiseshell",
+        "activity": "nectar-pollen",
+        "notes": "Uses early-summer foothill flowers along woodland\u2013chaparral ecotones.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          5,
+          6,
+          7
+        ],
+        "species": "Xylocopa tabaniformis orpifex (Western Carpenter Bee)",
+        "activity": "nectar-pollen",
+        "notes": "Large carpenter bees rob nectar by slitting corolla bases on sticky, tubular flowers.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "Wrentit",
+        "activity": "shelter",
+        "notes": "Uses dense evergreen shrubs for year-round cover adjacent to yerba santa thickets.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "mimulus-aurantiacus",
+    "commonNames": [
+      "Sticky Monkeyflower"
+    ],
+    "scientificName": "Mimulus aurantiacus",
+    "synonyms": [
+      "Diplacus aurantiacus"
+    ],
+    "category": "small-shrub",
+    "isKeystone": false,
+    "wildlifeSpeciesSupported": 26,
+    "description": "Sticky-leaved perennial subshrub whose large orange flowers are a classic hummingbird signal in warm, rocky foothill openings. Tallamy framing emphasizes pulse resources: intense nectar during spring\u2013summer rather than massive caterpillar loads, though glandular foliage still supports a specialized suite of herbivores adapted to resinous monkeyflowers.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Diplacus-aurantiacus-(Bush-Monkey-Flower)",
+    "iNaturalistData": {
+      "taxonId": 777371,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=777371&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun, Partial Shade",
+      "slopeRequirements": "Best on rocky banks and well-drained slopes; inland Auburn plantings benefit from afternoon shade",
+      "soilRequirements": "Fast-draining loam to rocky soil; intolerant of heavy summer irrigation combined with poor drainage"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 0,
+        "jun": 1,
+        "jul": 1,
+        "aug": 1,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "Calscape caps established summer irrigation at low frequency; default to none unless foliage stress appears in extreme heat, then rare deep soaks\u2014not sprinklers.",
+      "pruningMonths": [
+        3,
+        4
+      ],
+      "pruningTask": "Pinch tips to encourage bushiness; remove winter-damaged stems",
+      "pruningNotes": "Early-spring shaping sets wood before the main bloom wave without removing all flower buds.",
+      "specialNotes": "Deadheading can extend bloom in garden settings; leave some seed heads if naturalizing on banks."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "colors": [
+          "orange",
+          "yellow"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          7,
+          8,
+          9
+        ],
+        "description": "Capsules release tiny seeds after midsummer; self-sows on open mineral soil when irrigation is restrained"
+      },
+      "ecologicalValue": "Long-season hummingbird nectar; sticky foliage supports specialized insect herbivores within the monkeyflower guild."
+    },
+    "wildlife": [
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "Anna's Hummingbird",
+        "activity": "nectar-pollen",
+        "notes": "A primary visitor to orange tubular monkeyflowers in Sierra foothill gardens.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "species": "Black-chinned Hummingbird",
+        "activity": "nectar-pollen",
+        "notes": "Uses foothill flower corridors during migration and breeding where riparian edges meet dry slopes.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "Variable Checkerspot butterfly",
+        "activity": "caterpillar-host",
+        "notes": "Euphydryas chalcedona populations in parts of California use sticky monkeyflower foliage as a larval host.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "species": "Bombus vosnesenskii (Yellow-faced Bumble Bee)",
+        "activity": "nectar-pollen",
+        "notes": "Forages monkeyflower tubes where corolla geometry permits legitimate entry.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "asclepias-fascicularis",
+    "commonNames": [
+      "Narrowleaf Milkweed"
+    ],
+    "scientificName": "Asclepias fascicularis",
+    "synonyms": [],
+    "category": "herbaceous-perennial",
+    "isKeystone": true,
+    "wildlifeSpeciesSupported": 94,
+    "description": "Clumping milkweed of open foothill grasslands and oak edges whose summer umbels concentrate nectar while foliage hosts monarch larvae and a distinctive milkweed insect suite. In Tallamy terms it is a keystone forb because it couples a charismatic host-plant role with flowers that feed diverse native bees, wasps, and butterflies during warm-season resource bottlenecks.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Asclepias-fascicularis-(Narrow-Leaf-Milkweed)",
+    "iNaturalistData": {
+      "taxonId": 56851,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=56851&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun",
+      "slopeRequirements": "Open sunny pockets; tolerates gentle slopes where soil does not bake to concrete",
+      "soilRequirements": "Well-drained sandy loam to loam; tolerates seasonal dryness; avoid soggy winter bottoms"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "No supplemental summer water once established in naturalistic plantings; first-year transplants may take occasional deep cool-season drinks only.",
+      "pruningMonths": [
+        2,
+        3
+      ],
+      "pruningTask": "Remove previous year\u2019s dead stems after monarchs have emerged",
+      "pruningNotes": "Delay cutting until you are confident stems are empty; leaving stalks standing supports overwintering invertebrates.",
+      "specialNotes": "Expect aphids and milkweed bugs\u2014they signal a functioning milkweed patch; avoid broad-spectrum sprays near blooms."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "colors": [
+          "pink",
+          "white",
+          "lavender"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          8,
+          9,
+          10
+        ],
+        "description": "Follicles split to release silk-borne seeds on autumn winds; important for local patch dynamics and fall finch foraging on floss"
+      },
+      "ecologicalValue": "Monarch host plant; complex floral morphology supports diverse pollinators; milky latex structures a specialized arthropod community."
+    },
+    "wildlife": [
+      {
+        "months": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "species": "Monarch butterfly",
+        "activity": "caterpillar-host",
+        "notes": "Danaus plexippus larvae feed on milkweed foliage; narrowleaf milkweed is a core California host lineage.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "species": "Queen butterfly",
+        "activity": "caterpillar-host",
+        "notes": "Danaus gilippus uses milkweeds where populations occur; adds host redundancy in warm foothill pockets.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "species": "Lygaeus kalmii (Small Milkweed Bug)",
+        "activity": "eating-seeds",
+        "notes": "Specialist seed-feeder on milkweed follicles; part of the native milkweed food web rather than a garden failure signal.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "species": "Lesser Goldfinch",
+        "activity": "eating-seeds",
+        "notes": "Pulls at silk and seeds as follicles mature, linking milkweed patches to finch energy budgets.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "solidago-velutina-subsp-californica",
+    "commonNames": [
+      "California Goldenrod"
+    ],
+    "scientificName": "Solidago velutina subsp. californica",
+    "synonyms": [
+      "Solidago californica"
+    ],
+    "category": "herbaceous-perennial",
+    "isKeystone": true,
+    "wildlifeSpeciesSupported": 61,
+    "description": "Late-summer and fall goldenrod of woodland openings whose yellow plumes arrive when many spring flowers are finished, extending pollinator forage into migration season. Tallamy-style keystone value comes from super-abundant small florets that concentrate bees, wasps, and butterflies while seeds feed finches after frost.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Solidago-velutina-ssp.-californica-(California-Goldenrod)",
+    "iNaturalistData": {
+      "taxonId": 80217,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=80217&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun, Partial Shade",
+      "slopeRequirements": "Road cuts, meadow edges, and oak margins; tolerates moderate competition if crown drainage is good",
+      "soilRequirements": "Loam to rocky loam; tolerates seasonal drought once established; not for constantly soggy clay"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 0,
+        "jun": 1,
+        "jul": 1,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "Mostly rain-fed once established; in harsh interior heat, an occasional June\u2013July deep soak can prevent premature senescence before bloom.",
+      "pruningMonths": [
+        11,
+        12
+      ],
+      "pruningTask": "Cut spent stems after seed drop; leave standing through early winter if finch seed use is a goal",
+      "pruningNotes": "Late-fall cleanup reduces disease carryover without removing all winter perch structure if delayed.",
+      "specialNotes": "Goldenrod is wind-pollinated and not a major ragweed allergen\u2014use this fact when neighbors object to yellow spikes."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "colors": [
+          "yellow"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          9,
+          10,
+          11
+        ],
+        "description": "Copious small achenes with pappus disperse in autumn winds; finches glean seeds from upright stalks"
+      },
+      "ecologicalValue": "Late-season nectar and pollen for migrating insects; structural stems for overwintering cavity-nesters\u2019 foraging substrate nearby."
+    },
+    "wildlife": [
+      {
+        "months": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "species": "Painted Lady butterfly",
+        "activity": "nectar-pollen",
+        "notes": "Migratory pulses track late composites during warm autumn flights.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          8,
+          9,
+          10
+        ],
+        "species": "California Tortoiseshell",
+        "activity": "nectar-pollen",
+        "notes": "Uses goldenrod heads during autumn nectar windows in foothill openings.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          8,
+          9,
+          10
+        ],
+        "species": "Bombus vosnesenskii (Yellow-faced Bumble Bee)",
+        "activity": "nectar-pollen",
+        "notes": "Queens and workers bulk on late goldenrod before winter dormancy cycles.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          9,
+          10,
+          11
+        ],
+        "species": "Lesser Goldfinch",
+        "activity": "eating-seeds",
+        "notes": "Shreds composite heads for mature achenes as seed availability shifts into fall.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "lupinus-albifrons",
+    "commonNames": [
+      "Silver Lupine"
+    ],
+    "scientificName": "Lupinus albifrons",
+    "synonyms": [],
+    "category": "herbaceous-perennial",
+    "isKeystone": true,
+    "wildlifeSpeciesSupported": 53,
+    "description": "Silvery-leaved foothill lupine whose tall blue flower spikes fix nitrogen and feed long-tongued bees during the spring bloom arc. Tallamy framing treats many native lupines as keystone forbs because they combine Rhizobium-driven soil facilitation with pollen-heavy inflorescences that support diverse bee and butterfly visitation in lean soils.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Lupinus-albifrons-(Silver-Lupine)",
+    "iNaturalistData": {
+      "taxonId": 51691,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=51691&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun",
+      "slopeRequirements": "Classic on dry banks and rocky openings; excellent erosion-control morphology once established",
+      "soilRequirements": "Well-drained sandy to rocky soils; avoid heavy compost that fuels rank, short-lived growth"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "Calscape emphasizes very low summer water; over-irrigation promotes root pathogens and collapses the silvery, drought-adapted habit.",
+      "pruningMonths": [
+        6,
+        7
+      ],
+      "pruningTask": "Remove spent flower spikes after pods set if you want a tidier habit",
+      "pruningNotes": "Early-summer deadheading trades some self-seeding for cleaner structure; leave pods if expanding local populations is the goal.",
+      "specialNotes": "Nitrogen fixation benefits neighbors slowly\u2014think decades-scale soil improvement, not instant fertilizer replacement."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "colors": [
+          "blue",
+          "lavender",
+          "purple"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          6,
+          7,
+          8
+        ],
+        "description": "Hairy legume pods mature in early summer; seeds germinate after cool-season cues in open soil"
+      },
+      "ecologicalValue": "Spring pollen and nectar pulses; seeds for finches; nitrogen facilitation in harsh mineral soils."
+    },
+    "wildlife": [
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "species": "Silvery Blue butterfly",
+        "activity": "caterpillar-host",
+        "notes": "Glaucopsyche lygdamus uses lupines as primary hosts across much of its California range.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          4,
+          5,
+          6
+        ],
+        "species": "Anna's Hummingbird",
+        "activity": "nectar-pollen",
+        "notes": "Visits lupine spikes where corolla geometry permits access in warm foothill gardens.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "species": "Bombus vosnesenskii (Yellow-faced Bumble Bee)",
+        "activity": "nectar-pollen",
+        "notes": "Buzz-pollinates papilionaceous flowers, improving outcrossing in patchy stands.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          6,
+          7,
+          8
+        ],
+        "species": "Lesser Goldfinch",
+        "activity": "eating-seeds",
+        "notes": "Extracts seeds from mature lupine pods in shrubby openings.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "clarkia-unguiculata",
+    "commonNames": [
+      "Elegant Clarkia",
+      "Woodland Clarkia"
+    ],
+    "scientificName": "Clarkia unguiculata",
+    "synonyms": [],
+    "category": "groundcover-annual",
+    "isKeystone": false,
+    "wildlifeSpeciesSupported": 19,
+    "description": "Tall pink-flowered annual of oak woodland edges whose late-season bloom fills the gap after spring ephemerals fade. Not a keystone in the oak sense, but Tallamy-relevant as a pulse forb that stitches together woodland pollinator networks with evening-flying hawkmoth pollination and lightweight cover for small insects.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Clarkia-unguiculata-(Elegant-Clarkia)",
+    "iNaturalistData": {
+      "taxonId": 51735,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=51735&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Partial Shade, Full Sun",
+      "slopeRequirements": "Under high canopy or along north-facing woodland edges; avoid dense shade that prevents bloom",
+      "soilRequirements": "Sandy loam to loam; tolerates dry summer soils once plants are up\u2014classic oak understory wildflower soils"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 1,
+        "apr": 1,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "Fall-sown populations use winter rain; garden transplants may take light March\u2013April irrigation to bridge dry springs, then taper to zero before bloom.",
+      "pruningMonths": [
+        7,
+        8
+      ],
+      "pruningTask": "Remove browned annual stems after seeds shatter",
+      "pruningNotes": "Delay removal if you want self-sowing\u2014shake ripe capsules over bare soil instead of sending them to green waste.",
+      "specialNotes": "Best treated as a self-reseeding annual mosaic under oaks rather than a manicured groundcover monoculture."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "colors": [
+          "pink",
+          "magenta",
+          "purple"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          7,
+          8,
+          9
+        ],
+        "description": "Capsules mature midsummer into fall; seeds persist in soil until cool-season germination cues return"
+      },
+      "ecologicalValue": "Late spring\u2013summer nectar for moths and butterflies; fine-stemmed structure for small beneficial insects in partial shade."
+    },
+    "wildlife": [
+      {
+        "months": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "Proserpinus clarkiae (Clark's Sphinx Moth)",
+        "activity": "nectar-pollen",
+        "notes": "Specialist hawkmoth named for its association with Clarkia flowers in California oak woodland systems.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          5,
+          6,
+          7
+        ],
+        "species": "Pale Swallowtail butterfly",
+        "activity": "nectar-pollen",
+        "notes": "Adults nectar along woodland edges where clarkias bloom under canyon live oak and foothill pine canopies.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "White-lined Sphinx",
+        "activity": "nectar-pollen",
+        "notes": "Evening flights align with onagraceous flowers that open into dusk.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          5,
+          6,
+          7
+        ],
+        "species": "Common Bushtit",
+        "activity": "shelter",
+        "notes": "Moves through clarkia patches in shrubby oak understories while gleaning small insects from nearby foliage.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "eschscholzia-californica",
+    "commonNames": [
+      "California Poppy"
+    ],
+    "scientificName": "Eschscholzia californica",
+    "synonyms": [],
+    "category": "groundcover-annual",
+    "isKeystone": false,
+    "wildlifeSpeciesSupported": 23,
+    "description": "California\u2019s iconic spring annual (often behaving as a short-lived perennial in mild microclimates) whose orange cups light up grassy oak openings. Tallamy context: modest specialist diversity compared with woody keystone plants, but very high landscape connectivity for generalist pollinators and finches on tiny seeds.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Eschscholzia-californica-(California-Poppy)",
+    "iNaturalistData": {
+      "taxonId": 48225,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=48225&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun",
+      "slopeRequirements": "Road verges, meadow pockets, and sunny openings; intolerant of deep shade under dense canopy",
+      "soilRequirements": "Lean, fast-draining soils; tolerates poor foothill mineral soils where seed can contact mineral soil"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 1,
+        "apr": 1,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "Rainfall usually suffices; optional light March\u2013April irrigation helps germination in unnaturally dry springs\u2014avoid summer sprinklers that favor exotic weeds.",
+      "pruningMonths": [
+        6,
+        7
+      ],
+      "pruningTask": "Pull or cut browned plants after seed shed if aesthetics require",
+      "pruningNotes": "If self-sowing is desired, leave tan skeletons until capsules rattle.",
+      "specialNotes": "Reseeds best on disturbed mineral soil; thick mulch layers can suppress next year\u2019s cohort."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "colors": [
+          "orange",
+          "yellow"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          5,
+          6,
+          7
+        ],
+        "description": "Elongate capsules split to release many small seeds as plants senesce into early summer heat"
+      },
+      "ecologicalValue": "Spring pollen and nectar pulse; seeds for finches; bright color increases pollinator discovery in sparse early-season landscapes."
+    },
+    "wildlife": [
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "species": "White-lined Sphinx",
+        "activity": "nectar-pollen",
+        "notes": "Hyles lineata adults visit open, bright flowers in spring wildflower patches across foothill grasslands.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "species": "Mylitta Crescent butterfly",
+        "activity": "nectar-pollen",
+        "notes": "Phyciodes mylitta adults nectar at spring composites and open Papaveraceae in sunny openings.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          3,
+          4,
+          5
+        ],
+        "species": "Lesser Goldfinch",
+        "activity": "eating-seeds",
+        "notes": "Feeds on small seeds in weedy\u2013wildflower mosaics where poppies mix with native grasses.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "species": "Agapostemon virescens (Ultra Green Sweat Bee)",
+        "activity": "nectar-pollen",
+        "notes": "Metallic halictid bee commonly filmed on bright spring flowers in California gardens.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "achillea-millefolium",
+    "commonNames": [
+      "Common Yarrow"
+    ],
+    "scientificName": "Achillea millefolium",
+    "synonyms": [],
+    "category": "groundcover-perennial",
+    "isKeystone": false,
+    "wildlifeSpeciesSupported": 37,
+    "description": "Rhizomatous perennial ground layer with flat white inflorescences that pack hundreds of tiny disc florets attractive to short-tongued bees and many small butterflies. Tallamy framing: not a canopy keystone, but a workhorse forb that increases insect surface area at ground level and stabilizes soils on slopes.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Achillea-millefolium-(Common-Yarrow)",
+    "iNaturalistData": {
+      "taxonId": 52821,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=52821&place_id=5299"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun, Partial Shade",
+      "slopeRequirements": "Useful on gentle slopes for soil binding; spreads by rhizomes\u2014plan containment if mixing with delicate forbs",
+      "soilRequirements": "Tolerates a wide soil range if not constantly soggy; pH flexible in foothill gardens"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 0,
+        "jun": 1,
+        "jul": 1,
+        "aug": 1,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "Low water overall; occasional summer irrigation keeps foliage fresher in hot interior sites but is not required in naturalistic meadows.",
+      "pruningMonths": [
+        10,
+        11
+      ],
+      "pruningTask": "Shear spent flower heads; divide crowded patches if centers die out",
+      "pruningNotes": "Late-fall cutback reduces mildew carryover and refreshes spring basal growth.",
+      "specialNotes": "Can dominate small beds\u2014pair with assertive neighbors or use in larger matrix plantings."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "colors": [
+          "white",
+          "cream"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          7,
+          8,
+          9
+        ],
+        "description": "Tiny cypselae mature after midsummer; local spread is often vegetative via rhizomes rather than heavy seed rain"
+      },
+      "ecologicalValue": "Long-season small-flower nectar and pollen; dense foliage hosts aphid complexes that feed insectivorous birds when managed without sprays."
+    },
+    "wildlife": [
+      {
+        "months": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "Field Crescent butterfly",
+        "activity": "caterpillar-host",
+        "notes": "Phyciodes pulchella larvae use native Asteraceae including yarrows in montane and foothill populations.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "Painted Lady butterfly",
+        "activity": "nectar-pollen",
+        "notes": "Adults use flat-topped white inflorescences during migration pulses.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "species": "American Goldfinch",
+        "activity": "eating-seeds",
+        "notes": "Shreds composite heads for small seeds in late-summer meadow edges.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "species": "Bombus vosnesenskii (Yellow-faced Bumble Bee)",
+        "activity": "nectar-pollen",
+        "notes": "Works dense disc florets efficiently, packing pollen on corbiculae.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  }
+]

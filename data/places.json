@@ -1,0 +1,44 @@
+[
+  {
+    "id": "auburn-ca",
+    "name": "Auburn, California",
+    "shortName": "Auburn, CA",
+    "ecosystem": "Sierra Foothills Oak Woodland / Chaparral",
+    "ecosystemDescription": "Auburn sits at the transition between the Sacramento Valley floor and the Sierra Nevada foothills, in a zone of blue oak woodland, interior live oak chaparral, and mixed foothill pine. These habitats support an extraordinary diversity of woodpeckers, raptors, and native pollinators.",
+    "iNaturalistPlaceId": 5299,
+    "boundingBox": {
+      "nelat": 38.986542,
+      "nelng": -120.9610799,
+      "swlat": 38.831071,
+      "swlng": -121.191049
+    },
+    "plantDataFile": "plants-auburn-ca.json",
+    "heroDescription": "A living guide to California native plants selected for maximum wildlife impact in Auburn's Sierra foothills — keystone species first, then the plants that support the most birds, butterflies, and pollinators.",
+    "aboutSections": {
+      "whyNative": "California's native plants have co-evolved with local wildlife for thousands of years. They require less water, no fertilizers, and no pesticides — while supporting 10–50× more wildlife than non-native alternatives. A single native oak supports over 300 species of insects, birds, and mammals.",
+      "ecosystem": "Auburn sits at the transition between the Sacramento Valley and the Sierra Nevada foothills, in a zone of blue oak woodland, interior live oak chaparral, and mixed foothill pine. These fire-adapted habitats support an extraordinary diversity of woodpeckers, raptors, and native pollinators — but are increasingly threatened by development and altered fire regimes.",
+      "getStarted": "Begin with 3–5 keystone species: Valley Oak or Blue Oak, Coyote Brush, California Buckwheat, and a native milkweed. Visit Calscape.org to find plants native to your zip code and local nurseries that carry them."
+    }
+  },
+  {
+    "id": "poway-ca",
+    "name": "Poway, California",
+    "shortName": "Poway, CA",
+    "ecosystem": "Coastal Sage Scrub",
+    "ecosystemDescription": "San Diego County's coastal sage scrub — one of the most endangered habitats in the United States. Less than 15% remains, making backyard habitat gardens a meaningful act of conservation for species like the California Gnatcatcher and Crotch's Bumblebee.",
+    "iNaturalistPlaceId": null,
+    "boundingBox": {
+      "nelat": 33.0652649,
+      "nelng": -116.9575429,
+      "swlat": 32.899128,
+      "swlng": -117.103013
+    },
+    "plantDataFile": "plants-poway-ca.json",
+    "heroDescription": "A living guide to California native plants selected for maximum wildlife impact in Poway's coastal sage scrub — keystone species first, then the plants that support the most birds, butterflies, and pollinators.",
+    "aboutSections": {
+      "whyNative": "California's native plants have co-evolved with local wildlife for thousands of years. They require less water, no fertilizers, and no pesticides — while supporting 10–50× more wildlife than non-native alternatives. A single native oak supports over 300 species of insects, birds, and mammals.",
+      "ecosystem": "Poway sits within San Diego County's coastal sage scrub ecosystem — one of the most endangered habitats in the United States. Less than 15% remains, making backyard habitat gardens a meaningful act of conservation for species like the California Gnatcatcher and Crotch's Bumblebee.",
+      "getStarted": "Begin with 3–5 keystone species: California Buckwheat, Black Sage, Toyon, and a native oak. Visit Calscape.org to find plants native to your zip code and local nurseries that carry them. Remove your lawn, stop irrigating in summer, and watch the wildlife arrive."
+    }
+  }
+]

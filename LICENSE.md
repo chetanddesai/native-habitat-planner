@@ -29,4 +29,4 @@ Citizen-science observation counts are sourced from the [iNaturalist](https://ww
 
 ---
 
-Full license text: <https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode>
+Full license text: [https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)

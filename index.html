@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Native Habitat Planner</title>
+  <meta name="description" content="A living reference for native habitat gardens — plant inventory, bloom calendars, wildlife schedules, and maintenance guides for California native plants across multiple regions.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Native Habitat Planner">
+  <meta property="og:description" content="Explore curated California native plants, their bloom schedules, wildlife interactions, and care guides for habitat gardens.">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Native Habitat Planner">
+  <meta name="twitter:description" content="Explore curated California native plants, their bloom schedules, wildlife interactions, and care guides.">
+
+  <meta name="theme-color" content="#4a7c59">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#" class="nav-logo" aria-label="Native Habitat Planner home">
+        <span class="nav-logo-icon" aria-hidden="true">🌿</span>
+        <span>Native Habitat</span>
+      </a>
+      <div class="place-selector-wrap">
+        <label for="place-selector" class="sr-only">Select a region</label>
+        <select id="place-selector" class="place-selector" aria-label="Select a region"></select>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#inventory">Plants</a></li>
+        <li><a href="#calendar">Calendar</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contribute">Contribute</a></li>
+        <li><a href="https://github.com/chetanddesai/native-habitat-planner" target="_blank" rel="noopener" class="nav-github" aria-label="View on GitHub"><svg viewBox="0 0 16 16" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.64 7.64 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-label="Garden introduction">
+      <div class="hero-content">
+        <h1 id="hero-title">Native Habitat Garden</h1>
+        <p class="hero-subtitle" id="hero-subtitle"></p>
+        <p class="hero-desc" id="hero-desc"></p>
+        <a href="#inventory" class="btn btn-primary">Explore Plants</a>
+        <a href="#calendar" class="btn btn-secondary">This Month</a>
+      </div>
+    </section>
+
+    <section id="inventory" class="section" aria-label="Plant inventory">
+      <div class="container">
+        <h2 class="section-title">Plant Inventory</h2>
+        <p class="section-desc" id="inventory-desc"></p>
+        <div class="filters" role="search" aria-label="Filter plants">
+          <input type="search" id="plant-search" class="filter-search" placeholder="Search by name…" aria-label="Search plants by name">
+          <div class="filter-group">
+            <select id="category-filter" aria-label="Filter by category">
+              <option value="all">All Categories</option>
+              <option value="large-tree">Large Tree</option>
+              <option value="large-shrub">Large Shrub</option>
+              <option value="small-shrub">Small Shrub</option>
+              <option value="herbaceous-perennial">Herbaceous Perennial</option>
+              <option value="groundcover-perennial">Groundcover — Perennial</option>
+              <option value="groundcover-annual">Groundcover — Annual</option>
+            </select>
+            <label class="filter-checkbox">
+              <input type="checkbox" id="keystone-filter">
+              <span>Keystone only</span>
+            </label>
+          </div>
+        </div>
+        <div id="plant-grid" class="plant-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="phenology-section" class="section section-alt" aria-label="Year-round phenology">
+      <div class="container">
+        <h3 class="section-title section-title-sm">Year-Round Bloom &amp; Phenology</h3>
+        <div id="phenology-chart" class="phenology-chart" role="img" aria-label="Year-round bloom and phenology timeline for all plants"></div>
+      </div>
+    </section>
+
+    <section id="calendar" class="section" aria-label="Garden calendar">
+      <div class="container">
+        <h2 class="section-title">Garden Calendar</h2>
+        <p class="section-desc">What's happening in the garden right now — wildlife visitors, maintenance tasks, and citizen-science observation trends.</p>
+        <div class="calendar-controls">
+          <button class="month-btn" data-dir="-1" aria-label="Previous month">&larr;</button>
+          <h3 id="calendar-month-label" class="calendar-month-label"></h3>
+          <button class="month-btn" data-dir="1" aria-label="Next month">&rarr;</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="cal-wildlife-section" class="section" aria-label="Wildlife activity">
+      <div class="container">
+        <h3 class="section-title section-title-sm"><span class="cal-icon" aria-hidden="true">🦋</span> Wildlife to Look For</h3>
+        <div id="cal-wildlife-grid" class="cal-wildlife-grid"></div>
+      </div>
+    </section>
+
+    <section id="cal-maintenance-section" class="section section-alt" aria-label="Maintenance tasks">
+      <div class="container">
+        <h3 class="section-title section-title-sm"><span class="cal-icon" aria-hidden="true">🛠️</span> Maintenance</h3>
+        <div id="cal-maintenance-grid" class="cal-maintenance-grid"></div>
+      </div>
+    </section>
+
+    <section id="trends-section" class="section" aria-label="Observation trends">
+      <div class="container">
+        <h3 class="section-title section-title-sm">Observation Trends</h3>
+        <p class="section-desc" id="trends-desc"></p>
+        <div id="trend-chart" class="trend-chart" role="img" aria-label="Monthly observations and year-over-year trends"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section" aria-label="About the garden">
+      <div class="container">
+        <h2 class="section-title">About the Garden</h2>
+        <div id="about-grid" class="about-grid"></div>
+      </div>
+    </section>
+
+    <section id="contribute" class="section section-alt" aria-label="Contribute">
+      <div class="container">
+        <h2 class="section-title">Contribute</h2>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Suggest a Plant</h3>
+            <p>Know a native plant that should be included? Open a <a href="https://github.com/chetanddesai/native-habitat-planner/issues" target="_blank" rel="noopener">GitHub issue</a> with the scientific name, region, and why it belongs.</p>
+          </div>
+          <div class="about-card">
+            <h3>Suggest a Region</h3>
+            <p>Want to see your city represented? Open a <a href="https://github.com/chetanddesai/native-habitat-planner/issues" target="_blank" rel="noopener">GitHub issue</a> with the city/state and either an iNaturalist place ID or bounding box coordinates.</p>
+          </div>
+          <div class="about-card">
+            <h3>Submit a Pull Request</h3>
+            <p>Developers can fork the repo and use the add-plant or add-city skills to contribute new data. See the <a href="https://github.com/chetanddesai/native-habitat-planner" target="_blank" rel="noopener">README</a> for details.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h4>Data Sources</h4>
+          <ul>
+            <li><a href="https://www.inaturalist.org" target="_blank" rel="noopener">iNaturalist</a> — plant &amp; wildlife images (Creative Commons), observation data</li>
+            <li><a href="https://calscape.org" target="_blank" rel="noopener">Calscape</a> — native plant information &amp; nursery finder</li>
+            <li><a href="https://www.nwf.org/nativeplantfinder" target="_blank" rel="noopener">National Wildlife Federation</a> — keystone species data</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>About This Site</h4>
+          <p>Inspired by Doug Tallamy's <em>Bringing Nature Home</em>. Built with vanilla HTML, CSS, and JavaScript. Data-driven from JSON. No frameworks, no build step.</p>
+          <p><a href="https://github.com/chetanddesai/native-habitat-planner" target="_blank" rel="noopener">View on GitHub</a> · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></p>
+        </div>
+      </div>
+      <div class="footer-cache">
+        <span id="cache-status" class="cache-status">iNaturalist data: not yet fetched</span>
+        <button type="button" id="refresh-cache-btn" class="refresh-cache-btn" title="Clear cached data and re-fetch from iNaturalist">↻ Refresh Data</button>
+      </div>
+      <p class="footer-copy">&copy; 2026 Native Habitat Planner. Plant and wildlife images used under Creative Commons licenses from iNaturalist contributors.</p>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
