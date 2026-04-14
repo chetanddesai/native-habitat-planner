@@ -18,7 +18,7 @@
     "calscapeUrl": "https://calscape.org/Quercus-lobata-(Valley-Oak)",
     "iNaturalistData": {
       "taxonId": 49011,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=49011&place_id=5299"
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=49011&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
       "sunExposure": "Full Sun",
@@ -163,7 +163,7 @@
     "calscapeUrl": "https://calscape.org/Quercus-douglasii-(Blue-Oak)",
     "iNaturalistData": {
       "taxonId": 49009,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=49009&place_id=5299"
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=49009&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
       "sunExposure": "Full Sun, Partial Shade",
@@ -310,7 +310,7 @@
     "calscapeUrl": "https://calscape.org/Quercus-wislizeni-(Interior-Live-Oak)",
     "iNaturalistData": {
       "taxonId": 51089,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=51089&place_id=5299"
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=51089&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
       "sunExposure": "Full Sun, Partial Shade",
@@ -455,7 +455,7 @@
     "calscapeUrl": "https://calscape.org/Aesculus-californica-(California-Buckeye)",
     "iNaturalistData": {
       "taxonId": 53348,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=53348&place_id=5299"
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=53348&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
       "sunExposure": "Full Sun, Partial Shade",
@@ -593,7 +593,7 @@
     "calscapeUrl": "https://calscape.org/Heteromeles-arbutifolia-(Toyon)",
     "iNaturalistData": {
       "taxonId": 53405,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=53405&place_id=5299"
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=53405&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
       "sunExposure": "Full Sun, Partial Shade",
@@ -737,7 +737,7 @@
     "calscapeUrl": "https://calscape.org/Ceanothus-cuneatus-(Buck-Brush)",
     "iNaturalistData": {
       "taxonId": 49673,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=49673&place_id=5299"
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=49673&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
       "sunExposure": "Full Sun",
@@ -886,7 +886,7 @@
     "calscapeUrl": "https://calscape.org/Arctostaphylos-viscida-(Whiteleaf-Manzanita)",
     "iNaturalistData": {
       "taxonId": 55135,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=55135&place_id=5299"
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=55135&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
       "sunExposure": "Full Sun, Partial Shade",
@@ -1031,7 +1031,7 @@
     "calscapeUrl": "https://calscape.org/Sambucus-nigra-subsp.-caerulea-(Blue-Elderberry)",
     "iNaturalistData": {
       "taxonId": 143799,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=143799&place_id=5299"
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=143799&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
       "sunExposure": "Full Sun, Partial Shade",
@@ -1174,7 +1174,7 @@
     "calscapeUrl": "https://calscape.org/Rhamnus-ilicifolia-(Hollyleaf-Redberry)",
     "iNaturalistData": {
       "taxonId": 58308,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=58308&place_id=5299"
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=58308&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
       "sunExposure": "Full Sun, Partial Shade",
@@ -1319,7 +1319,7 @@
     "calscapeUrl": "https://calscape.org/Eriogonum-nudum-(Naked-Buckwheat)",
     "iNaturalistData": {
       "taxonId": 53046,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=53046&place_id=5299"
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=53046&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
       "sunExposure": "Full Sun",
@@ -1446,30 +1446,33 @@
     ]
   },
   {
-    "id": "salvia-sonomensis",
+    "id": "epilobium-canum",
     "commonNames": [
-      "Sonoma Sage"
+      "California Fuchsia",
+      "Hummingbird Trumpet"
     ],
-    "scientificName": "Salvia sonomensis",
-    "synonyms": [],
+    "scientificName": "Epilobium canum",
+    "synonyms": [
+      "Zauschneria californica"
+    ],
     "category": "small-shrub",
-    "isKeystone": true,
-    "wildlifeSpeciesSupported": 44,
-    "description": "Mat-forming foothill sage whose long lavender flower spikes extend the sagebrush\u2013oak woodland nectar corridor into late spring and early summer. It behaves as a keystone small shrub in Tallamy framing because it couples durable evergreen foliage (high caterpillar and insect gleaning value) with reliable pollen and nectar for early-season native bees and hummingbirds when many chaparral dominants are between floral peaks.",
+    "isKeystone": false,
+    "wildlifeSpeciesSupported": 32,
+    "description": "Low, spreading subshrub whose brilliant scarlet-orange tubular flowers erupt from late summer through fall — exactly when most foothill natives have finished blooming. This makes it the single most important late-season hummingbird resource in Sierra foothill gardens, bridging the nectar gap between spring bloomers and winter dormancy.",
     "image": {
       "url": "",
       "attribution": "",
       "iNaturalistUrl": ""
     },
-    "calscapeUrl": "https://calscape.org/Salvia-sonomensis-(Sonoma-Sage)",
+    "calscapeUrl": "https://calscape.org/Epilobium-canum-(California-Fuchsia)",
     "iNaturalistData": {
-      "taxonId": 63964,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=63964&place_id=5299"
+      "taxonId": 53051,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=53051&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
-      "sunExposure": "Partial Shade, Full Sun",
-      "slopeRequirements": "Best on gentle slopes or terraces with afternoon shade in hot interior foothills; avoid heat-reflecting walls without relief",
-      "soilRequirements": "Well-drained loam to sandy loam; tolerates lean soils; intolerant of prolonged summer wet around the crown"
+      "sunExposure": "Full Sun",
+      "slopeRequirements": "Rocky slopes, road cuts, dry banks; excellent on south-facing exposures",
+      "soilRequirements": "Well-drained sandy or rocky soil; tolerates poor, dry soils; avoid heavy clay or wet winter conditions"
     },
     "maintenance": {
       "wateringSchedule": {
@@ -1486,50 +1489,52 @@
         "nov": 0,
         "dec": 0
       },
-      "wateringNotes": "Calscape lists very low water; avoid regular lawn-style sprinklers. In Auburn\u2019s hot season, partial shade matters more than irrigation\u2014overwatering promotes rot and shortens life compared with dry-season rest.",
+      "wateringNotes": "No summer irrigation once established — it blooms during drought on stored root moisture. Occasional deep water in first year only.",
       "pruningMonths": [
-        7,
-        8
+        1,
+        2
       ],
-      "pruningTask": "Deadhead spent spikes if desired; lightly thin crowded stems after peak bloom",
-      "pruningNotes": "Summer shaping preserves late-spring display; avoid heavy shearing that removes next season\u2019s wood.",
-      "specialNotes": "Fragrant foliage resists deer browsing for many sites; pair with dappled oak shade rather than baking pavement reflected heat."
+      "pruningTask": "Cut back to a few inches in late winter before new growth emerges",
+      "pruningNotes": "Hard annual cutback keeps plants compact and floriferous; skip this and plants become leggy and woody.",
+      "specialNotes": "Spreads by underground rhizomes — give it room or use a root barrier near paths. Gray-leaved forms tolerate more heat."
     },
     "phenology": {
       "bloom": {
         "months": [
-          4,
-          5,
-          6,
-          7
+          7,
+          8,
+          9,
+          10,
+          11
         ],
         "colors": [
-          "lavender",
-          "purple"
+          "red",
+          "orange"
         ]
       },
       "berry": null,
       "seed": {
         "months": [
-          7,
-          8,
-          9
+          9,
+          10,
+          11
         ],
-        "description": "Small nutlets mature after bloom; modest local self-sowing possible in open mineral soil near parent plants"
+        "description": "Small wind-dispersed seeds with cottony hairs mature as flowers fade; moderate self-sowing in open ground"
       },
-      "ecologicalValue": "Extended spring\u2013early-summer nectar and pollen; aromatic foliage supports insect herbivory and gleaning by songbirds at shrub edges."
+      "ecologicalValue": "Critical late-season nectar source when almost nothing else blooms; bridges the summer–fall gap for hummingbirds and native bees preparing for winter."
     },
     "wildlife": [
       {
         "months": [
-          4,
-          5,
-          6,
-          7
+          7,
+          8,
+          9,
+          10,
+          11
         ],
         "species": "Anna's Hummingbird",
         "activity": "nectar-pollen",
-        "notes": "Works the tubular corollas during the foothill bloom pulse when sage resources are concentrated.",
+        "notes": "Primary late-season nectar source; hummingbirds defend individual plants as feeding territories.",
         "image": {
           "url": "",
           "attribution": "",
@@ -1538,30 +1543,13 @@
       },
       {
         "months": [
-          5,
-          6,
-          7,
-          8
-        ],
-        "species": "California Sister butterfly",
-        "activity": "nectar-pollen",
-        "notes": "Adults nectar widely along woodland edges while larvae remain tied to oaks nearby.",
-        "image": {
-          "url": "",
-          "attribution": "",
-          "iNaturalistUrl": ""
-        }
-      },
-      {
-        "months": [
-          5,
-          6,
-          7,
-          8
+          8,
+          9,
+          10
         ],
         "species": "White-lined Sphinx",
         "activity": "nectar-pollen",
-        "notes": "Night-flying hawkmoth that tracks pale to medium-purple sage inflorescences in warm foothill nights.",
+        "notes": "Hawkmoths visit the tubular red flowers at dusk, providing nocturnal pollination services.",
         "image": {
           "url": "",
           "attribution": "",
@@ -1570,14 +1558,14 @@
       },
       {
         "months": [
-          4,
-          5,
-          6,
-          7
+          7,
+          8,
+          9,
+          10
         ],
         "species": "Bombus vosnesenskii (Yellow-faced Bumble Bee)",
         "activity": "nectar-pollen",
-        "notes": "Buzz-forages sage whorls, transferring pollen efficiently on structurally complex flowers.",
+        "notes": "Workers and queens forage on the tubular flowers, bulking up before winter dormancy.",
         "image": {
           "url": "",
           "attribution": "",
@@ -1606,7 +1594,7 @@
     "calscapeUrl": "https://calscape.org/Artemisia-douglasiana-(Mugwort)",
     "iNaturalistData": {
       "taxonId": 52854,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=52854&place_id=5299"
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=52854&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
       "sunExposure": "Full Sun, Partial Shade",
@@ -1747,7 +1735,7 @@
     "calscapeUrl": "https://calscape.org/Eriodictyon-californicum-(California-Yerba-Santa)",
     "iNaturalistData": {
       "taxonId": 57095,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=57095&place_id=5299"
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=57095&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
       "sunExposure": "Full Sun, Partial Shade",
@@ -1887,7 +1875,7 @@
     "calscapeUrl": "https://calscape.org/Diplacus-aurantiacus-(Bush-Monkey-Flower)",
     "iNaturalistData": {
       "taxonId": 777371,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=777371&place_id=5299"
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=777371&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
       "sunExposure": "Full Sun, Partial Shade",
@@ -2015,30 +2003,31 @@
     ]
   },
   {
-    "id": "asclepias-fascicularis",
+    "id": "asclepias-cordifolia",
     "commonNames": [
-      "Narrowleaf Milkweed"
+      "Heart-leaf Milkweed",
+      "Purple Milkweed"
     ],
-    "scientificName": "Asclepias fascicularis",
+    "scientificName": "Asclepias cordifolia",
     "synonyms": [],
     "category": "herbaceous-perennial",
     "isKeystone": true,
-    "wildlifeSpeciesSupported": 94,
-    "description": "Clumping milkweed of open foothill grasslands and oak edges whose summer umbels concentrate nectar while foliage hosts monarch larvae and a distinctive milkweed insect suite. In Tallamy terms it is a keystone forb because it couples a charismatic host-plant role with flowers that feed diverse native bees, wasps, and butterflies during warm-season resource bottlenecks.",
+    "wildlifeSpeciesSupported": 87,
+    "description": "The dominant foothill milkweed of the Sierra Nevada, with distinctive heart-shaped leaves clasping the stem and deep crimson-purple flower clusters. Far more abundant in the Auburn area than narrowleaf milkweed — this is the milkweed monarchs actually encounter in oak woodland and chaparral openings here. A keystone forb that hosts monarch larvae while supporting a specialized milkweed insect community.",
     "image": {
       "url": "",
       "attribution": "",
       "iNaturalistUrl": ""
     },
-    "calscapeUrl": "https://calscape.org/Asclepias-fascicularis-(Narrow-Leaf-Milkweed)",
+    "calscapeUrl": "https://calscape.org/Asclepias-cordifolia-(Heart-Leaf-Milkweed)",
     "iNaturalistData": {
-      "taxonId": 56851,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=56851&place_id=5299"
+      "taxonId": 62248,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=62248&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
-      "sunExposure": "Full Sun",
-      "slopeRequirements": "Open sunny pockets; tolerates gentle slopes where soil does not bake to concrete",
-      "soilRequirements": "Well-drained sandy loam to loam; tolerates seasonal dryness; avoid soggy winter bottoms"
+      "sunExposure": "Full Sun, Partial Shade",
+      "slopeRequirements": "Rocky slopes, road cuts, and chaparral openings; naturally grows on dry, well-drained hillsides",
+      "soilRequirements": "Well-drained rocky or sandy loam; tolerates lean, dry soils; avoid heavy clay or wet winter conditions"
     },
     "maintenance": {
       "wateringSchedule": {
@@ -2055,40 +2044,37 @@
         "nov": 0,
         "dec": 0
       },
-      "wateringNotes": "No supplemental summer water once established in naturalistic plantings; first-year transplants may take occasional deep cool-season drinks only.",
+      "wateringNotes": "No summer irrigation once established — this is a true dryland milkweed adapted to Sierra foothill drought. Water only during the first establishment year.",
       "pruningMonths": [
         2,
         3
       ],
-      "pruningTask": "Remove previous year\u2019s dead stems after monarchs have emerged",
-      "pruningNotes": "Delay cutting until you are confident stems are empty; leaving stalks standing supports overwintering invertebrates.",
-      "specialNotes": "Expect aphids and milkweed bugs\u2014they signal a functioning milkweed patch; avoid broad-spectrum sprays near blooms."
+      "pruningTask": "Remove previous year's dead stems after monarchs have emerged",
+      "pruningNotes": "Delay cutting until late winter to protect overwintering invertebrates in hollow stems; new shoots emerge from the rootstock in spring.",
+      "specialNotes": "Expect aphids and milkweed bugs — they are part of a healthy milkweed patch. Avoid broad-spectrum pesticides near blooming plants."
     },
     "phenology": {
       "bloom": {
         "months": [
           5,
           6,
-          7,
-          8,
-          9
+          7
         ],
         "colors": [
-          "pink",
-          "white",
-          "lavender"
+          "purple",
+          "crimson"
         ]
       },
       "berry": null,
       "seed": {
         "months": [
+          7,
           8,
-          9,
-          10
+          9
         ],
-        "description": "Follicles split to release silk-borne seeds on autumn winds; important for local patch dynamics and fall finch foraging on floss"
+        "description": "Large spindle-shaped follicles split to release silk-borne seeds on summer winds; seeds colonize rocky openings and road cuts"
       },
-      "ecologicalValue": "Monarch host plant; complex floral morphology supports diverse pollinators; milky latex structures a specialized arthropod community."
+      "ecologicalValue": "Monarch host plant; complex floral morphology supports diverse pollinators; milky latex structures a specialized arthropod community including milkweed bugs and beetles."
     },
     "wildlife": [
       {
@@ -2096,12 +2082,11 @@
           5,
           6,
           7,
-          8,
-          9
+          8
         ],
         "species": "Monarch butterfly",
         "activity": "caterpillar-host",
-        "notes": "Danaus plexippus larvae feed on milkweed foliage; narrowleaf milkweed is a core California host lineage.",
+        "notes": "Danaus plexippus larvae feed on milkweed foliage; heart-leaf milkweed is the primary monarch host plant in Sierra foothill oak woodland.",
         "image": {
           "url": "",
           "attribution": "",
@@ -2110,14 +2095,13 @@
       },
       {
         "months": [
+          5,
           6,
-          7,
-          8,
-          9
+          7
         ],
-        "species": "Queen butterfly",
-        "activity": "caterpillar-host",
-        "notes": "Danaus gilippus uses milkweeds where populations occur; adds host redundancy in warm foothill pockets.",
+        "species": "Bombus vosnesenskii (Yellow-faced Bumble Bee)",
+        "activity": "nectar-pollen",
+        "notes": "Workers and queens forage on the deep crimson flower clusters; complex floral traps ensure effective pollination.",
         "image": {
           "url": "",
           "attribution": "",
@@ -2128,12 +2112,11 @@
         "months": [
           6,
           7,
-          8,
-          9
+          8
         ],
         "species": "Lygaeus kalmii (Small Milkweed Bug)",
         "activity": "eating-seeds",
-        "notes": "Specialist seed-feeder on milkweed follicles; part of the native milkweed food web rather than a garden failure signal.",
+        "notes": "Specialist seed-feeder on milkweed follicles; a sign of a functioning milkweed patch, not a pest.",
         "image": {
           "url": "",
           "attribution": "",
@@ -2144,8 +2127,7 @@
         "months": [
           7,
           8,
-          9,
-          10
+          9
         ],
         "species": "Lesser Goldfinch",
         "activity": "eating-seeds",
@@ -2159,32 +2141,31 @@
     ]
   },
   {
-    "id": "solidago-velutina-subsp-californica",
+    "id": "iris-macrosiphon",
     "commonNames": [
-      "California Goldenrod"
+      "Bowltube Iris",
+      "Ground Iris"
     ],
-    "scientificName": "Solidago velutina subsp. californica",
-    "synonyms": [
-      "Solidago californica"
-    ],
+    "scientificName": "Iris macrosiphon",
+    "synonyms": [],
     "category": "herbaceous-perennial",
-    "isKeystone": true,
-    "wildlifeSpeciesSupported": 61,
-    "description": "Late-summer and fall goldenrod of woodland openings whose yellow plumes arrive when many spring flowers are finished, extending pollinator forage into migration season. Tallamy-style keystone value comes from super-abundant small florets that concentrate bees, wasps, and butterflies while seeds feed finches after frost.",
+    "isKeystone": false,
+    "wildlifeSpeciesSupported": 28,
+    "description": "A delicate woodland iris of Sierra foothill oak openings and grassy slopes — one of the most frequently observed native plants in the Auburn area with 130+ research-grade observations. Its cream-to-purple flowers with intricate veining bloom in spring, providing early-season nectar when pollinators are emerging. Forms dense clumps that stabilize thin foothill soils.",
     "image": {
       "url": "",
       "attribution": "",
       "iNaturalistUrl": ""
     },
-    "calscapeUrl": "https://calscape.org/Solidago-velutina-ssp.-californica-(California-Goldenrod)",
+    "calscapeUrl": "https://calscape.org/Iris-macrosiphon-(Bowltube-Iris)",
     "iNaturalistData": {
-      "taxonId": 80217,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=80217&place_id=5299"
+      "taxonId": 54057,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=54057&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
-      "sunExposure": "Full Sun, Partial Shade",
-      "slopeRequirements": "Road cuts, meadow edges, and oak margins; tolerates moderate competition if crown drainage is good",
-      "soilRequirements": "Loam to rocky loam; tolerates seasonal drought once established; not for constantly soggy clay"
+      "sunExposure": "Partial Shade, Full Sun (with afternoon shade in hot foothills)",
+      "slopeRequirements": "Oak woodland edges, grassy slopes, and light gaps; does well on north-facing or east-facing slopes",
+      "soilRequirements": "Well-drained loam to clay loam; tolerates seasonal dryness; prefers some organic matter from leaf litter"
     },
     "maintenance": {
       "wateringSchedule": {
@@ -2193,87 +2174,57 @@
         "mar": 0,
         "apr": 0,
         "may": 0,
-        "jun": 1,
-        "jul": 1,
+        "jun": 0,
+        "jul": 0,
         "aug": 0,
         "sep": 0,
         "oct": 0,
         "nov": 0,
         "dec": 0
       },
-      "wateringNotes": "Mostly rain-fed once established; in harsh interior heat, an occasional June\u2013July deep soak can prevent premature senescence before bloom.",
+      "wateringNotes": "No summer water once established — goes dormant in summer like most foothill bulbs and rhizomatous perennials. Let it rest dry.",
       "pruningMonths": [
-        11,
-        12
+        7,
+        8
       ],
-      "pruningTask": "Cut spent stems after seed drop; leave standing through early winter if finch seed use is a goal",
-      "pruningNotes": "Late-fall cleanup reduces disease carryover without removing all winter perch structure if delayed.",
-      "specialNotes": "Goldenrod is wind-pollinated and not a major ragweed allergen\u2014use this fact when neighbors object to yellow spikes."
+      "pruningTask": "Remove dried foliage after summer dormancy begins if desired for aesthetics",
+      "pruningNotes": "Mostly maintenance-free; the clump expands slowly and rarely needs division.",
+      "specialNotes": "Deer-resistant. Combine with other shade-tolerant foothill perennials under oaks for a naturalistic woodland garden."
     },
     "phenology": {
       "bloom": {
         "months": [
-          7,
-          8,
-          9,
-          10
+          3,
+          4,
+          5
         ],
         "colors": [
-          "yellow"
+          "cream",
+          "lavender",
+          "purple"
         ]
       },
       "berry": null,
       "seed": {
         "months": [
-          9,
-          10,
-          11
+          5,
+          6,
+          7
         ],
-        "description": "Copious small achenes with pappus disperse in autumn winds; finches glean seeds from upright stalks"
+        "description": "Capsules mature after bloom; seeds drop near parent plants and are dispersed by gravity and ants"
       },
-      "ecologicalValue": "Late-season nectar and pollen for migrating insects; structural stems for overwintering cavity-nesters\u2019 foraging substrate nearby."
+      "ecologicalValue": "Early spring nectar and pollen for emerging native bees and butterflies; dense rhizomatous growth stabilizes foothill soils and provides ground-level cover for invertebrates."
     },
     "wildlife": [
       {
         "months": [
-          7,
-          8,
-          9,
-          10
-        ],
-        "species": "Painted Lady butterfly",
-        "activity": "nectar-pollen",
-        "notes": "Migratory pulses track late composites during warm autumn flights.",
-        "image": {
-          "url": "",
-          "attribution": "",
-          "iNaturalistUrl": ""
-        }
-      },
-      {
-        "months": [
-          8,
-          9,
-          10
-        ],
-        "species": "California Tortoiseshell",
-        "activity": "nectar-pollen",
-        "notes": "Uses goldenrod heads during autumn nectar windows in foothill openings.",
-        "image": {
-          "url": "",
-          "attribution": "",
-          "iNaturalistUrl": ""
-        }
-      },
-      {
-        "months": [
-          8,
-          9,
-          10
+          3,
+          4,
+          5
         ],
         "species": "Bombus vosnesenskii (Yellow-faced Bumble Bee)",
         "activity": "nectar-pollen",
-        "notes": "Queens and workers bulk on late goldenrod before winter dormancy cycles.",
+        "notes": "Early-emerging queens forage on iris flowers during the critical spring build-up period.",
         "image": {
           "url": "",
           "attribution": "",
@@ -2282,13 +2233,27 @@
       },
       {
         "months": [
-          9,
-          10,
-          11
+          3,
+          4,
+          5
         ],
-        "species": "Lesser Goldfinch",
-        "activity": "eating-seeds",
-        "notes": "Shreds composite heads for mature achenes as seed availability shifts into fall.",
+        "species": "Anna's Hummingbird",
+        "activity": "nectar-pollen",
+        "notes": "Visits iris flowers for nectar, especially the deeper-tubed purple forms.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          4,
+          5
+        ],
+        "species": "Painted Lady butterfly",
+        "activity": "nectar-pollen",
+        "notes": "Spring migrants use iris nectar during the northward movement through foothill grasslands.",
         "image": {
           "url": "",
           "attribution": "",
@@ -2316,7 +2281,7 @@
     "calscapeUrl": "https://calscape.org/Lupinus-albifrons-(Silver-Lupine)",
     "iNaturalistData": {
       "taxonId": 51691,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=51691&place_id=5299"
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=51691&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
       "sunExposure": "Full Sun",
@@ -2457,7 +2422,7 @@
     "calscapeUrl": "https://calscape.org/Clarkia-unguiculata-(Elegant-Clarkia)",
     "iNaturalistData": {
       "taxonId": 51735,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=51735&place_id=5299"
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=51735&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
       "sunExposure": "Partial Shade, Full Sun",
@@ -2597,7 +2562,7 @@
     "calscapeUrl": "https://calscape.org/Eschscholzia-californica-(California-Poppy)",
     "iNaturalistData": {
       "taxonId": 48225,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=48225&place_id=5299"
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=48225&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
       "sunExposure": "Full Sun",
@@ -2738,7 +2703,7 @@
     "calscapeUrl": "https://calscape.org/Achillea-millefolium-(Common-Yarrow)",
     "iNaturalistData": {
       "taxonId": 52821,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=52821&place_id=5299"
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=52821&nelat=38.986542&nelng=-120.9610799&swlat=38.831071&swlng=-121.191049"
     },
     "plantingRequirements": {
       "sunExposure": "Full Sun, Partial Shade",

@@ -93,7 +93,7 @@ Each Place of Interest uses one of two modes for iNaturalist API queries:
 
 | Mode | iNaturalist API Parameter | When to Use |
 |---|---|---|
-| **`place_id`** | `place_id=N` (integer) | Preferred when an iNaturalist place exists for the region. Uses iNaturalist's curated polygon boundary (often more accurate than a rectangle). Find place IDs via `https://api.inaturalist.org/v1/places/autocomplete?q=PLACE_NAME` or on the iNaturalist website URL (e.g., `inaturalist.org/observations?place_id=5299`). |
+| **`place_id`** | `place_id=N` (integer) | Preferred when an iNaturalist place exists for the region. Uses iNaturalist's curated polygon boundary (often more accurate than a rectangle). Find place IDs via `https://api.inaturalist.org/v1/places/autocomplete?q=PLACE_NAME` or on the iNaturalist website URL (e.g., `inaturalist.org/observations?place_id=962` for San Diego County). |
 | **Bounding box** | `nelat=...&nelng=...&swlat=...&swlng=...` | Fallback when no suitable iNaturalist place exists, or when a custom rectangular area is needed. |
 
 A Place of Interest may specify **both** — the `place_id` is used for API calls (polygon precision) while the bounding box is used as a fallback and for the "View on iNaturalist" search URL. If only one is provided, that mode is used for everything.
@@ -103,7 +103,7 @@ A Place of Interest may specify **both** — the `place_id` is used for API call
 | Place ID | Display Name | Ecosystem | iNaturalist Place ID | Bounding Box |
 |---|---|---|---|---|
 | `poway-ca` | Poway, California | Coastal Sage Scrub | — | nelat: 33.0652649, nelng: -116.9575429, swlat: 32.899128, swlng: -117.103013 |
-| `auburn-ca` | Auburn, California | Sierra Foothills Oak Woodland / Chaparral | `5299` (Auburn State Recreation Area) | nelat: 38.986542, nelng: -120.9610799, swlat: 38.831071, swlng: -121.191049 |
+| `auburn-ca` | Auburn, California (95603) | Sierra Foothills Oak Woodland / Chaparral | — | nelat: 38.986542, nelng: -120.9610799, swlat: 38.831071, swlng: -121.191049 |
 
 ### 3.1 Plant Inventory
 
@@ -242,7 +242,7 @@ A month-by-month wildlife interaction calendar per plant:
     "shortName": "Auburn, CA",
     "ecosystem": "Sierra Foothills Oak Woodland / Chaparral",
     "ecosystemDescription": "Auburn sits at the transition between the Sacramento Valley floor and the Sierra Nevada foothills, in a zone of blue oak woodland, interior live oak chaparral, and mixed foothill pine. These habitats support an extraordinary diversity of woodpeckers, raptors, and native pollinators.",
-    "iNaturalistPlaceId": 5299,
+    "iNaturalistPlaceId": null,
     "boundingBox": {
       "nelat": 38.986542,
       "nelng": -120.9610799,
@@ -476,12 +476,12 @@ The following genera are designated as keystone by the National Wildlife Federat
 | 8 | *Sambucus nigra* subsp. *caerulea* | Blue Elderberry | Large Shrub | Yes | Keystone genus; berries are critical bird food; host for Valley Elderberry Longhorn Beetle (threatened species) |
 | 9 | *Rhamnus ilicifolia* | Hollyleaf Redberry | Large Shrub | No | High wildlife support; berries eaten by many bird species; caterpillar host |
 | 10 | *Eriogonum nudum* | Naked Buckwheat | Small Shrub | Yes | Keystone genus (*Eriogonum*); important pollinator plant in foothill habitats |
-| 11 | *Salvia sonomensis* | Sonoma Sage | Small Shrub | Yes | Keystone genus; groundcover sage; pollinator magnet in foothills |
+| 11 | *Epilobium canum* | California Fuchsia | Small Shrub | No | Premier late-season hummingbird resource (55 obs in bbox); fills summer–fall nectar gap when nothing else blooms |
 | 12 | *Artemisia douglasiana* | Mugwort | Small Shrub | Yes | Keystone genus; caterpillar host for Painted Lady and other butterflies |
 | 13 | *Eriodictyon californicum* | Yerba Santa | Small Shrub | No | High pollinator value; butterfly host plant; important foothill native |
 | 14 | *Mimulus aurantiacus* | Sticky Monkeyflower | Small Shrub | No | Key hummingbird plant; long bloom season; Buckeye butterfly host |
-| 15 | *Asclepias fascicularis* | Narrowleaf Milkweed | Herbaceous Perennial | Yes | Keystone genus; obligate Monarch host; found throughout California |
-| 16 | *Solidago californica* | California Goldenrod | Herbaceous Perennial | Yes | Keystone genus (*Solidago*); late-season pollinator resource; high caterpillar support |
+| 15 | *Asclepias cordifolia* | Heart-leaf Milkweed | Herbaceous Perennial | Yes | Keystone genus; dominant foothill Monarch host (93 obs vs 15 for narrowleaf); far more hyperlocal |
+| 16 | *Iris macrosiphon* | Bowltube Iris | Herbaceous Perennial | No | 6th most observed native in bbox (130 obs); spring nectar for emerging pollinators; no *Solidago* present in area |
 | 17 | *Lupinus albifrons* | Silver Lupine | Herbaceous Perennial | Yes | Keystone genus; nitrogen-fixer; butterfly host; beautiful foothill native |
 | 18 | *Clarkia unguiculata* | Elegant Clarkia | Groundcover — Annual | No | High pollinator value; important spring wildflower; easy to grow from seed |
 | 19 | *Eschscholzia californica* | California Poppy | Groundcover — Annual | No | State flower; important pollinator resource; easy groundcover |
@@ -594,7 +594,7 @@ The section should be brief and welcoming to non-technical users (GitHub issues 
 | 5 | **Plant categories** | Six categories: Large Tree, Large Shrub, Small Shrub, Herbaceous Perennial, Groundcover — Perennial, Groundcover — Annual. No vine or succulent categories. |
 | 6 | **Wildlife images** | Sourced from iNaturalist under Creative Commons, same hotlink + cache strategy as plant images. |
 | 7 | **Multi-region architecture** | One `places.json` for region metadata; one `plants-{place-id}.json` per region. Client-side JS loads the active region's data file and scopes all iNaturalist API calls to that region's geographic scope (`place_id` or bounding box). |
-| 10 | **Geographic scoping** | Each Place of Interest can define its area via an iNaturalist `place_id` (integer — preferred, uses curated polygon boundaries) or a bounding box (4 coordinates — fallback). If both are provided, `place_id` is used for API calls and the bounding box for the "View on iNaturalist" search URL. Example: Auburn uses `place_id=5299` (Auburn State Recreation Area) for precise polygon-based queries. |
+| 10 | **Geographic scoping** | Each Place of Interest can define its area via an iNaturalist `place_id` (integer — preferred, uses curated polygon boundaries) or a bounding box (4 coordinates — fallback). If both are provided, `place_id` is used for API calls and the bounding box for the "View on iNaturalist" search URL. Both Auburn (95603) and Poway use bounding boxes; future regions may use `place_id` when a suitable iNaturalist place exists. |
 | 8 | **Plant selection methodology** | Tallamy-inspired: keystone species first, then wildlife-support count, then iNaturalist observation density. 3–5 species per structural category per region. |
 | 9 | **Codebase** | Modeled after the [SD Habitat reference project](https://github.com/chetanddesai/sd-habitat) — same HTML/CSS/JS structure, card design, tab system, and garden calendar. Extended with Place of Interest switching. |
 

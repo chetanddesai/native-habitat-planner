@@ -20,7 +20,7 @@ This site curates native plant inventories for specific geographic regions, sele
 
 | Region | Ecosystem | Plants | Geographic Scope |
 |---|---|---|---|
-| **Auburn, CA** | Sierra Foothills Oak Woodland / Chaparral | 20 | iNaturalist `place_id=5299` |
+| **Auburn, CA** (95603) | Sierra Foothills Oak Woodland / Chaparral | 20 | Bounding box |
 | **Poway, CA** | Coastal Sage Scrub | 20 | Bounding box |
 
 ## Features

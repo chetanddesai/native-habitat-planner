@@ -76,7 +76,7 @@ Derived from the [Product Requirements Document](PRD.md) §2.
 | 7   | **Geographic scope is stored in `places.json`, not hardcoded**                                          | Unlike the reference project (single hardcoded bounding box), all geographic scoping lives in the data layer. Each place may specify an `iNaturalistPlaceId` (integer, preferred) and/or a `boundingBox` (4 coordinates, fallback). The JS reads the active place's scope from `places.json` and injects either `place_id=N` or `nelat=...&swlat=...` into every iNaturalist API call. Using `place_id` is preferred because iNaturalist places use curated polygon boundaries (not just rectangles), producing more precise observation data. Adding a new region requires zero code changes. |
 | 8   | **Browser must support ES2020+**                                                                        | The app uses optional chaining (`?.`), `Promise.all`, `async/await`, `IntersectionObserver`, `Map`, `Set`, and template literals. Supported by all target browsers (latest 2 versions of Chrome, Safari, Firefox, Edge).                                                                                                                                                                                                                                                                                                                                                                       |
 | 9   | **Plants may appear in multiple regions**                                                               | The same species (e.g., *Heteromeles arbutifolia*) may appear in both Poway and Auburn data files. Each region's JSON entry is independent — it has its own `iNaturalistData.searchUrl` scoped to that region's geographic scope. Cache entries are keyed by `{placeId}:{taxonId}`, so observation data is stored separately per region.                                                                                                                                                                                                                                                       |
-| 10  | **iNaturalist `place_id` provides polygon precision**                                                   | When a place has an iNaturalist `place_id` (e.g., `5299` for Auburn State Recreation Area), API queries use that instead of a bounding box. This means observation data is scoped to the actual geographic polygon rather than a rough rectangle. The `boundingBox` is still stored as a fallback (for the "View on iNaturalist" search URL and for places without an iNaturalist ID). Both fields are optional — at least one must be present.                                                                                                                                                |
+| 10  | **iNaturalist `place_id` provides polygon precision**                                                   | When a place has an iNaturalist `place_id`, API queries use that instead of a bounding box. This means observation data is scoped to the actual geographic polygon rather than a rough rectangle. The `boundingBox` is still stored as a fallback (for the "View on iNaturalist" search URL and for places without an iNaturalist ID). Both fields are optional — at least one must be present. Currently both Auburn (95603) and Poway use bounding boxes; future regions may use `place_id` when a suitable iNaturalist place exists.                                                          |
 
 
 ---
@@ -344,7 +344,7 @@ sequenceDiagram
     Note over JS: Plant cards re-rendered for Auburn species
 
     JS->>JS: renderCalendar(plants, activePlace)
-    Note over JS: Wildlife + maintenance scoped to Auburn (place_id=5299)
+    Note over JS: Wildlife + maintenance scoped to Auburn (bounding box)
 
     JS->>JS: renderPhenologyChart(plants)
     JS->>JS: renderAbout(activePlace)
@@ -356,7 +356,7 @@ sequenceDiagram
 
         loop Wildlife observations
             JS->>JS: fetchWildlifeObs("auburn-ca", species)
-            Note over JS: Uses Auburn geo scope (place_id=5299) in API calls
+            Note over JS: Uses Auburn geo scope (bounding box) in API calls
         end
     end
 ```
@@ -663,7 +663,7 @@ function buildHistogramUrl(taxonId, interval) {
 }
 ```
 
-No geographic scope is ever hardcoded in JavaScript. All scoping flows from `places.json` → `state.activePlace` → `buildGeoParams()` → API call URL. The `place_id` approach is preferred because iNaturalist places use curated polygon boundaries — for example, `place_id=5299` (Auburn State Recreation Area) scopes queries to the actual park boundary rather than a rough rectangle.
+No geographic scope is ever hardcoded in JavaScript. All scoping flows from `places.json` → `state.activePlace` → `buildGeoParams()` → API call URL. The `place_id` approach is preferred when available because iNaturalist places use curated polygon boundaries rather than rough rectangles. Currently both Auburn (95603) and Poway use bounding boxes; future regions may use `place_id` when a suitable iNaturalist place exists.
 
 ---
 

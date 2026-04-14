@@ -32,7 +32,7 @@ Confirm with the user:
 
 1. **City and state** (required — e.g., "Sacramento, CA")
 2. **Geographic scope** (required — at least one of the following):
-   - **iNaturalist `place_id`** (preferred) — An integer ID for a named place on iNaturalist. This uses iNaturalist's curated polygon boundary, which is more precise than a rectangle. Examples: `place_id=5299` (Auburn State Recreation Area), `place_id=962` (San Diego County).
+   - **iNaturalist `place_id`** (preferred) — An integer ID for a named place on iNaturalist. This uses iNaturalist's curated polygon boundary, which is more precise than a rectangle. Examples: `place_id=962` (San Diego County), `place_id=14` (San Francisco).
      - Find it on the iNaturalist website: search for a place at `https://www.inaturalist.org/observations?place_id=` — the `place_id` appears in the URL
      - Or use the API: `https://api.inaturalist.org/v1/places/autocomplete?q=PLACE_NAME` — the `id` field in results is the `place_id`
    - **Bounding box** (fallback) — Four coordinates: `nelat`, `nelng`, `swlat`, `swlng`. Use when no suitable iNaturalist place exists or a custom rectangular area is needed.

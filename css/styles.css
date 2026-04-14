@@ -373,21 +373,76 @@ select, input { font: inherit; }
   outline: 2px solid var(--c-sage);
   outline-offset: -2px;
 }
-.plant-card-img {
+.plant-card-img-wrap {
+  position: relative;
   width: 90px;
   height: 90px;
   border-radius: var(--radius-sm);
-  object-fit: cover;
   flex-shrink: 0;
+  overflow: hidden;
   background: var(--c-sand-dark);
 }
-.plant-card-img.loading {
-  animation: skeleton 1.2s ease-in-out infinite;
+.plant-card-img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  display: block;
 }
-@keyframes skeleton {
-  0%, 100% { opacity: .6; }
-  50% { opacity: .3; }
+/* ---- Image loading / failed states ---- */
+.img-loading {
+  position: relative;
+  overflow: hidden;
 }
+.img-loading::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--c-sand) 0%, var(--c-sand-dark) 50%, var(--c-sand) 100%);
+  background-size: 200% 200%;
+  animation: shimmer 1.6s ease-in-out infinite;
+  z-index: 1;
+}
+.img-loading::after {
+  content: '🌱';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  opacity: .45;
+  z-index: 2;
+}
+.img-loading.img-circle::after { font-size: 1rem; }
+.img-loading.img-sm::after { font-size: 0.9rem; }
+@keyframes shimmer {
+  0% { background-position: 200% 200%; }
+  100% { background-position: 0% 0%; }
+}
+.img-failed {
+  position: relative;
+}
+.img-failed::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--c-sand-dark);
+  z-index: 1;
+}
+.img-failed::after {
+  content: '🍃';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  opacity: .35;
+  z-index: 2;
+}
+.img-failed.img-circle::after { font-size: 1rem; }
+.img-failed.img-sm::after { font-size: 0.9rem; }
 .plant-card-info { flex: 1; min-width: 0; }
 .plant-card-name {
   font-family: var(--font-heading);
@@ -462,12 +517,20 @@ select, input { font: inherit; }
   width: 200px;
   flex-shrink: 0;
 }
-.plant-detail-hero img {
+.plant-detail-img-wrap {
+  position: relative;
   width: 100%;
-  border-radius: var(--radius-sm);
   aspect-ratio: 4/3;
-  object-fit: cover;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
   background: var(--c-sand-dark);
+}
+.plant-detail-img-wrap img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  display: block;
 }
 .plant-detail-hero .attribution {
   font-size: 0.72rem;
@@ -718,13 +781,21 @@ select, input { font: inherit; }
   align-items: flex-start;
 }
 .wildlife-entry:last-child { border-bottom: none; }
-.wildlife-img {
+.wildlife-img-wrap {
+  position: relative;
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  object-fit: cover;
   flex-shrink: 0;
+  overflow: hidden;
   background: var(--c-sand-dark);
+}
+.wildlife-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
 }
 .wildlife-info { flex: 1; }
 .wildlife-species {
@@ -898,13 +969,21 @@ select, input { font: inherit; }
   padding: 8px 0;
   border-bottom: 1px solid rgba(0,0,0,.06);
 }
-.cal-wl-img {
+.cal-wl-img-wrap {
+  position: relative;
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  object-fit: cover;
   flex-shrink: 0;
+  overflow: hidden;
   background: var(--c-sand-dark);
+}
+.cal-wl-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
 }
 .cal-wl-info { min-width: 0; }
 .cal-wl-name {

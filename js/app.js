@@ -257,15 +257,13 @@
   }
 
   function applyImage(img, photoData) {
-    img.onload = () => img.classList.remove('loading');
+    const wrap = img.parentElement;
+    img.onload = () => { if (wrap) { wrap.classList.remove('img-loading'); } };
     img.onerror = () => showImageFailed(img);
     img.src = photoData.url;
 
-    const creditEl = img.parentElement?.querySelector('.img-credit');
-    if (creditEl) {
-      creditEl.innerHTML = `<a href="${photoData.inatUrl}" target="_blank" rel="noopener" title="${photoData.attribution}">iNaturalist</a>`;
-    }
-    const attrEl = img.parentElement?.querySelector('.attribution');
+    const hero = img.closest('.plant-detail-hero');
+    const attrEl = hero?.querySelector('.attribution');
     if (attrEl) {
       attrEl.innerHTML = `<a href="${photoData.inatUrl}" target="_blank" rel="noopener">${photoData.attribution}</a>`;
     }
@@ -279,8 +277,12 @@
   }
 
   function showImageFailed(img) {
-    img.classList.remove('loading');
-    img.alt = 'Photo unavailable';
+    const wrap = img.parentElement;
+    if (wrap) {
+      wrap.classList.remove('img-loading');
+      wrap.classList.add('img-failed');
+    }
+    img.style.visibility = 'hidden';
   }
 
   function setupImageObserver() {
@@ -509,7 +511,7 @@
       : '';
     return `<article class="plant-card" data-id="${p.id}">
       <div class="plant-card-header" tabindex="0" role="button" aria-expanded="false" aria-label="Expand details for ${p.commonNames[0]}">
-        <img class="plant-card-img loading" data-species="${p.scientificName}" alt="${p.commonNames[0]}" width="90" height="90">
+        <div class="plant-card-img-wrap img-loading"><img class="plant-card-img" data-species="${p.scientificName}" alt="${p.commonNames[0]}" width="90" height="90"></div>
         <div class="plant-card-info">
           <div class="plant-card-name">${p.commonNames[0]}</div>
           <div class="plant-card-scientific">${p.scientificName}</div>
@@ -569,7 +571,7 @@
     return `
       <div class="plant-detail-top">
         <div class="plant-detail-hero">
-          <img data-species="${p.scientificName}" alt="${p.commonNames[0]}" class="loading">
+          <div class="plant-detail-img-wrap img-loading"><img data-species="${p.scientificName}" alt="${p.commonNames[0]}"></div>
           <div class="attribution"></div>
         </div>
         <div class="plant-detail-body">
@@ -671,7 +673,7 @@
         return `<div class="wl-month ${cls}"><span class="wl-month-label">${MONTHS[i]}</span></div>`;
       }).join('');
 
-      const imgHtml = `<a class="wildlife-img-link" target="_blank" rel="noopener"><img class="wildlife-img loading" data-species="${escapeAttr(w.species)}" alt="${escapeAttr(w.species)}" width="60" height="60"></a>`;
+      const imgHtml = `<a class="wildlife-img-link" target="_blank" rel="noopener"><div class="wildlife-img-wrap img-loading img-circle"><img class="wildlife-img" data-species="${escapeAttr(w.species)}" alt="${escapeAttr(w.species)}" width="60" height="60"></div></a>`;
 
       return `<div class="wildlife-entry">
         ${imgHtml}
@@ -825,7 +827,7 @@
         `<span class="cal-wl-interaction">${i.activity} on ${i.plants.join(', ')}</span>`
       ).join('');
       return `<div class="cal-wl-card wildlife-entry">
-        <a class="wildlife-img-link cal-wl-img-link" target="_blank" rel="noopener"><img class="cal-wl-img loading" data-species="${escapeAttr(w.species)}" alt="${escapeAttr(w.species)}" width="48" height="48"></a>
+        <a class="wildlife-img-link cal-wl-img-link" target="_blank" rel="noopener"><div class="cal-wl-img-wrap img-loading img-circle img-sm"><img class="cal-wl-img" data-species="${escapeAttr(w.species)}" alt="${escapeAttr(w.species)}" width="48" height="48"></div></a>
         <div class="cal-wl-info">
           <a class="wildlife-species-link cal-wl-name" target="_blank" rel="noopener">${w.species}</a>
           <span class="cal-wl-detail">${w.obs} obs/mo</span>

@@ -44,7 +44,7 @@ Read `data/places.json` to find the target region's geographic scope. Each place
 | Place ID | iNaturalist Place ID | Bounding Box |
 |---|---|---|
 | `poway-ca` | — (uses bounding box) | nelat: 33.0652649, nelng: -116.9575429, swlat: 32.899128, swlng: -117.103013 |
-| `auburn-ca` | `5299` (Auburn State Recreation Area) | nelat: 38.986542, nelng: -120.9610799, swlat: 38.831071, swlng: -121.191049 |
+| `auburn-ca` | — (uses bounding box) | nelat: 38.986542, nelng: -120.9610799, swlat: 38.831071, swlng: -121.191049 |
 
 **Geographic parameter for API calls:** If the place has `iNaturalistPlaceId`, use `place_id=N` in API URLs. Otherwise, use `nelat=...&nelng=...&swlat=...&swlng=...`.
 
@@ -286,7 +286,7 @@ else:
 Poway, CA:    iNaturalistPlaceId: null
               boundingBox: nelat: 33.0652649, nelng: -116.9575429, swlat: 32.899128, swlng: -117.103013
 
-Auburn, CA:   iNaturalistPlaceId: 5299 (Auburn State Recreation Area)
+Auburn, CA:   iNaturalistPlaceId: null (uses bounding box)
               boundingBox: nelat: 38.986542, nelng: -120.9610799, swlat: 38.831071, swlng: -121.191049
 ```
 
