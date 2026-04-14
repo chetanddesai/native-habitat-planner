@@ -16,7 +16,7 @@ description: >-
 
 This skill orchestrates the full workflow for onboarding a new geographic region:
 
-1. Gather city/region info and bounding box
+1. Gather city/region info and geographic scope (iNaturalist `place_id` or bounding box)
 2. Identify the local ecosystem
 3. Run the Tallamy-inspired plant selection algorithm (PRD §5) for each structural category
 4. Present the candidate plant list for user approval
@@ -31,10 +31,14 @@ This skill orchestrates the full workflow for onboarding a new geographic region
 Confirm with the user:
 
 1. **City and state** (required — e.g., "Sacramento, CA")
-2. **Bounding box** (required — `nelat`, `nelng`, `swlat`, `swlng`). If the user doesn't know the coordinates, help them find it:
-   - Go to https://www.openstreetmap.org, search for the city, and note the bounding box from the URL
-   - Or use the iNaturalist "Places" search: `https://api.inaturalist.org/v1/places/autocomplete?q=CITY_NAME` — the `bounding_box_geojson` in results gives the coordinates
-   - Or ask the user to draw a box on Google Maps and read the corner coordinates
+2. **Geographic scope** (required — at least one of the following):
+   - **iNaturalist `place_id`** (preferred) — An integer ID for a named place on iNaturalist. This uses iNaturalist's curated polygon boundary, which is more precise than a rectangle. Examples: `place_id=5299` (Auburn State Recreation Area), `place_id=962` (San Diego County).
+     - Find it on the iNaturalist website: search for a place at `https://www.inaturalist.org/observations?place_id=` — the `place_id` appears in the URL
+     - Or use the API: `https://api.inaturalist.org/v1/places/autocomplete?q=PLACE_NAME` — the `id` field in results is the `place_id`
+   - **Bounding box** (fallback) — Four coordinates: `nelat`, `nelng`, `swlat`, `swlng`. Use when no suitable iNaturalist place exists or a custom rectangular area is needed.
+     - Go to https://www.openstreetmap.org, search for the city, and note the bounding box from the URL
+     - Or ask the user to draw a box on Google Maps and read the corner coordinates
+   - **Both** — If both are provided, `place_id` is used for API calls (polygon precision) and the bounding box is used for the "View on iNaturalist" search URL fallback.
 3. **Target plant count per category** — default is 3–5 per category (the user may want fewer for a smaller garden or more for a larger project). Confirm the target.
 
 ---
@@ -42,7 +46,7 @@ Confirm with the user:
 ## Workflow
 
 ```
-- [ ] Phase 1: Setup — gather city info, bounding box, ecosystem
+- [ ] Phase 1: Setup — gather city info, geographic scope (place_id or bbox), ecosystem
 - [ ] Phase 2: Discovery — query iNaturalist + Calscape for candidate plants
 - [ ] Phase 3: Selection — rank candidates and select top species per category
 - [ ] Phase 4: Approval — present the list to the user for review
@@ -81,10 +85,39 @@ Write a 2–3 sentence `ecosystemDescription` covering:
 - Why it's ecologically important or threatened
 - Why backyard habitat gardens matter here
 
-#### 1c. Verify the Bounding Box
+#### 1c. Look Up iNaturalist Place ID (if not provided)
 
-Run a quick iNaturalist query to confirm the bounding box returns plant observations:
+If the user provides a place name but not a `place_id`, look it up:
 
+```bash
+curl -s "https://api.inaturalist.org/v1/places/autocomplete?q=PLACE_NAME&per_page=5" | python3 -c "
+import json, sys
+data = json.load(sys.stdin)
+for r in data.get('results', []):
+    print(f'  place_id={r[\"id\"]:>6d} | {r[\"display_name\"]} | bbox_area={r.get(\"bbox_area\",\"?\")}')
+"
+```
+
+Pick the most appropriate result. Prefer places with a reasonable `bbox_area` (city-level, not county or state). Common place types on iNaturalist: cities, counties, state parks, recreation areas, open space preserves.
+
+#### 1d. Verify the Geographic Scope
+
+Run a quick iNaturalist query to confirm the scope returns plant observations. Use whichever mode applies:
+
+**If using `place_id`:**
+```bash
+curl -s "https://api.inaturalist.org/v1/observations/species_counts?place_id=PLACE_ID&iconic_taxa=Plantae&quality_grade=research&per_page=5" | python3 -c "
+import json, sys
+data = json.load(sys.stdin)
+total = data.get('total_results', 0)
+print(f'Total plant species observed in place: {total}')
+for r in data.get('results', [])[:5]:
+    t = r.get('taxon', {})
+    print(f'  {t.get(\"name\",\"?\")} ({t.get(\"preferred_common_name\",\"?\")}) — {r.get(\"count\",0)} obs')
+"
+```
+
+**If using bounding box:**
 ```bash
 curl -s "https://api.inaturalist.org/v1/observations/species_counts?nelat=NELAT&nelng=NELNG&swlat=SWLAT&swlng=SWLNG&iconic_taxa=Plantae&quality_grade=research&per_page=5" | python3 -c "
 import json, sys
@@ -97,7 +130,7 @@ for r in data.get('results', [])[:5]:
 "
 ```
 
-If `total_results` is < 50, the bounding box may be too small — suggest expanding it. If > 5000, it may be too large or cover diverse ecosystems — suggest narrowing.
+If `total_results` is < 50, the scope may be too small — suggest expanding it or using a broader place. If > 5000, it may be too large or cover diverse ecosystems — suggest narrowing.
 
 ---
 
@@ -123,9 +156,12 @@ These genera are the starting point. For each category, look for species in thes
 
 For each category, run a species_counts query filtered to relevant taxa. Use `iconic_taxa=Plantae` and filter by observation count to find what actually grows in the area.
 
-**For trees** — query for order Fagales (oaks, birches), Salicales (willows, poplars), Sapindales (maples), etc.:
+Build the geographic parameter string based on the place's scope:
+- If `place_id` is available: `GEO_PARAM="place_id=PLACE_ID"`
+- If using bounding box: `GEO_PARAM="nelat=NELAT&nelng=NELNG&swlat=SWLAT&swlng=SWLNG"`
+
 ```bash
-curl -s "https://api.inaturalist.org/v1/observations/species_counts?nelat=NELAT&nelng=NELNG&swlat=SWLAT&swlng=SWLNG&iconic_taxa=Plantae&quality_grade=research&per_page=200&native=true" | python3 -c "
+curl -s "https://api.inaturalist.org/v1/observations/species_counts?${GEO_PARAM}&iconic_taxa=Plantae&quality_grade=research&per_page=200&native=true" | python3 -c "
 import json, sys
 data = json.load(sys.stdin)
 print(f'Total native plant species: {data.get(\"total_results\", 0)}')
@@ -183,7 +219,7 @@ PRIORITY 2 — Wildlife species supported (Calscape count)
   Among species at the same keystone tier, the one with the highest Calscape
   wildlife-supported count ranks higher.
 
-PRIORITY 3 — iNaturalist observation count in the bounding box
+PRIORITY 3 — iNaturalist observation count in the geographic scope
   As a tiebreaker and confirmation of hyperlocal presence. Higher observation
   count = more established local population = better candidate.
 ```
@@ -205,7 +241,7 @@ PRIORITY 3 — iNaturalist observation count in the bounding box
 
 Before finalizing a species, verify:
 
-- [ ] Has at least 1 iNaturalist observation in the bounding box (hyperlocal confirmation)
+- [ ] Has at least 1 iNaturalist observation in the geographic scope (hyperlocal confirmation)
 - [ ] Has a Calscape page with planting requirements, bloom data, and wildlife info
 - [ ] Has a valid iNaturalist taxon ID
 - [ ] Is not a cultivar or non-native variety
@@ -225,7 +261,7 @@ Before creating any data files, present the full candidate list to the user in t
 ## Proposed Plant Inventory for {City, State}
 
 **Ecosystem:** {ecosystem name}
-**Bounding box:** nelat: {}, nelng: {}, swlat: {}, swlng: {}
+**Geographic scope:** {place_id=N and/or bounding box coordinates}
 
 ### Large Trees (N selected)
 | # | Scientific Name | Common Name | Keystone | Wildlife Spp. | iNat Obs | Rationale |
@@ -270,6 +306,7 @@ Read the existing `data/places.json` and append a new entry:
   "shortName": "{City, ST}",
   "ecosystem": "{Ecosystem Name}",
   "ecosystemDescription": "{2-3 sentence description}",
+  "iNaturalistPlaceId": null,
   "boundingBox": {
     "nelat": ...,
     "nelng": ...,
@@ -395,12 +432,16 @@ When researching candidates, check if the genus is in this list. If yes, mark `i
 
 ## Reference: iNaturalist API Endpoints Used
 
+All geographic endpoints accept **either** `place_id=N` **or** bounding box coordinates (`nelat`, `nelng`, `swlat`, `swlng`). Use `place_id` when available (polygon precision); bounding box as fallback.
+
 | Endpoint | Purpose |
 |---|---|
-| `GET /v1/observations/species_counts?nelat=...&nelng=...&swlat=...&swlng=...&iconic_taxa=Plantae&native=true&quality_grade=research&per_page=200` | Discover most-observed native plants in a bounding box |
+| `GET /v1/observations/species_counts?place_id=N&iconic_taxa=Plantae&native=true&quality_grade=research&per_page=200` | Discover most-observed native plants in an iNaturalist place |
+| `GET /v1/observations/species_counts?nelat=...&nelng=...&swlat=...&swlng=...&iconic_taxa=Plantae&native=true&quality_grade=research&per_page=200` | Same, using bounding box (fallback) |
 | `GET /v1/taxa?q=SCIENTIFIC_NAME&per_page=1&is_active=true` | Look up taxon ID for a specific species |
-| `GET /v1/observations/histogram?taxon_id=ID&nelat=...&nelng=...&swlat=...&swlng=...&interval=month_of_year&d1=YYYY-01-01` | Monthly observation histogram for a species in a bounding box |
-| `GET /v1/places/autocomplete?q=CITY_NAME` | Look up a place and its bounding box coordinates |
+| `GET /v1/observations/histogram?taxon_id=ID&place_id=N&interval=month_of_year&d1=YYYY-01-01` | Monthly observation histogram for a species in a place |
+| `GET /v1/observations/histogram?taxon_id=ID&nelat=...&swlat=...&interval=month_of_year&d1=YYYY-01-01` | Same, using bounding box (fallback) |
+| `GET /v1/places/autocomplete?q=PLACE_NAME` | Look up a place and its `place_id`, name, and bounding box |
 
 ## Reference: Category Targets Summary
 

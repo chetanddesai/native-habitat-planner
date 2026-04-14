@@ -37,14 +37,16 @@ Copy this checklist and track progress:
 
 ---
 
-### Step 1: Identify the Place of Interest
+### Step 1: Identify the Place of Interest and Its Geographic Scope
 
-Read `data/places.json` to find the target region's bounding box coordinates. You'll need these for all iNaturalist API calls and the `searchUrl` field.
+Read `data/places.json` to find the target region's geographic scope. Each place may have an `iNaturalistPlaceId` (preferred for API calls — uses polygon boundaries) and/or a `boundingBox` (fallback — rectangle coordinates). You'll need the scope for all iNaturalist API calls and the `searchUrl` field.
 
-| Place ID | Bounding Box |
-|---|---|
-| `poway-ca` | nelat: 33.0652649, nelng: -116.9575429, swlat: 32.899128, swlng: -117.103013 |
-| `auburn-ca` | nelat: 38.986542, nelng: -120.9610799, swlat: 38.831071, swlng: -121.191049 |
+| Place ID | iNaturalist Place ID | Bounding Box |
+|---|---|---|
+| `poway-ca` | — (uses bounding box) | nelat: 33.0652649, nelng: -116.9575429, swlat: 32.899128, swlng: -117.103013 |
+| `auburn-ca` | `5299` (Auburn State Recreation Area) | nelat: 38.986542, nelng: -120.9610799, swlat: 38.831071, swlng: -121.191049 |
+
+**Geographic parameter for API calls:** If the place has `iNaturalistPlaceId`, use `place_id=N` in API URLs. Otherwise, use `nelat=...&nelng=...&swlat=...&swlng=...`.
 
 ### Step 2: Research the Plant
 
@@ -73,7 +75,10 @@ Gather this information (Calscape, iNaturalist, and web search are the primary s
 1. Search `https://api.inaturalist.org/v1/taxa?q=SCIENTIFIC_NAME&per_page=1&is_active=true`
 2. The `results[0].id` is the `taxonId`.
 3. Verify the returned `name` matches the expected scientific name.
-4. Build the search URL using the region's bounding box: `https://www.inaturalist.org/observations?taxon_id=TAXON_ID&nelat=NELAT&nelng=NELNG&swlat=SWLAT&swlng=SWLNG`
+4. Build the search URL using the region's geographic scope:
+   - If the place has `iNaturalistPlaceId`: `https://www.inaturalist.org/observations?taxon_id=TAXON_ID&place_id=PLACE_ID`
+   - If using bounding box: `https://www.inaturalist.org/observations?taxon_id=TAXON_ID&nelat=NELAT&nelng=NELNG&swlat=SWLAT&swlng=SWLNG`
+   - If the place has both, prefer `place_id` for the search URL as it shows observations within the polygon boundary
 5. Build the Calscape URL: `https://calscape.org/GENUS-SPECIES-(Common-Name)` (hyphens between words, parentheses around common name).
 
 ### Step 4: Build the JSON Entry
@@ -152,7 +157,7 @@ Use this template. All fields are required unless marked optional.
 - `wateringSchedule`: Use numeric frequencies (`0`, `1`, `2`) — **not** string values like `"none"` or `"low"`.
 - `pruningMonths`: Array of 1-indexed month numbers when pruning should occur. Use `[]` if no pruning is needed.
 - `pruningTask`: A short, actionable description of the pruning work. Required if `pruningMonths` is non-empty.
-- `iNaturalistData.searchUrl`: Must use the **region-specific bounding box** from `data/places.json`, NOT hardcoded coordinates.
+- `iNaturalistData.searchUrl`: Must use the **region-specific geographic scope** from `data/places.json` — either `place_id=N` or bounding box coordinates. Never hardcode coordinates.
 
 **Wildlife Species Naming Rules (critical for image loading AND observation data):**
 
@@ -205,7 +210,23 @@ else:
 "
 ```
 
-**Observation check** (uses name minus parenthetical content — use the region's bounding box):
+**Observation check** (uses name minus parenthetical content — use the region's geographic scope):
+
+If the place has `iNaturalistPlaceId`, use `place_id=N`:
+```bash
+curl -s "https://api.inaturalist.org/v1/observations/histogram?taxon_name=SPECIES_NAME&place_id=PLACE_ID&interval=month_of_year&d1=2021-01-01" | python3 -c "
+import json, sys
+data = json.load(sys.stdin)
+m = data.get('results', {}).get('month_of_year', {})
+total = sum(m.values())
+if total > 0:
+    print(f'OK: {total} observations across months')
+else:
+    print('WARN: 0 observations in region — species will appear as Rare in the Garden Calendar')
+"
+```
+
+If using bounding box:
 ```bash
 curl -s "https://api.inaturalist.org/v1/observations/histogram?taxon_name=SPECIES_NAME&nelat=NELAT&nelng=NELNG&swlat=SWLAT&swlng=SWLNG&interval=month_of_year&d1=2021-01-01" | python3 -c "
 import json, sys
@@ -260,8 +281,14 @@ else:
 ### Watering Frequencies
 `0` = none | `1` = 1×/month | `2` = 2×/month (numeric integers, not strings)
 
-### Bounding Boxes (from data/places.json)
+### Geographic Scopes (from data/places.json)
 ```
-Poway, CA:    nelat: 33.0652649, nelng: -116.9575429, swlat: 32.899128,  swlng: -117.103013
-Auburn, CA:   nelat: 38.986542,  nelng: -120.9610799, swlat: 38.831071,  swlng: -121.191049
+Poway, CA:    iNaturalistPlaceId: null
+              boundingBox: nelat: 33.0652649, nelng: -116.9575429, swlat: 32.899128, swlng: -117.103013
+
+Auburn, CA:   iNaturalistPlaceId: 5299 (Auburn State Recreation Area)
+              boundingBox: nelat: 38.986542, nelng: -120.9610799, swlat: 38.831071, swlng: -121.191049
 ```
+
+When `iNaturalistPlaceId` is set, use `place_id=N` in API calls (polygon precision).
+When null, use the bounding box coordinates (`nelat`, `nelng`, `swlat`, `swlng`).

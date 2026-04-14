@@ -9,7 +9,7 @@
 
 ## 1. Overview
 
-A static informational website that helps gardeners build **maximum-impact native habitat gardens** by recommending hyperlocal plant selections backed by real ecological data. The site supports multiple **Places of Interest** (regions defined by iNaturalist bounding boxes) and, for each region, presents a curated inventory of 15–25 native plants selected using Doug Tallamy's keystone-species framework: **keystone species first, then highest wildlife support**.
+A static informational website that helps gardeners build **maximum-impact native habitat gardens** by recommending hyperlocal plant selections backed by real ecological data. The site supports multiple **Places of Interest** — regions defined by either an **iNaturalist `place_id`** (a named, polygon-bounded place like a city, park, or recreation area) or a **manual bounding box** (latitude/longitude coordinates). For each region, the site presents a curated inventory of 15–25 native plants selected using Doug Tallamy's keystone-species framework: **keystone species first, then highest wildlife support**.
 
 All content is data-driven (JSON-backed, one file per Place of Interest) so that adding or editing plants requires no code changes. Observation and wildlife data is fetched client-side at runtime from iNaturalist and cached locally.
 
@@ -23,7 +23,7 @@ For each Place of Interest, the plant inventory is curated across structural cat
 
 1. **Keystone status** (National Wildlife Federation data) — keystone genera get priority
 2. **Wildlife species supported** (Calscape "wildlife supported" count, iNaturalist observation density) — among remaining candidates, the species supporting the most wildlife wins
-3. **Hyperlocal presence** — the plant must have iNaturalist observations within the region's bounding box, confirming it actually grows there
+3. **Hyperlocal presence** — the plant must have iNaturalist observations within the region's geographic scope (bounding box or place_id), confirming it actually grows there
 
 ---
 
@@ -43,10 +43,10 @@ For each Place of Interest, the plant inventory is curated across structural cat
 | Requirement | Detail |
 |---|---|
 | **Data format** | JSON files stored in a `data/` directory. One `places.json` for Place of Interest metadata, and one `plants-{place-id}.json` per region for plant inventories. |
-| **Schema** | Each plant is a single JSON object containing all inventory, schedule, bloom, and wildlife data (see §4 for schema). Each Place of Interest is a JSON object with bounding box, display name, and ecosystem description. |
+| **Schema** | Each plant is a single JSON object containing all inventory, schedule, bloom, and wildlife data (see §4 for schema). Each Place of Interest is a JSON object with geographic scope (bounding box and/or iNaturalist `place_id`), display name, and ecosystem description. |
 | **Extensibility** | Adding a new plant = adding a JSON entry to the appropriate regional file. Adding a new Place of Interest = adding a JSON entry to `places.json` + a new plant data file. No HTML changes needed. |
 | **Image strategy** | All plant and wildlife images hotlinked from iNaturalist CDN (no local copies). The site displays skeleton/placeholder states while images load and caches images locally in the browser after first load. |
-| **iNaturalist observation data** | All observation data (plant and wildlife) is fetched **client-side at runtime** from the iNaturalist `/observations/histogram` API, scoped to the **active Place of Interest's bounding box** over a **rolling 5-year window**. Plant observations use `taxon_id` with both `month_of_year` and `year` intervals (2 calls per plant). Wildlife observations use `taxon_name` with `month_of_year` interval (1 call per species). All results are cached in `localStorage` with a **7-day TTL**, keyed by place + taxon. A footer "Refresh Data" button allows manual cache clearing. No server-side scripts or pre-computation needed. |
+| **iNaturalist observation data** | All observation data (plant and wildlife) is fetched **client-side at runtime** from the iNaturalist `/observations/histogram` API, scoped to the **active Place of Interest's geographic scope** — either `place_id=N` (preferred when an iNaturalist place exists) or bounding box coordinates (`nelat`, `nelng`, `swlat`, `swlng`) — over a **rolling 5-year window**. Plant observations use `taxon_id` with both `month_of_year` and `year` intervals (2 calls per plant). Wildlife observations use `taxon_name` with `month_of_year` interval (1 call per species). All results are cached in `localStorage` with a **7-day TTL**, keyed by place + taxon. A footer "Refresh Data" button allows manual cache clearing. No server-side scripts or pre-computation needed. |
 
 ### 2.3 Favicons & Touch Icons
 
@@ -83,16 +83,27 @@ For each Place of Interest, the plant inventory is curated across structural cat
 The site supports multiple geographic regions. Users toggle between them via a **prominent selector** in the site header (dropdown or pill toggle). Switching regions:
 
 - Loads the corresponding plant inventory JSON (`data/plants-{place-id}.json`)
-- Updates all bounding-box-scoped iNaturalist API calls to use the new coordinates
+- Updates all geographically-scoped iNaturalist API calls to use the new region's scope (`place_id` or bounding box)
 - Updates hero text, ecosystem description, and "About" section context
 - Persists the selection in `localStorage` so returning users see their last-viewed region
 
+#### Geographic Scoping Modes
+
+Each Place of Interest uses one of two modes for iNaturalist API queries:
+
+| Mode | iNaturalist API Parameter | When to Use |
+|---|---|---|
+| **`place_id`** | `place_id=N` (integer) | Preferred when an iNaturalist place exists for the region. Uses iNaturalist's curated polygon boundary (often more accurate than a rectangle). Find place IDs via `https://api.inaturalist.org/v1/places/autocomplete?q=PLACE_NAME` or on the iNaturalist website URL (e.g., `inaturalist.org/observations?place_id=5299`). |
+| **Bounding box** | `nelat=...&nelng=...&swlat=...&swlng=...` | Fallback when no suitable iNaturalist place exists, or when a custom rectangular area is needed. |
+
+A Place of Interest may specify **both** — the `place_id` is used for API calls (polygon precision) while the bounding box is used as a fallback and for the "View on iNaturalist" search URL. If only one is provided, that mode is used for everything.
+
 #### Starting Places of Interest
 
-| Place ID | Display Name | Ecosystem | Bounding Box |
-|---|---|---|---|
-| `poway-ca` | Poway, California | Coastal Sage Scrub | nelat: 33.0652649, nelng: -116.9575429, swlat: 32.899128, swlng: -117.103013 |
-| `auburn-ca` | Auburn, California | Sierra Foothills Oak Woodland / Chaparral | nelat: 38.986542, nelng: -120.9610799, swlat: 38.831071, swlng: -121.191049 |
+| Place ID | Display Name | Ecosystem | iNaturalist Place ID | Bounding Box |
+|---|---|---|---|---|
+| `poway-ca` | Poway, California | Coastal Sage Scrub | — | nelat: 33.0652649, nelng: -116.9575429, swlat: 32.899128, swlng: -117.103013 |
+| `auburn-ca` | Auburn, California | Sierra Foothills Oak Woodland / Chaparral | `5299` (Auburn State Recreation Area) | nelat: 38.986542, nelng: -120.9610799, swlat: 38.831071, swlng: -121.191049 |
 
 ### 3.1 Plant Inventory
 
@@ -210,6 +221,7 @@ A month-by-month wildlife interaction calendar per plant:
     "shortName": "Poway, CA",
     "ecosystem": "Coastal Sage Scrub",
     "ecosystemDescription": "San Diego County's coastal sage scrub — one of the most endangered habitats in the United States. Less than 15% remains, making backyard habitat gardens a meaningful act of conservation for species like the California Gnatcatcher and Crotch's Bumblebee.",
+    "iNaturalistPlaceId": null,
     "boundingBox": {
       "nelat": 33.0652649,
       "nelng": -116.9575429,
@@ -230,6 +242,7 @@ A month-by-month wildlife interaction calendar per plant:
     "shortName": "Auburn, CA",
     "ecosystem": "Sierra Foothills Oak Woodland / Chaparral",
     "ecosystemDescription": "Auburn sits at the transition between the Sacramento Valley floor and the Sierra Nevada foothills, in a zone of blue oak woodland, interior live oak chaparral, and mixed foothill pine. These habitats support an extraordinary diversity of woodpeckers, raptors, and native pollinators.",
+    "iNaturalistPlaceId": 5299,
     "boundingBox": {
       "nelat": 38.986542,
       "nelng": -120.9610799,
@@ -368,17 +381,19 @@ This is the core methodology inspired by Doug Tallamy's *Bringing Nature Home*. 
 For each category (Large Tree, Large Shrub, Small Shrub, Herbaceous Perennial, Groundcover):
 
 ```
-1. QUERY iNaturalist for native plant taxa observed within the region's bounding box
+1. QUERY iNaturalist for native plant taxa observed within the region's geographic scope
+   — use `place_id=N` if the place has an iNaturalist place ID
+   — otherwise use bounding box coordinates (nelat, nelng, swlat, swlng)
 2. FILTER to species appropriate for the category (tree, shrub, groundcover, etc.)
 3. FILTER to species that appear on Calscape (confirming California native status + data availability)
 4. RANK by:
    a. Keystone status (NWF keystone genera list) — keystone species sort to top
    b. Wildlife species supported (Calscape count) — descending
-   c. iNaturalist observation count in the bounding box — as a tiebreaker / confirmation of local presence
+   c. iNaturalist observation count in the geographic scope — as a tiebreaker / confirmation of local presence
 5. SELECT top 3–5 species per category
 6. VERIFY each species has:
    - A valid iNaturalist taxon ID
-   - At least 1 observation in the bounding box (confirming hyperlocal presence)
+   - At least 1 observation in the geographic scope (confirming hyperlocal presence)
    - Calscape data for planting requirements, bloom schedule, etc.
 ```
 
@@ -413,7 +428,7 @@ The following genera are designated as keystone by the National Wildlife Federat
 
 | Source | What it provides | How it's used |
 |---|---|---|
-| **iNaturalist API** | Observation counts by bounding box, taxon IDs, photos | Confirms hyperlocal presence; provides images and observation data at runtime |
+| **iNaturalist API** | Observation counts by place_id or bounding box, taxon IDs, photos | Confirms hyperlocal presence; provides images and observation data at runtime |
 | **Calscape** | Wildlife species supported count, planting requirements, bloom data, nursery availability | Primary source for wildlife support ranking and all plant care data |
 | **National Wildlife Federation** | Keystone species designation by genus | Primary selection criterion — keystone genera get priority |
 | **Doug Tallamy's research** | Caterpillar–bird food web data, keystone genus rankings | Philosophical framework and validation of selection priorities |
@@ -481,7 +496,7 @@ The following genera are designated as keystone by the National Wildlife Federat
 ├── Header
 │   ├── Logo + site title
 │   ├── Place of Interest selector (dropdown/toggle: Poway, CA | Auburn, CA)
-│   └── Nav links: Plants | Calendar | About
+│   └── Nav links: Plants | Calendar | About | Contribute
 ├── Hero section — garden overview, location context, Tallamy-inspired mission statement
 ├── #inventory — Plant Inventory (default view)
 │   ├── Filter bar (category, keystone only, search)
@@ -504,9 +519,14 @@ The following genera are designated as keystone by the National Wildlife Federat
 │   ├── Why native plants matter (Tallamy's food web thesis)
 │   ├── The local ecosystem (dynamically rendered per Place of Interest)
 │   └── How to start your own habitat garden
+├── #contribute — Contribute
+│   ├── How to suggest a new plant or region
+│   ├── Link to GitHub repo (issues, PRs)
+│   └── Brief explanation of the add-plant and add-city workflows
 └── Footer
     ├── Data sources & credits (iNaturalist, Calscape, NWF, Tallamy)
-    ├── GitHub repo link
+    ├── GitHub repo link + license badge (CC BY-NC-SA 4.0)
+    ├── Copyright notice with image attribution disclaimer
     └── Refresh Data button (clears localStorage cache)
 ```
 
@@ -528,7 +548,42 @@ The following genera are designated as keystone by the National Wildlife Federat
 
 ---
 
-## 9. Resolved Decisions
+## 9. Licensing & Contribution
+
+### 9.1 License
+
+The project is licensed under **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**. A `LICENSE.md` file in the repo root contains the full license terms and content attribution details.
+
+| Aspect | Detail |
+|---|---|
+| **License** | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) |
+| **License file** | `LICENSE.md` in repo root |
+| **Footer display** | "View on GitHub · CC BY-NC-SA 4.0" link in site footer |
+| **Copyright notice** | "© 2026 Native Habitat Planner. Plant and wildlife images used under Creative Commons licenses from iNaturalist contributors." |
+
+### 9.2 Content Attribution
+
+| Content | Source | License |
+|---|---|---|
+| Plant & wildlife photographs | iNaturalist community observations (taxa API) | Per-image Creative Commons as specified by the photographer; attribution displayed alongside each photo |
+| Observation data | iNaturalist observations API | Open data |
+| Plant inventory, maintenance, phenology data | Manually curated from Calscape, iNaturalist, NWF, and native plant care references | CC BY-NC-SA 4.0 (this project) |
+| Keystone species designations | National Wildlife Federation, Doug Tallamy research | Referenced with attribution |
+
+### 9.3 Contribute Section
+
+The site includes a `#contribute` section (linked from the main nav) that explains how community members can participate:
+
+- **Suggest a plant** — open a GitHub issue with the scientific name, region, and why it should be included
+- **Suggest a new region** — open a GitHub issue with the city/state and either an iNaturalist place ID or bounding box
+- **Submit a pull request** — contributors can fork the repo, use the add-plant or add-city skills, and submit a PR with new plant data
+- **Report issues** — link to GitHub Issues for bug reports, data corrections, or missing attribution
+
+The section should be brief and welcoming to non-technical users (GitHub issues are the simplest entry point) while also directing developers to the skill files for structured contribution workflows.
+
+---
+
+## 10. Resolved Decisions
 
 | # | Question | Decision |
 |---|---|---|
@@ -538,13 +593,14 @@ The following genera are designated as keystone by the National Wildlife Federat
 | 4 | **Calendar view scope** | Both: garden-wide "What's happening this month" is the primary view, with drill-down to per-plant detail. |
 | 5 | **Plant categories** | Six categories: Large Tree, Large Shrub, Small Shrub, Herbaceous Perennial, Groundcover — Perennial, Groundcover — Annual. No vine or succulent categories. |
 | 6 | **Wildlife images** | Sourced from iNaturalist under Creative Commons, same hotlink + cache strategy as plant images. |
-| 7 | **Multi-region architecture** | One `places.json` for region metadata; one `plants-{place-id}.json` per region. Client-side JS loads the active region's data file and scopes all iNaturalist API calls to that region's bounding box. |
+| 7 | **Multi-region architecture** | One `places.json` for region metadata; one `plants-{place-id}.json` per region. Client-side JS loads the active region's data file and scopes all iNaturalist API calls to that region's geographic scope (`place_id` or bounding box). |
+| 10 | **Geographic scoping** | Each Place of Interest can define its area via an iNaturalist `place_id` (integer — preferred, uses curated polygon boundaries) or a bounding box (4 coordinates — fallback). If both are provided, `place_id` is used for API calls and the bounding box for the "View on iNaturalist" search URL. Example: Auburn uses `place_id=5299` (Auburn State Recreation Area) for precise polygon-based queries. |
 | 8 | **Plant selection methodology** | Tallamy-inspired: keystone species first, then wildlife-support count, then iNaturalist observation density. 3–5 species per structural category per region. |
 | 9 | **Codebase** | Modeled after the [SD Habitat reference project](https://github.com/chetanddesai/sd-habitat) — same HTML/CSS/JS structure, card design, tab system, and garden calendar. Extended with Place of Interest switching. |
 
 ---
 
-## 10. Future Enhancements (Out of Scope for V1)
+## 11. Future Enhancements (Out of Scope for V1)
 
 - Interactive garden layout map (SVG or Canvas-based) showing plant placement
 - Photo gallery from the actual garden
@@ -561,7 +617,7 @@ The following genera are designated as keystone by the National Wildlife Federat
 
 ---
 
-## 11. Success Criteria
+## 12. Success Criteria
 
 - [ ] Poway, CA inventory: 20 plants populated with complete data
 - [ ] Auburn, CA inventory: 20 plants populated with complete data
@@ -579,7 +635,7 @@ The following genera are designated as keystone by the National Wildlife Federat
 
 ---
 
-## 12. References
+## 13. References
 
 - Tallamy, Doug. *Bringing Nature Home: How You Can Sustain Wildlife with Native Plants*. Timber Press, 2007.
 - Tallamy, Doug. *Nature's Best Hope: A New Approach to Conservation That Starts in Your Yard*. Timber Press, 2019.

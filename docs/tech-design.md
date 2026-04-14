@@ -18,7 +18,7 @@ A single, data-driven reference site consolidates all of this into one place:
 
 - **For the gardener:** A location-specific, curated plant list answers "what should I plant to maximize wildlife impact in *my* yard?" and a month-by-month dashboard answers "what should I do this week?" and "what wildlife should I look for?"
 - **For conservation:** By anchoring plant selection around Tallamy's keystone-species framework, every garden built from this tool maximizes its contribution to the local food web — supporting the most caterpillars, which feed the most birds, which sustain the broadest biodiversity.
-- **For scalability:** The multi-region architecture means the same site can serve any California community. Adding a new city requires only curating a plant list and a bounding box — no code changes.
+- **For scalability:** The multi-region architecture means the same site can serve any California community. Adding a new city requires only curating a plant list and either an iNaturalist place ID or a bounding box — no code changes.
 - **For the community:** An open-source, no-cost, no-login site can inspire neighbors to plant native gardens and contribute to regional wildlife corridors.
 
 ---
@@ -29,14 +29,14 @@ Derived from the [Product Requirements Document](PRD.md) §3.
 
 | ID | Requirement | Implementation |
 |---|---|---|
-| FR-0 | **Place of Interest selector** allowing users to switch between geographic regions (starting with Poway, CA and Auburn, CA) | Header dropdown reads `data/places.json` to populate options. Selection triggers async fetch of the region's plant data file (`data/plants-{place-id}.json`), updates the active bounding box for all API calls, re-renders hero/about text from the place metadata, and persists the choice in `localStorage`. |
+| FR-0 | **Place of Interest selector** allowing users to switch between geographic regions (starting with Poway, CA and Auburn, CA) | Header dropdown reads `data/places.json` to populate options. Selection triggers async fetch of the region's plant data file (`data/plants-{place-id}.json`), updates the active geographic scope (iNaturalist `place_id` or bounding box) for all API calls, re-renders hero/about text from the place metadata, and persists the choice in `localStorage`. Each place specifies its scope via `iNaturalistPlaceId` (preferred — uses polygon boundaries) and/or `boundingBox` (fallback — rectangle coordinates). |
 | FR-1 | **Plant inventory** per region with 15–22 species, each displaying common/scientific names, images, descriptions, keystone badge, wildlife species supported count, category, planting requirements, and links to Calscape/iNaturalist | Single-page app renders the active region's plant JSON into expandable card components grouped by category. Within categories, keystone species sort first, then by wildlife support count descending. Cards are filterable by category, keystone status, and free-text search. |
 | FR-2 | **Maintenance schedule** per plant showing 12-month watering frequency and pruning tasks | Per-plant tab with two 6×2 grids (watering cells color-coded by frequency, pruning cells with scissor indicators). Current month highlighted. |
 | FR-3 | **Bloom, berry & seed phenology** with actual botanical colors | Per-plant tab with 12-month color-coded cells (CSS gradients for multi-color blooms, stripe pattern for seeds, dot overlay for berries). Garden-wide phenology chart as a scrollable HTML table with sticky plant-name column. |
 | FR-4 | **Wildlife schedule** per plant with specific named species, activity type, and month ranges | Per-plant tab listing each species with image, activity label, 12-month indicator grid, and notes. Images fetched at runtime from iNaturalist taxa API. |
 | FR-5 | **Garden Calendar** showing garden-wide monthly summary scoped to the active region | Month-navigable dashboard with three sub-sections: wildlife (deduplicated by species, classified Common/Uncommon/Rare), maintenance (two-column: watering and pruning), and observation trends (SVG sparkline cards). All data reflects only the active region's plant list. |
-| FR-6 | **Observation data** for each plant showing monthly histograms and year-over-year trends | Fetched at runtime from iNaturalist histogram API scoped to the active region's bounding box. Displayed in per-plant Observations tab and garden-wide trend chart. Frequency badge (common/uncommon/rare) derived from 5-year total. |
-| FR-7 | **Wildlife rarity classification** using live observation counts | For each unique wildlife species in the current calendar month, the site fetches monthly observation data from iNaturalist scoped to the active bounding box, then classifies species into Common/Uncommon/Rare using percentile-based thresholds calculated dynamically from the current month's data. |
+| FR-6 | **Observation data** for each plant showing monthly histograms and year-over-year trends | Fetched at runtime from iNaturalist histogram API scoped to the active region's geographic scope (`place_id` or bounding box). Displayed in per-plant Observations tab and garden-wide trend chart. Frequency badge (common/uncommon/rare) derived from 5-year total. |
+| FR-7 | **Wildlife rarity classification** using live observation counts | For each unique wildlife species in the current calendar month, the site fetches monthly observation data from iNaturalist scoped to the active geographic scope, then classifies species into Common/Uncommon/Rare using percentile-based thresholds calculated dynamically from the current month's data. |
 | FR-8 | **Cache management** with manual refresh | Footer displays cache timestamp and a "Refresh Data" button that clears all `localStorage` caches and reloads the page. Caches are keyed by `{placeId}:{taxonIdOrSpecies}` to avoid cross-region collisions. |
 
 ---
@@ -68,9 +68,10 @@ Derived from the [Product Requirements Document](PRD.md) §2.
 | 4 | **`localStorage` has a ~5 MB quota** per origin | Caches are keyed by `{placeId}:{key}`. With 2 regions × ~20 plants × ~40 wildlife species each, total cached data is estimated at ~1.5 MB. Adding more regions increases cache size linearly — at ~10 regions, we would approach the quota and may need to implement LRU eviction or migrate to IndexedDB. |
 | 5 | **Separate JSON file per region** | Each region's plant data is a standalone JSON array (~30 KB for 20 plants). Only the active region's file is loaded; others are fetched on demand when the user switches. This keeps initial load fast regardless of how many regions exist. |
 | 6 | **No build step** | All code is hand-written and committed as-is. No transpilation, minification, or bundling. This keeps the project simple but means no TypeScript, no JSX, and no tree-shaking. |
-| 7 | **Bounding boxes are stored in `places.json`, not hardcoded** | Unlike the reference project (single hardcoded bounding box), all geographic coordinates live in the data layer. The JS reads the active place's bounding box from `places.json` and injects it into every iNaturalist API call. Adding a new region requires zero code changes. |
+| 7 | **Geographic scope is stored in `places.json`, not hardcoded** | Unlike the reference project (single hardcoded bounding box), all geographic scoping lives in the data layer. Each place may specify an `iNaturalistPlaceId` (integer, preferred) and/or a `boundingBox` (4 coordinates, fallback). The JS reads the active place's scope from `places.json` and injects either `place_id=N` or `nelat=...&swlat=...` into every iNaturalist API call. Using `place_id` is preferred because iNaturalist places use curated polygon boundaries (not just rectangles), producing more precise observation data. Adding a new region requires zero code changes. |
 | 8 | **Browser must support ES2020+** | The app uses optional chaining (`?.`), `Promise.all`, `async/await`, `IntersectionObserver`, `Map`, `Set`, and template literals. Supported by all target browsers (latest 2 versions of Chrome, Safari, Firefox, Edge). |
-| 9 | **Plants may appear in multiple regions** | The same species (e.g., *Heteromeles arbutifolia*) may appear in both Poway and Auburn data files. Each region's JSON entry is independent — it has its own `iNaturalistData.searchUrl` scoped to that region's bounding box. Cache entries are keyed by `{placeId}:{taxonId}`, so observation data is stored separately per region. |
+| 9 | **Plants may appear in multiple regions** | The same species (e.g., *Heteromeles arbutifolia*) may appear in both Poway and Auburn data files. Each region's JSON entry is independent — it has its own `iNaturalistData.searchUrl` scoped to that region's geographic scope. Cache entries are keyed by `{placeId}:{taxonId}`, so observation data is stored separately per region. |
+| 10 | **iNaturalist `place_id` provides polygon precision** | When a place has an iNaturalist `place_id` (e.g., `5299` for Auburn State Recreation Area), API queries use that instead of a bounding box. This means observation data is scoped to the actual geographic polygon rather than a rough rectangle. The `boundingBox` is still stored as a fallback (for the "View on iNaturalist" search URL and for places without an iNaturalist ID). Both fields are optional — at least one must be present. |
 
 ---
 
@@ -163,11 +164,11 @@ The entire application is a single IIFE with the following logical modules:
 flowchart LR
     subgraph "app.js (IIFE)"
         INIT["init()<br/>Bootstrap + load places"]
-        STATE["App State<br/>activePlace, plants[]<br/>activeBBox, month"]
+        STATE["App State<br/>activePlace, plants[]<br/>geoScope, month"]
 
         subgraph "Region Manager"
             LP["loadPlaces()<br/>Fetch places.json"]
-            SP["switchPlace(placeId)<br/>Load plant JSON,<br/>update bbox, re-render"]
+            SP["switchPlace(placeId)<br/>Load plant JSON,<br/>update geo scope, re-render"]
             RS["restorePlace()<br/>Read localStorage pref"]
         end
 
@@ -184,9 +185,9 @@ flowchart LR
         subgraph "Renderers"
             RH["renderHero(place)<br/>Title, desc, ecosystem"]
             INV["renderInventory(plants)<br/>Plant cards + filters"]
-            CAL["renderCalendar(plants, bbox)<br/>Wildlife + maintenance"]
+            CAL["renderCalendar(plants, place)<br/>Wildlife + maintenance"]
             PHENO["renderPhenologyChart(plants)<br/>Garden-wide table"]
-            TREND["renderTrendChart(plants, bbox)<br/>SVG sparklines"]
+            TREND["renderTrendChart(plants, place)<br/>SVG sparklines"]
             ABOUT["renderAbout(place)<br/>Dynamic about sections"]
         end
 
@@ -261,19 +262,19 @@ sequenceDiagram
     JS->>JS: setupImageObserver()
     Note over JS: IntersectionObserver watches card thumbnails
 
-    JS->>JS: renderCalendar(plants, activePlace.boundingBox)
+    JS->>JS: renderCalendar(plants, activePlace)
     JS->>JS: renderPhenologyChart(plants)
     JS->>JS: renderAbout(activePlace)
 
     par Trend Chart (async)
-        JS->>JS: renderTrendChart(plants, bbox)
+        JS->>JS: renderTrendChart(plants, activePlace)
         loop For each plant (parallel)
             JS->>JS: fetchPlantObs(placeId, taxonId)
             alt Cache valid (< 7 days)
                 JS-->>JS: Return cached data
             else Cache expired or empty
-                JS->>iNat: GET /histogram?taxon_id=X&interval=month_of_year&nelat=...&swlat=...
-                JS->>iNat: GET /histogram?taxon_id=X&interval=year&nelat=...&swlat=...
+                JS->>iNat: GET /histogram?taxon_id=X&interval=month_of_year&{geoParams}
+                JS->>iNat: GET /histogram?taxon_id=X&interval=year&{geoParams}
                 iNat-->>JS: Monthly counts
                 iNat-->>JS: Yearly counts
                 JS->>JS: Write to localStorage with key {placeId}:{taxonId}
@@ -289,7 +290,7 @@ sequenceDiagram
             alt Cache valid
                 JS-->>JS: Return cached data
             else Cache miss
-                JS->>iNat: GET /histogram?taxon_name=X&interval=month_of_year&nelat=...&swlat=...
+                JS->>iNat: GET /histogram?taxon_name=X&interval=month_of_year&{geoParams}
                 iNat-->>JS: Monthly counts
                 JS->>JS: Write to localStorage with key {placeId}:{species}
             end
@@ -314,7 +315,7 @@ sequenceDiagram
 
     JS->>LS: Write nhp-active-place = "auburn-ca"
     JS->>JS: activePlace = places.find(p => p.id === "auburn-ca")
-    JS->>JS: activeBBox = activePlace.boundingBox
+    JS->>JS: geoScope = buildGeoParams(activePlace)
 
     alt Plant JSON already fetched & cached in memory
         JS->>JS: plants = plantCache["auburn-ca"]
@@ -330,20 +331,20 @@ sequenceDiagram
     JS->>JS: renderInventory(plants)
     Note over JS: Plant cards re-rendered for Auburn species
 
-    JS->>JS: renderCalendar(plants, activeBBox)
-    Note over JS: Wildlife + maintenance scoped to Auburn bbox
+    JS->>JS: renderCalendar(plants, activePlace)
+    Note over JS: Wildlife + maintenance scoped to Auburn (place_id=5299)
 
     JS->>JS: renderPhenologyChart(plants)
     JS->>JS: renderAbout(activePlace)
 
     par Async data fetches (same as page load)
-        JS->>JS: renderTrendChart(plants, activeBBox)
+        JS->>JS: renderTrendChart(plants, activePlace)
         Note over JS: Fetches use {placeId}:{taxonId} cache keys
         Note over JS: Auburn obs data cached separately from Poway
 
         loop Wildlife observations
             JS->>JS: fetchWildlifeObs("auburn-ca", species)
-            Note over JS: Uses Auburn bounding box in API calls
+            Note over JS: Uses Auburn geo scope (place_id=5299) in API calls
         end
     end
 ```
@@ -387,7 +388,7 @@ sequenceDiagram
             JS->>LS: Read plantObsCache[{placeId}:{taxonId}]
             LS-->>JS: {byMonth, byYear, total, frequency}
         else Cache miss
-            JS->>iNat: GET /histogram (month_of_year + year, bbox)
+            JS->>iNat: GET /histogram (month_of_year + year, geoParams)
             iNat-->>JS: Observation data
             JS->>LS: Write plantObsCache[{placeId}:{taxonId}]
         end
@@ -547,7 +548,7 @@ flowchart TB
     CHECK_TS{"Cache timestamp<br/>< 7 days old?"}
     CHECK_KEY{"Composite key<br/>{placeId}:{key}<br/>exists in cache?"}
     RETURN_CACHED["Return cached data"]
-    FETCH["Fetch from iNaturalist API<br/>using activePlace.boundingBox"]
+    FETCH["Fetch from iNaturalist API<br/>using buildGeoParams(activePlace)"]
     WRITE["Write to localStorage<br/>key = {placeId}:{key}<br/>+ update timestamp"]
     API_OK{"API response<br/>OK?"}
     FALLBACK{"Stale cache<br/>exists for this<br/>placeId:key?"}
@@ -579,7 +580,7 @@ The Region Manager is the key architectural addition over the single-region refe
 // App-level state (module-scoped within the IIFE)
 const state = {
     places: [],              // Array from places.json
-    activePlace: null,       // Current place object (id, name, boundingBox, etc.)
+    activePlace: null,       // Current place object (id, name, iNaturalistPlaceId, boundingBox, etc.)
     plants: [],              // Current region's plant array
     plantsByRegion: {},      // In-memory cache: { "poway-ca": [...], "auburn-ca": [...] }
     currentMonth: new Date().getMonth() + 1,  // 1-indexed
@@ -605,35 +606,42 @@ async function switchPlace(placeId) {
         state.plantsByRegion[placeId] = state.plants;
     }
 
-    // Re-render everything with new data + bounding box
+    // Re-render everything with new data + geographic scope
     renderHero(place);
     renderInventory(state.plants);
-    renderCalendar(state.plants, place.boundingBox);
+    renderCalendar(state.plants, place);
     renderPhenologyChart(state.plants);
-    renderTrendChart(state.plants, place.boundingBox);
+    renderTrendChart(state.plants, place);
     renderAbout(place);
     updateCacheStatusUI();
 }
 ```
 
-### 8.3 Bounding Box Injection
+### 8.3 Geographic Scope Injection
 
-Every iNaturalist API call receives the bounding box from `state.activePlace.boundingBox`:
+Every iNaturalist API call receives geographic scoping from the active place. If the place has an `iNaturalistPlaceId`, the API uses `place_id=N` (polygon-based, more precise). Otherwise it falls back to bounding box coordinates.
 
 ```javascript
+function buildGeoParams(place) {
+    if (place.iNaturalistPlaceId) {
+        return `place_id=${place.iNaturalistPlaceId}`;
+    }
+    const bb = place.boundingBox;
+    return `nelat=${bb.nelat}&nelng=${bb.nelng}&swlat=${bb.swlat}&swlng=${bb.swlng}`;
+}
+
 function buildHistogramUrl(taxonId, interval) {
-    const bb = state.activePlace.boundingBox;
+    const geoParams = buildGeoParams(state.activePlace);
     const d1 = new Date().getFullYear() - 5;
     return `https://api.inaturalist.org/v1/observations/histogram`
         + `?taxon_id=${taxonId}`
-        + `&nelat=${bb.nelat}&nelng=${bb.nelng}`
-        + `&swlat=${bb.swlat}&swlng=${bb.swlng}`
+        + `&${geoParams}`
         + `&interval=${interval}`
         + `&d1=${d1}-01-01`;
 }
 ```
 
-No bounding box is ever hardcoded in JavaScript. All coordinates flow from `places.json` → `state.activePlace.boundingBox` → API call URL.
+No geographic scope is ever hardcoded in JavaScript. All scoping flows from `places.json` → `state.activePlace` → `buildGeoParams()` → API call URL. The `place_id` approach is preferred because iNaturalist places use curated polygon boundaries — for example, `place_id=5299` (Auburn State Recreation Area) scopes queries to the actual park boundary rather than a rough rectangle.
 
 ---
 
