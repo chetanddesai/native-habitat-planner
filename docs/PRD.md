@@ -31,48 +31,58 @@ For each Place of Interest, the plant inventory is curated across structural cat
 
 ### 2.1 Hosting & Technology
 
-| Constraint | Detail |
-|---|---|
-| **Hosting** | GitHub Pages (static only — no server-side rendering) |
-| **Allowed assets** | HTML, CSS, JavaScript (vanilla or lightweight library), JSON data files, image assets |
-| **Build step** | None required. The site must work by serving the repo root (or a configured publish directory) directly. A lightweight build step (e.g., a Node script to generate HTML from JSON) is acceptable as long as the **output** is committed static files. |
-| **Browser support** | Latest two versions of Chrome, Safari, Firefox, Edge; mobile Safari & Chrome on iOS/Android |
+
+| Constraint          | Detail                                                                                                                                                                                                                                                |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Hosting**         | GitHub Pages (static only — no server-side rendering)                                                                                                                                                                                                 |
+| **Allowed assets**  | HTML, CSS, JavaScript (vanilla or lightweight library), JSON data files, image assets                                                                                                                                                                 |
+| **Build step**      | None required. The site must work by serving the repo root (or a configured publish directory) directly. A lightweight build step (e.g., a Node script to generate HTML from JSON) is acceptable as long as the **output** is committed static files. |
+| **Browser support** | Latest two versions of Chrome, Safari, Firefox, Edge; mobile Safari & Chrome on iOS/Android                                                                                                                                                           |
+
 
 ### 2.2 Data Architecture
 
-| Requirement | Detail |
-|---|---|
-| **Data format** | JSON files stored in a `data/` directory. One `places.json` for Place of Interest metadata, and one `plants-{place-id}.json` per region for plant inventories. |
-| **Schema** | Each plant is a single JSON object containing all inventory, schedule, bloom, and wildlife data (see §4 for schema). Each Place of Interest is a JSON object with geographic scope (bounding box and/or iNaturalist `place_id`), display name, and ecosystem description. |
-| **Extensibility** | Adding a new plant = adding a JSON entry to the appropriate regional file. Adding a new Place of Interest = adding a JSON entry to `places.json` + a new plant data file. No HTML changes needed. |
-| **Image strategy** | All plant and wildlife images hotlinked from iNaturalist CDN (no local copies). The site displays skeleton/placeholder states while images load and caches images locally in the browser after first load. |
+
+| Requirement                      | Detail                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Data format**                  | JSON files stored in a `data/` directory. One `places.json` for Place of Interest metadata, and one `plants-{place-id}.json` per region for plant inventories.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Schema**                       | Each plant is a single JSON object containing all inventory, schedule, bloom, and wildlife data (see §4 for schema). Each Place of Interest is a JSON object with geographic scope (bounding box and/or iNaturalist `place_id`), display name, and ecosystem description.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Extensibility**                | Adding a new plant = adding a JSON entry to the appropriate regional file. Adding a new Place of Interest = adding a JSON entry to `places.json` + a new plant data file. No HTML changes needed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Image strategy**               | All plant and wildlife images hotlinked from iNaturalist CDN (no local copies). The site displays skeleton/placeholder states while images load and caches images locally in the browser after first load.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | **iNaturalist observation data** | All observation data (plant and wildlife) is fetched **client-side at runtime** from the iNaturalist `/observations/histogram` API, scoped to the **active Place of Interest's geographic scope** — either `place_id=N` (preferred when an iNaturalist place exists) or bounding box coordinates (`nelat`, `nelng`, `swlat`, `swlng`) — over a **rolling 5-year window**. Plant observations use `taxon_id` with both `month_of_year` and `year` intervals (2 calls per plant). Wildlife observations use `taxon_name` with `month_of_year` interval (1 call per species). All results are cached in `localStorage` with a **7-day TTL**, keyed by place + taxon. A footer "Refresh Data" button allows manual cache clearing. No server-side scripts or pre-computation needed. |
+
 
 ### 2.3 Favicons & Touch Icons
 
-| Asset | Specification |
-|---|---|
-| **favicon.ico** | 16×16 and 32×32 multi-resolution ICO |
-| **favicon.svg** | SVG favicon for modern browsers |
-| **apple-touch-icon.png** | 180×180 PNG |
-| **Android icons** | 192×192 and 512×512 PNGs referenced via `site.webmanifest` |
-| **`site.webmanifest`** | Standard Web App Manifest with name, icons, theme_color, background_color |
+
+| Asset                    | Specification                                                             |
+| ------------------------ | ------------------------------------------------------------------------- |
+| **favicon.ico**          | 16×16 and 32×32 multi-resolution ICO                                      |
+| **favicon.svg**          | SVG favicon for modern browsers                                           |
+| **apple-touch-icon.png** | 180×180 PNG                                                               |
+| **Android icons**        | 192×192 and 512×512 PNGs referenced via `site.webmanifest`                |
+| `**site.webmanifest`**   | Standard Web App Manifest with name, icons, theme_color, background_color |
+
 
 ### 2.4 Performance & Accessibility
 
-| Requirement | Detail |
-|---|---|
-| **Lighthouse score targets** | Performance ≥ 90, Accessibility ≥ 95, Best Practices ≥ 90, SEO ≥ 90 |
-| **Page weight** | < 500 KB first load (excluding off-site images) |
-| **Accessibility** | Semantic HTML, ARIA landmarks, sufficient color contrast (WCAG AA), keyboard-navigable, alt text on all images |
-| **Responsive design** | Mobile-first; must look great on 375px–1440px+ viewports |
+
+| Requirement                  | Detail                                                                                                         |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| **Lighthouse score targets** | Performance ≥ 90, Accessibility ≥ 95, Best Practices ≥ 90, SEO ≥ 90                                            |
+| **Page weight**              | < 500 KB first load (excluding off-site images)                                                                |
+| **Accessibility**            | Semantic HTML, ARIA landmarks, sufficient color contrast (WCAG AA), keyboard-navigable, alt text on all images |
+| **Responsive design**        | Mobile-first; must look great on 375px–1440px+ viewports                                                       |
+
 
 ### 2.5 SEO & Social Sharing
 
-| Requirement | Detail |
-|---|---|
-| **Meta tags** | `<title>`, `<meta name="description">`, Open Graph (`og:title`, `og:description`, `og:image`), Twitter Card |
-| **Structured data** | JSON-LD for the site (WebSite schema) — stretch goal |
+
+| Requirement         | Detail                                                                                                      |
+| ------------------- | ----------------------------------------------------------------------------------------------------------- |
+| **Meta tags**       | `<title>`, `<meta name="description">`, Open Graph (`og:title`, `og:description`, `og:image`), Twitter Card |
+| **Structured data** | JSON-LD for the site (WebSite schema) — stretch goal                                                        |
+
 
 ---
 
@@ -91,47 +101,55 @@ The site supports multiple geographic regions. Users toggle between them via a *
 
 Each Place of Interest uses one of two modes for iNaturalist API queries:
 
-| Mode | iNaturalist API Parameter | When to Use |
-|---|---|---|
-| **`place_id`** | `place_id=N` (integer) | Preferred when an iNaturalist place exists for the region. Uses iNaturalist's curated polygon boundary (often more accurate than a rectangle). Find place IDs via `https://api.inaturalist.org/v1/places/autocomplete?q=PLACE_NAME` or on the iNaturalist website URL (e.g., `inaturalist.org/observations?place_id=962` for San Diego County). |
-| **Bounding box** | `nelat=...&nelng=...&swlat=...&swlng=...` | Fallback when no suitable iNaturalist place exists, or when a custom rectangular area is needed. |
+
+| Mode             | iNaturalist API Parameter                 | When to Use                                                                                                                                                                                                                                                                                                                                     |
+| ---------------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `**place_id`**   | `place_id=N` (integer)                    | Preferred when an iNaturalist place exists for the region. Uses iNaturalist's curated polygon boundary (often more accurate than a rectangle). Find place IDs via `https://api.inaturalist.org/v1/places/autocomplete?q=PLACE_NAME` or on the iNaturalist website URL (e.g., `inaturalist.org/observations?place_id=962` for San Diego County). |
+| **Bounding box** | `nelat=...&nelng=...&swlat=...&swlng=...` | Fallback when no suitable iNaturalist place exists, or when a custom rectangular area is needed.                                                                                                                                                                                                                                                |
+
 
 A Place of Interest may specify **both** — the `place_id` is used for API calls (polygon precision) while the bounding box is used as a fallback and for the "View on iNaturalist" search URL. If only one is provided, that mode is used for everything.
 
 #### Starting Places of Interest
 
-| Place ID | Display Name | Ecosystem | iNaturalist Place ID | Bounding Box |
-|---|---|---|---|---|
-| `poway-ca` | Poway, California | Coastal Sage Scrub | — | nelat: 33.0652649, nelng: -116.9575429, swlat: 32.899128, swlng: -117.103013 |
-| `auburn-ca` | Auburn, California (95603) | Sierra Foothills Oak Woodland / Chaparral | — | nelat: 38.986542, nelng: -120.9610799, swlat: 38.831071, swlng: -121.191049 |
+
+| Place ID    | Display Name               | Ecosystem                                 | iNaturalist Place ID | Bounding Box                                                                 |
+| ----------- | -------------------------- | ----------------------------------------- | -------------------- | ---------------------------------------------------------------------------- |
+| `poway-ca`  | Poway, California          | Coastal Sage Scrub                        | —                    | nelat: 33.0652649, nelng: -116.9575429, swlat: 32.899128, swlng: -117.103013 |
+| `auburn-ca` | Auburn, California (95603) | Sierra Foothills Oak Woodland / Chaparral | —                    | nelat: 38.986542, nelng: -120.9610799, swlat: 38.831071, swlng: -121.191049  |
+
 
 ### 3.1 Plant Inventory
 
 The primary section of the site. Each plant entry displays:
 
-| Field | Source / Notes |
-|---|---|
-| **Common name(s)** | May have multiple common names |
-| **Scientific name** | Displayed in *italics* per convention |
-| **Synonyms** | Former scientific names where applicable |
-| **Hero image** | Hotlinked from iNaturalist CDN (Creative Commons licensed). Skeleton placeholder shown while loading; cached locally in the browser after first load. |
-| **Image citation** | Photographer name, license type, and link back to the iNaturalist observation |
-| **Calscape link** | Direct URL to the plant's page on calscape.org (nursery availability, growing info) |
-| **iNaturalist observation data** | Monthly observation histogram (Jan–Dec) showing when this plant is most commonly sighted in the active region by citizen scientists, plus year-over-year totals for trend analysis. A frequency indicator (Common / Uncommon / Rare) is derived from the 5-year total. |
-| **Description** | 2–4 sentence narrative about the plant's role in supporting native wildlife, emphasizing Tallamy's food-web perspective (caterpillar support, bird food chain, pollinator value) |
-| **Keystone species indicator** | Boolean flag + visual badge if true. Keystone plants are called out prominently as high-impact species per NWF/Tallamy. |
-| **Wildlife species supported count** | Number of wildlife species this plant supports (sourced from Calscape), displayed as a secondary ranking metric |
-| **Category** | One of: `Large Tree`, `Large Shrub`, `Small Shrub`, `Groundcover — Perennial`, `Groundcover — Annual`, `Herbaceous Perennial` |
+
+| Field                                | Source / Notes                                                                                                                                                                                                                                                         |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Common name(s)**                   | May have multiple common names                                                                                                                                                                                                                                         |
+| **Scientific name**                  | Displayed in *italics* per convention                                                                                                                                                                                                                                  |
+| **Synonyms**                         | Former scientific names where applicable                                                                                                                                                                                                                               |
+| **Hero image**                       | Hotlinked from iNaturalist CDN (Creative Commons licensed). Skeleton placeholder shown while loading; cached locally in the browser after first load.                                                                                                                  |
+| **Image citation**                   | Photographer name, license type, and link back to the iNaturalist observation                                                                                                                                                                                          |
+| **Calscape link**                    | Direct URL to the plant's page on calscape.org (nursery availability, growing info)                                                                                                                                                                                    |
+| **iNaturalist observation data**     | Monthly observation histogram (Jan–Dec) showing when this plant is most commonly sighted in the active region by citizen scientists, plus year-over-year totals for trend analysis. A frequency indicator (Common / Uncommon / Rare) is derived from the 5-year total. |
+| **Description**                      | 2–4 sentence narrative about the plant's role in supporting native wildlife, emphasizing Tallamy's food-web perspective (caterpillar support, bird food chain, pollinator value)                                                                                       |
+| **Keystone species indicator**       | Boolean flag + visual badge if true. Keystone plants are called out prominently as high-impact species per NWF/Tallamy.                                                                                                                                                |
+| **Wildlife species supported count** | Number of wildlife species this plant supports (sourced from Calscape), displayed as a secondary ranking metric                                                                                                                                                        |
+| **Category**                         | One of: `Large Tree`, `Large Shrub`, `Small Shrub`, `Groundcover — Perennial`, `Groundcover — Annual`, `Herbaceous Perennial`                                                                                                                                          |
+
 
 #### Planting Requirements
 
 Static site-condition data displayed as part of each plant's inventory card/detail:
 
-| Field | Detail |
-|---|---|
-| **Sun exposure** | Full Sun, Part Shade, Full Shade, or combination |
-| **Slope / drainage** | Flat, gentle slope, steep slope, well-drained required, clay-tolerant, etc. |
-| **Soil requirements** | Sandy, loam, clay, serpentine-tolerant, pH preference, amendment notes |
+
+| Field                 | Detail                                                                      |
+| --------------------- | --------------------------------------------------------------------------- |
+| **Sun exposure**      | Full Sun, Part Shade, Full Shade, or combination                            |
+| **Slope / drainage**  | Flat, gentle slope, steep slope, well-drained required, clay-tolerant, etc. |
+| **Soil requirements** | Sandy, loam, clay, serpentine-tolerant, pH preference, amendment notes      |
+
 
 These do not vary month-to-month and are therefore part of the plant profile rather than the maintenance schedule.
 
@@ -147,14 +165,16 @@ These do not vary month-to-month and are therefore part of the plant profile rat
 
 A calendar-oriented view (12 months) for each plant covering time-varying care tasks:
 
-| Field | Detail |
-|---|---|
-| **Watering schedule** | Per-month numeric frequency: `0` = none, `1` = once/month, `2` = twice/month. Displayed as "1×", "2×" in the UI. |
-| **Watering notes** | Free-text description of watering strategy (e.g., "Deep water monthly in summer for first 2–3 years; no irrigation once established") |
-| **Pruning months** | Array of 1-indexed months when pruning should be done |
-| **Pruning task** | Short actionable description of what to do (e.g., "Cut back by half for fall rebloom", "Remove dead or crossing branches") |
-| **Pruning notes** | Longer free-text explanation of pruning approach and timing |
-| **Special maintenance** | Deadheading, dividing, fire-clearing, pest notes |
+
+| Field                   | Detail                                                                                                                                |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| **Watering schedule**   | Per-month numeric frequency: `0` = none, `1` = once/month, `2` = twice/month. Displayed as "1×", "2×" in the UI.                      |
+| **Watering notes**      | Free-text description of watering strategy (e.g., "Deep water monthly in summer for first 2–3 years; no irrigation once established") |
+| **Pruning months**      | Array of 1-indexed months when pruning should be done                                                                                 |
+| **Pruning task**        | Short actionable description of what to do (e.g., "Cut back by half for fall rebloom", "Remove dead or crossing branches")            |
+| **Pruning notes**       | Longer free-text explanation of pruning approach and timing                                                                           |
+| **Special maintenance** | Deadheading, dividing, fire-clearing, pest notes                                                                                      |
+
 
 > **Note:** Static planting conditions (sun exposure, slope/drainage, soil) live in the Plant Inventory section under Planting Requirements (§3.1) since they don't vary by month.
 
@@ -168,14 +188,16 @@ A calendar-oriented view (12 months) for each plant covering time-varying care t
 
 A phenology calendar for each plant:
 
-| Field | Detail |
-|---|---|
-| **Bloom months** | Start and end month |
-| **Bloom color(s)** | Displayed as a color swatch + label |
-| **Berry/fruit months** | Start and end month (if applicable) |
-| **Berry/fruit color** | Color swatch + label |
-| **Seed months** | Start and end month |
-| **Ecological value** | What the bloom/berry/seed supports (e.g., "Nectar for native bees; berries eaten by Western Bluebird") |
+
+| Field                  | Detail                                                                                                 |
+| ---------------------- | ------------------------------------------------------------------------------------------------------ |
+| **Bloom months**       | Start and end month                                                                                    |
+| **Bloom color(s)**     | Displayed as a color swatch + label                                                                    |
+| **Berry/fruit months** | Start and end month (if applicable)                                                                    |
+| **Berry/fruit color**  | Color swatch + label                                                                                   |
+| **Seed months**        | Start and end month                                                                                    |
+| **Ecological value**   | What the bloom/berry/seed supports (e.g., "Nectar for native bees; berries eaten by Western Bluebird") |
+
 
 #### Presentation
 
@@ -187,13 +209,15 @@ A phenology calendar for each plant:
 
 A month-by-month wildlife interaction calendar per plant:
 
-| Field | Detail |
-|---|---|
-| **Month** | 1–12 |
+
+| Field                 | Detail                                                                                                                                                                                                                                                                  |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Month**             | 1–12                                                                                                                                                                                                                                                                    |
 | **Wildlife visitors** | **Specific, identifiable species only** (e.g., "Monarch butterfly", "Anna's Hummingbird", "Acmon Blue butterfly"). Generic groupings like "native bees" or "hover flies" belong in the plant description and `ecologicalValue` field, not as separate wildlife entries. |
-| **Wildlife image** | Hotlinked from iNaturalist CDN (Creative Commons). Same loading/caching strategy as plant images. Attribution stored with the image URL. |
-| **Activity** | What they're doing: nectar/pollen foraging, eating seeds, eating berries, nesting, caterpillar host plant, shelter/roosting |
-| **Notes** | Any special observations (e.g., "Monarch caterpillars exclusively feed on milkweed") |
+| **Wildlife image**    | Hotlinked from iNaturalist CDN (Creative Commons). Same loading/caching strategy as plant images. Attribution stored with the image URL.                                                                                                                                |
+| **Activity**          | What they're doing: nectar/pollen foraging, eating seeds, eating berries, nesting, caterpillar host plant, shelter/roosting                                                                                                                                             |
+| **Notes**             | Any special observations (e.g., "Monarch caterpillars exclusively feed on milkweed")                                                                                                                                                                                    |
+
 
 > **Guideline — specific species only:** Each wildlife entry must name a specific, identifiable species (or a named species-level organism like "Bombus crotchii"). Broad groups such as "Native bees", "Native solitary bees (Halictidae)", or "Hover flies (Syrphidae)" should **not** appear as wildlife entries. Instead, fold that information into the plant's `description` field or the phenology `ecologicalValue` field where it serves as useful ecological context without cluttering the wildlife tab with entries that can't produce a meaningful image or calendar marker.
 
@@ -341,34 +365,40 @@ Each plant object follows the same schema as the reference project. One JSON arr
 
 **Key addition to the schema vs. the reference project:**
 
-| New Field | Type | Purpose |
-|---|---|---|
+
+| New Field                  | Type    | Purpose                                                                                                                            |
+| -------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | `wildlifeSpeciesSupported` | integer | Number of wildlife species this plant supports (from Calscape). Used as a secondary selection criterion and displayed on the card. |
+
 
 All other fields follow the same schema as the [SD Habitat reference project](https://github.com/chetanddesai/sd-habitat).
 
 ### Category Enum Values
 
-| Value | Display Label |
-|---|---|
-| `large-tree` | Large Tree |
-| `large-shrub` | Large Shrub |
-| `small-shrub` | Small Shrub |
+
+| Value                   | Display Label           |
+| ----------------------- | ----------------------- |
+| `large-tree`            | Large Tree              |
+| `large-shrub`           | Large Shrub             |
+| `small-shrub`           | Small Shrub             |
 | `groundcover-perennial` | Groundcover — Perennial |
-| `groundcover-annual` | Groundcover — Annual |
-| `herbaceous-perennial` | Herbaceous Perennial |
+| `groundcover-annual`    | Groundcover — Annual    |
+| `herbaceous-perennial`  | Herbaceous Perennial    |
+
 
 ### Activity Enum Values
 
-| Value | Display Label |
-|---|---|
-| `nectar-pollen` | Nectar / Pollen Foraging |
-| `eating-seeds` | Eating Seeds |
-| `eating-berries` | Eating Berries |
-| `nesting` | Nesting |
-| `caterpillar-host` | Caterpillar Host Plant |
-| `shelter` | Shelter / Roosting |
-| `browsing` | Browsing Foliage |
+
+| Value              | Display Label            |
+| ------------------ | ------------------------ |
+| `nectar-pollen`    | Nectar / Pollen Foraging |
+| `eating-seeds`     | Eating Seeds             |
+| `eating-berries`   | Eating Berries           |
+| `nesting`          | Nesting                  |
+| `caterpillar-host` | Caterpillar Host Plant   |
+| `shelter`          | Shelter / Roosting       |
+| `browsing`         | Browsing Foliage         |
+
 
 ---
 
@@ -401,37 +431,41 @@ For each category (Large Tree, Large Shrub, Small Shrub, Herbaceous Perennial, G
 
 The following genera are designated as keystone by the National Wildlife Federation, meaning they support a disproportionate number of caterpillar species (the base of the food web):
 
-| Genus | Common Name | Category Typical |
-|---|---|---|
-| *Quercus* | Oaks | Large Tree |
-| *Salix* | Willows | Large Tree / Large Shrub |
-| *Prunus* | Wild plums, cherries | Large Shrub / Small Tree |
-| *Betula* | Birches | Large Tree |
-| *Populus* | Cottonwoods, aspens | Large Tree |
-| *Acer* | Maples | Large Tree |
-| *Pinus* | Pines | Large Tree |
-| *Ceanothus* | California Lilacs | Large Shrub / Small Shrub |
-| *Arctostaphylos* | Manzanitas | Large Shrub / Small Shrub |
-| *Baccharis* | Coyote Brush, etc. | Large Shrub |
-| *Eriogonum* | Buckwheats | Small Shrub / Groundcover |
-| *Solidago* | Goldenrods | Herbaceous Perennial |
-| *Aster* / *Symphyotrichum* | Asters | Herbaceous Perennial |
-| *Lupinus* | Lupines | Groundcover / Herbaceous Perennial |
-| *Asclepias* | Milkweeds | Herbaceous Perennial |
-| *Artemisia* | Sagebrush | Small Shrub |
-| *Salvia* | Sages | Small Shrub |
-| *Heteromeles* | Toyon | Large Shrub |
-| *Ribes* | Currants, gooseberries | Small Shrub |
-| *Sambucus* | Elderberries | Large Shrub |
+
+| Genus                      | Common Name            | Category Typical                   |
+| -------------------------- | ---------------------- | ---------------------------------- |
+| *Quercus*                  | Oaks                   | Large Tree                         |
+| *Salix*                    | Willows                | Large Tree / Large Shrub           |
+| *Prunus*                   | Wild plums, cherries   | Large Shrub / Small Tree           |
+| *Betula*                   | Birches                | Large Tree                         |
+| *Populus*                  | Cottonwoods, aspens    | Large Tree                         |
+| *Acer*                     | Maples                 | Large Tree                         |
+| *Pinus*                    | Pines                  | Large Tree                         |
+| *Ceanothus*                | California Lilacs      | Large Shrub / Small Shrub          |
+| *Arctostaphylos*           | Manzanitas             | Large Shrub / Small Shrub          |
+| *Baccharis*                | Coyote Brush, etc.     | Large Shrub                        |
+| *Eriogonum*                | Buckwheats             | Small Shrub / Groundcover          |
+| *Solidago*                 | Goldenrods             | Herbaceous Perennial               |
+| *Aster* / *Symphyotrichum* | Asters                 | Herbaceous Perennial               |
+| *Lupinus*                  | Lupines                | Groundcover / Herbaceous Perennial |
+| *Asclepias*                | Milkweeds              | Herbaceous Perennial               |
+| *Artemisia*                | Sagebrush              | Small Shrub                        |
+| *Salvia*                   | Sages                  | Small Shrub                        |
+| *Heteromeles*              | Toyon                  | Large Shrub                        |
+| *Ribes*                    | Currants, gooseberries | Small Shrub                        |
+| *Sambucus*                 | Elderberries           | Large Shrub                        |
+
 
 ### 5.3 Data Sources for Selection
 
-| Source | What it provides | How it's used |
-|---|---|---|
-| **iNaturalist API** | Observation counts by place_id or bounding box, taxon IDs, photos | Confirms hyperlocal presence; provides images and observation data at runtime |
-| **Calscape** | Wildlife species supported count, planting requirements, bloom data, nursery availability | Primary source for wildlife support ranking and all plant care data |
-| **National Wildlife Federation** | Keystone species designation by genus | Primary selection criterion — keystone genera get priority |
-| **Doug Tallamy's research** | Caterpillar–bird food web data, keystone genus rankings | Philosophical framework and validation of selection priorities |
+
+| Source                           | What it provides                                                                          | How it's used                                                                 |
+| -------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| **iNaturalist API**              | Observation counts by place_id or bounding box, taxon IDs, photos                         | Confirms hyperlocal presence; provides images and observation data at runtime |
+| **Calscape**                     | Wildlife species supported count, planting requirements, bloom data, nursery availability | Primary source for wildlife support ranking and all plant care data           |
+| **National Wildlife Federation** | Keystone species designation by genus                                                     | Primary selection criterion — keystone genera get priority                    |
+| **Doug Tallamy's research**      | Caterpillar–bird food web data, keystone genus rankings                                   | Philosophical framework and validation of selection priorities                |
+
 
 ---
 
@@ -439,53 +473,57 @@ The following genera are designated as keystone by the National Wildlife Federat
 
 ### 6.1 Poway, CA — Coastal Sage Scrub
 
-| # | Scientific Name | Common Name(s) | Category | Keystone | Selection Rationale |
-|---|---|---|---|---|---|
-| 1 | *Quercus engelmannii* | Engelmann Oak | Large Tree | Yes | Keystone genus (*Quercus*); supports 300+ caterpillar species; iconic to inland San Diego |
-| 2 | *Quercus agrifolia* | Coast Live Oak | Large Tree | Yes | Keystone genus; evergreen oak providing year-round habitat; massive wildlife support |
-| 3 | *Salix lasiolepis* | Arroyo Willow | Large Tree | Yes | Keystone genus (*Salix*); supports 300+ caterpillar species; riparian anchor |
-| 4 | *Heteromeles arbutifolia* | Toyon | Large Shrub | Yes | Keystone genus; berries feed 20+ bird species; caterpillar host |
-| 5 | *Sambucus nigra* subsp. *caerulea* | Blue Elderberry | Large Shrub | Yes | Keystone genus (*Sambucus*); berries are critical bird food; high wildlife support |
-| 6 | *Baccharis sarothroides* | Desert Broom | Large Shrub | Yes | Keystone genus (*Baccharis*); late-season nectar source; high caterpillar support |
-| 7 | *Malosma laurina* | Laurel Sumac | Large Shrub | No | Extremely high wildlife support in coastal sage scrub; evergreen structure |
-| 8 | *Arctostaphylos glandulosa* | Eastwood Manzanita | Large Shrub | Yes | Keystone genus (*Arctostaphylos*); early bloom for pollinators; berry food for birds |
-| 9 | *Eriogonum fasciculatum* | California Buckwheat | Small Shrub | Yes | Keystone genus (*Eriogonum*); supports 50+ native bee species; top nectar source |
-| 10 | *Salvia mellifera* | Black Sage | Small Shrub | Yes | Keystone genus (*Salvia*); premier hummingbird and pollinator plant |
-| 11 | *Salvia apiana* | White Sage | Small Shrub | Yes | Keystone genus; important pollinator plant; cultural significance |
-| 12 | *Artemisia californica* | California Sagebrush | Small Shrub | Yes | Keystone genus (*Artemisia*); defines coastal sage scrub; high caterpillar host |
-| 13 | *Encelia californica* | Bush Sunflower | Small Shrub | No | High wildlife support; long bloom season; important pollinator resource |
-| 14 | *Diplacus puniceus* | Red Bush Monkeyflower | Small Shrub | No | Key hummingbird plant; long bloom season bridges nectar gaps |
-| 15 | *Asclepias fascicularis* | Narrowleaf Milkweed | Herbaceous Perennial | Yes | Keystone genus (*Asclepias*); obligate Monarch host plant; critical conservation species |
-| 16 | *Epilobium canum* | California Fuchsia | Herbaceous Perennial | No | Premier late-season hummingbird nectar source when little else blooms |
-| 17 | *Eriophyllum confertiflorum* | Golden Yarrow | Herbaceous Perennial | No | High pollinator value; long bloom season; drought-tolerant groundcover |
-| 18 | *Bahiopsis laciniata* | San Diego Sunflower | Small Shrub | No | Long bloom season; important pollinator and seed source; local endemic |
-| 19 | *Acmispon glaber* var. *brevialatus* | Short-winged Deerweed | Groundcover — Perennial | No | Nitrogen-fixer; caterpillar host for multiple butterfly species |
-| 20 | *Lupinus succulentus* | Arroyo Lupine | Groundcover — Annual | Yes | Keystone genus (*Lupinus*); nitrogen-fixer; butterfly host plant; spring wildflower |
+
+| #   | Scientific Name                      | Common Name(s)        | Category                | Keystone | Selection Rationale                                                                       |
+| --- | ------------------------------------ | --------------------- | ----------------------- | -------- | ----------------------------------------------------------------------------------------- |
+| 1   | *Quercus engelmannii*                | Engelmann Oak         | Large Tree              | Yes      | Keystone genus (*Quercus*); supports 300+ caterpillar species; iconic to inland San Diego |
+| 2   | *Quercus agrifolia*                  | Coast Live Oak        | Large Tree              | Yes      | Keystone genus; evergreen oak providing year-round habitat; massive wildlife support      |
+| 3   | *Salix lasiolepis*                   | Arroyo Willow         | Large Tree              | Yes      | Keystone genus (*Salix*); supports 300+ caterpillar species; riparian anchor              |
+| 4   | *Heteromeles arbutifolia*            | Toyon                 | Large Shrub             | Yes      | Keystone genus; berries feed 20+ bird species; caterpillar host                           |
+| 5   | *Sambucus nigra* subsp. *caerulea*   | Blue Elderberry       | Large Shrub             | Yes      | Keystone genus (*Sambucus*); berries are critical bird food; high wildlife support        |
+| 6   | *Baccharis sarothroides*             | Desert Broom          | Large Shrub             | Yes      | Keystone genus (*Baccharis*); late-season nectar source; high caterpillar support         |
+| 7   | *Malosma laurina*                    | Laurel Sumac          | Large Shrub             | No       | Extremely high wildlife support in coastal sage scrub; evergreen structure                |
+| 8   | *Arctostaphylos glandulosa*          | Eastwood Manzanita    | Large Shrub             | Yes      | Keystone genus (*Arctostaphylos*); early bloom for pollinators; berry food for birds      |
+| 9   | *Eriogonum fasciculatum*             | California Buckwheat  | Small Shrub             | Yes      | Keystone genus (*Eriogonum*); supports 50+ native bee species; top nectar source          |
+| 10  | *Salvia mellifera*                   | Black Sage            | Small Shrub             | Yes      | Keystone genus (*Salvia*); premier hummingbird and pollinator plant                       |
+| 11  | *Salvia apiana*                      | White Sage            | Small Shrub             | Yes      | Keystone genus; important pollinator plant; cultural significance                         |
+| 12  | *Artemisia californica*              | California Sagebrush  | Small Shrub             | Yes      | Keystone genus (*Artemisia*); defines coastal sage scrub; high caterpillar host           |
+| 13  | *Encelia californica*                | Bush Sunflower        | Small Shrub             | No       | High wildlife support; long bloom season; important pollinator resource                   |
+| 14  | *Diplacus puniceus*                  | Red Bush Monkeyflower | Small Shrub             | No       | Key hummingbird plant; long bloom season bridges nectar gaps                              |
+| 15  | *Asclepias fascicularis*             | Narrowleaf Milkweed   | Herbaceous Perennial    | Yes      | Keystone genus (*Asclepias*); obligate Monarch host plant; critical conservation species  |
+| 16  | *Epilobium canum*                    | California Fuchsia    | Herbaceous Perennial    | No       | Premier late-season hummingbird nectar source when little else blooms                     |
+| 17  | *Eriophyllum confertiflorum*         | Golden Yarrow         | Herbaceous Perennial    | No       | High pollinator value; long bloom season; drought-tolerant groundcover                    |
+| 18  | *Bahiopsis laciniata*                | San Diego Sunflower   | Small Shrub             | No       | Long bloom season; important pollinator and seed source; local endemic                    |
+| 19  | *Acmispon glaber* var. *brevialatus* | Short-winged Deerweed | Groundcover — Perennial | No       | Nitrogen-fixer; caterpillar host for multiple butterfly species                           |
+| 20  | *Lupinus succulentus*                | Arroyo Lupine         | Groundcover — Annual    | Yes      | Keystone genus (*Lupinus*); nitrogen-fixer; butterfly host plant; spring wildflower       |
+
 
 ### 6.2 Auburn, CA — Sierra Foothills Oak Woodland
 
-| # | Scientific Name | Common Name(s) | Category | Keystone | Selection Rationale |
-|---|---|---|---|---|---|
-| 1 | *Quercus lobata* | Valley Oak | Large Tree | Yes | Keystone genus; largest North American oak; 300+ caterpillar species; acorn food web anchor |
-| 2 | *Quercus douglasii* | Blue Oak | Large Tree | Yes | Keystone genus; defines foothill woodland; drought-deciduous; massive wildlife support |
-| 3 | *Quercus wislizeni* | Interior Live Oak | Large Tree | Yes | Keystone genus; evergreen foothill oak; year-round habitat and food |
-| 4 | *Aesculus californica* | California Buckeye | Large Tree | No | High caterpillar support; early bloom critical for spring pollinators; iconic foothill tree |
-| 5 | *Heteromeles arbutifolia* | Toyon | Large Shrub | Yes | Keystone genus; berries feed 20+ bird species; adaptable across elevations |
-| 6 | *Ceanothus cuneatus* | Buck Brush | Large Shrub | Yes | Keystone genus (*Ceanothus*); nitrogen-fixer; major pollinator resource; high caterpillar host |
-| 7 | *Arctostaphylos viscida* | Sticky Whiteleaf Manzanita | Large Shrub | Yes | Keystone genus; early bloom (Jan–Mar) critical for overwintering pollinators; berry food |
-| 8 | *Sambucus nigra* subsp. *caerulea* | Blue Elderberry | Large Shrub | Yes | Keystone genus; berries are critical bird food; host for Valley Elderberry Longhorn Beetle (threatened species) |
-| 9 | *Rhamnus ilicifolia* | Hollyleaf Redberry | Large Shrub | No | High wildlife support; berries eaten by many bird species; caterpillar host |
-| 10 | *Eriogonum nudum* | Naked Buckwheat | Small Shrub | Yes | Keystone genus (*Eriogonum*); important pollinator plant in foothill habitats |
-| 11 | *Epilobium canum* | California Fuchsia | Small Shrub | No | Premier late-season hummingbird resource (55 obs in bbox); fills summer–fall nectar gap when nothing else blooms |
-| 12 | *Artemisia douglasiana* | Mugwort | Small Shrub | Yes | Keystone genus; caterpillar host for Painted Lady and other butterflies |
-| 13 | *Eriodictyon californicum* | Yerba Santa | Small Shrub | No | High pollinator value; butterfly host plant; important foothill native |
-| 14 | *Mimulus aurantiacus* | Sticky Monkeyflower | Small Shrub | No | Key hummingbird plant; long bloom season; Buckeye butterfly host |
-| 15 | *Asclepias cordifolia* | Heart-leaf Milkweed | Herbaceous Perennial | Yes | Keystone genus; dominant foothill Monarch host (93 obs vs 15 for narrowleaf); far more hyperlocal |
-| 16 | *Iris macrosiphon* | Bowltube Iris | Herbaceous Perennial | No | 6th most observed native in bbox (130 obs); spring nectar for emerging pollinators; no *Solidago* present in area |
-| 17 | *Lupinus albifrons* | Silver Lupine | Herbaceous Perennial | Yes | Keystone genus; nitrogen-fixer; butterfly host; beautiful foothill native |
-| 18 | *Clarkia unguiculata* | Elegant Clarkia | Groundcover — Annual | No | High pollinator value; important spring wildflower; easy to grow from seed |
-| 19 | *Eschscholzia californica* | California Poppy | Groundcover — Annual | No | State flower; important pollinator resource; easy groundcover |
-| 20 | *Achillea millefolium* | Common Yarrow | Groundcover — Perennial | No | High pollinator value; supports beneficial insects; excellent groundcover |
+
+| #   | Scientific Name                    | Common Name(s)             | Category                | Keystone | Selection Rationale                                                                                               |
+| --- | ---------------------------------- | -------------------------- | ----------------------- | -------- | ----------------------------------------------------------------------------------------------------------------- |
+| 1   | *Quercus lobata*                   | Valley Oak                 | Large Tree              | Yes      | Keystone genus; largest North American oak; 300+ caterpillar species; acorn food web anchor                       |
+| 2   | *Quercus douglasii*                | Blue Oak                   | Large Tree              | Yes      | Keystone genus; defines foothill woodland; drought-deciduous; massive wildlife support                            |
+| 3   | *Quercus wislizeni*                | Interior Live Oak          | Large Tree              | Yes      | Keystone genus; evergreen foothill oak; year-round habitat and food                                               |
+| 4   | *Aesculus californica*             | California Buckeye         | Large Tree              | No       | High caterpillar support; early bloom critical for spring pollinators; iconic foothill tree                       |
+| 5   | *Heteromeles arbutifolia*          | Toyon                      | Large Shrub             | Yes      | Keystone genus; berries feed 20+ bird species; adaptable across elevations                                        |
+| 6   | *Ceanothus cuneatus*               | Buck Brush                 | Large Shrub             | Yes      | Keystone genus (*Ceanothus*); nitrogen-fixer; major pollinator resource; high caterpillar host                    |
+| 7   | *Arctostaphylos viscida*           | Sticky Whiteleaf Manzanita | Large Shrub             | Yes      | Keystone genus; early bloom (Jan–Mar) critical for overwintering pollinators; berry food                          |
+| 8   | *Sambucus nigra* subsp. *caerulea* | Blue Elderberry            | Large Shrub             | Yes      | Keystone genus; berries are critical bird food; host for Valley Elderberry Longhorn Beetle (threatened species)   |
+| 9   | *Rhamnus ilicifolia*               | Hollyleaf Redberry         | Large Shrub             | No       | High wildlife support; berries eaten by many bird species; caterpillar host                                       |
+| 10  | *Eriogonum nudum*                  | Naked Buckwheat            | Small Shrub             | Yes      | Keystone genus (*Eriogonum*); important pollinator plant in foothill habitats                                     |
+| 11  | *Epilobium canum*                  | California Fuchsia         | Small Shrub             | No       | Premier late-season hummingbird resource (55 obs in bbox); fills summer–fall nectar gap when nothing else blooms  |
+| 12  | *Artemisia douglasiana*            | Mugwort                    | Small Shrub             | Yes      | Keystone genus; caterpillar host for Painted Lady and other butterflies                                           |
+| 13  | *Eriodictyon californicum*         | Yerba Santa                | Small Shrub             | No       | High pollinator value; butterfly host plant; important foothill native                                            |
+| 14  | *Mimulus aurantiacus*              | Sticky Monkeyflower        | Small Shrub             | No       | Key hummingbird plant; long bloom season; Buckeye butterfly host                                                  |
+| 15  | *Asclepias cordifolia*             | Heart-leaf Milkweed        | Herbaceous Perennial    | Yes      | Keystone genus; dominant foothill Monarch host (93 obs vs 15 for narrowleaf); far more hyperlocal                 |
+| 16  | *Iris macrosiphon*                 | Bowltube Iris              | Herbaceous Perennial    | No       | 6th most observed native in bbox (130 obs); spring nectar for emerging pollinators; no *Solidago* present in area |
+| 17  | *Lupinus albifrons*                | Silver Lupine              | Herbaceous Perennial    | Yes      | Keystone genus; nitrogen-fixer; butterfly host; beautiful foothill native                                         |
+| 18  | *Clarkia unguiculata*              | Elegant Clarkia            | Groundcover — Annual    | No       | High pollinator value; important spring wildflower; easy to grow from seed                                        |
+| 19  | *Eschscholzia californica*         | California Poppy           | Groundcover — Annual    | No       | State flower; important pollinator resource; easy groundcover                                                     |
+| 20  | *Achillea millefolium*             | Common Yarrow              | Groundcover — Perennial | No       | High pollinator value; supports beneficial insects; excellent groundcover                                         |
+
 
 ---
 
@@ -536,15 +574,17 @@ The following genera are designated as keystone by the National Wildlife Federat
 
 ## 8. Visual Design Direction
 
-| Aspect | Guidance |
-|---|---|
-| **Palette** | Earth tones — sage green, warm sand, terracotta, oak brown, sky blue accent |
-| **Typography** | Clean sans-serif body (system font stack or Inter); serif or slab-serif for headings for a naturalist/field-guide feel |
-| **Card design** | Rounded corners, subtle shadows, generous whitespace. Keystone species cards get a subtle gold/amber border or badge. |
-| **Icons** | Simple line icons for wildlife types, sun/water indicators, bloom colors |
-| **Imagery** | Full-bleed hero image of a native landscape; plant images in consistent aspect ratio cards |
-| **Region indicator** | The active Place of Interest name + ecosystem type visible in the header and hero at all times |
-| **Dark mode** | Stretch goal — CSS custom properties make this straightforward |
+
+| Aspect               | Guidance                                                                                                               |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Palette**          | Earth tones — sage green, warm sand, terracotta, oak brown, sky blue accent                                            |
+| **Typography**       | Clean sans-serif body (system font stack or Inter); serif or slab-serif for headings for a naturalist/field-guide feel |
+| **Card design**      | Rounded corners, subtle shadows, generous whitespace. Keystone species cards get a subtle gold/amber border or badge.  |
+| **Icons**            | Simple line icons for wildlife types, sun/water indicators, bloom colors                                               |
+| **Imagery**          | Full-bleed hero image of a native landscape; plant images in consistent aspect ratio cards                             |
+| **Region indicator** | The active Place of Interest name + ecosystem type visible in the header and hero at all times                         |
+| **Dark mode**        | Stretch goal — CSS custom properties make this straightforward                                                         |
+
 
 ---
 
@@ -554,21 +594,25 @@ The following genera are designated as keystone by the National Wildlife Federat
 
 The project is licensed under **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**. A `LICENSE.md` file in the repo root contains the full license terms and content attribution details.
 
-| Aspect | Detail |
-|---|---|
-| **License** | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) |
-| **License file** | `LICENSE.md` in repo root |
-| **Footer display** | "View on GitHub · CC BY-NC-SA 4.0" link in site footer |
+
+| Aspect               | Detail                                                                                                                         |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| **License**          | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)                                                          |
+| **License file**     | `LICENSE.md` in repo root                                                                                                      |
+| **Footer display**   | "View on GitHub · CC BY-NC-SA 4.0" link in site footer                                                                         |
 | **Copyright notice** | "© 2026 Native Habitat Planner. Plant and wildlife images used under Creative Commons licenses from iNaturalist contributors." |
+
 
 ### 9.2 Content Attribution
 
-| Content | Source | License |
-|---|---|---|
-| Plant & wildlife photographs | iNaturalist community observations (taxa API) | Per-image Creative Commons as specified by the photographer; attribution displayed alongside each photo |
-| Observation data | iNaturalist observations API | Open data |
-| Plant inventory, maintenance, phenology data | Manually curated from Calscape, iNaturalist, NWF, and native plant care references | CC BY-NC-SA 4.0 (this project) |
-| Keystone species designations | National Wildlife Federation, Doug Tallamy research | Referenced with attribution |
+
+| Content                                      | Source                                                                             | License                                                                                                 |
+| -------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| Plant & wildlife photographs                 | iNaturalist community observations (taxa API)                                      | Per-image Creative Commons as specified by the photographer; attribution displayed alongside each photo |
+| Observation data                             | iNaturalist observations API                                                       | Open data                                                                                               |
+| Plant inventory, maintenance, phenology data | Manually curated from Calscape, iNaturalist, NWF, and native plant care references | CC BY-NC-SA 4.0 (this project)                                                                          |
+| Keystone species designations                | National Wildlife Federation, Doug Tallamy research                                | Referenced with attribution                                                                             |
+
 
 ### 9.3 Contribute Section
 
@@ -585,18 +629,20 @@ The section should be brief and welcoming to non-technical users (GitHub issues 
 
 ## 10. Resolved Decisions
 
-| # | Question | Decision |
-|---|---|---|
-| 1 | **Image hosting** | Hotlink from iNaturalist CDN. Show skeleton/placeholder while loading. Cache locally in browser after first load. No images stored in the repo. |
-| 2 | **Data population** | Manual curation for all plant data, informed by Tallamy selection criteria. iNaturalist observation data fetched client-side at runtime, cached in localStorage with 7-day TTL. |
-| 3 | **Plant detail layout** | Inline expansion only — no modal overlays anywhere on the site. |
-| 4 | **Calendar view scope** | Both: garden-wide "What's happening this month" is the primary view, with drill-down to per-plant detail. |
-| 5 | **Plant categories** | Six categories: Large Tree, Large Shrub, Small Shrub, Herbaceous Perennial, Groundcover — Perennial, Groundcover — Annual. No vine or succulent categories. |
-| 6 | **Wildlife images** | Sourced from iNaturalist under Creative Commons, same hotlink + cache strategy as plant images. |
-| 7 | **Multi-region architecture** | One `places.json` for region metadata; one `plants-{place-id}.json` per region. Client-side JS loads the active region's data file and scopes all iNaturalist API calls to that region's geographic scope (`place_id` or bounding box). |
-| 10 | **Geographic scoping** | Each Place of Interest can define its area via an iNaturalist `place_id` (integer — preferred, uses curated polygon boundaries) or a bounding box (4 coordinates — fallback). If both are provided, `place_id` is used for API calls and the bounding box for the "View on iNaturalist" search URL. Both Auburn (95603) and Poway use bounding boxes; future regions may use `place_id` when a suitable iNaturalist place exists. |
-| 8 | **Plant selection methodology** | Tallamy-inspired: keystone species first, then wildlife-support count, then iNaturalist observation density. 3–5 species per structural category per region. |
-| 9 | **Codebase** | Modeled after the [SD Habitat reference project](https://github.com/chetanddesai/sd-habitat) — same HTML/CSS/JS structure, card design, tab system, and garden calendar. Extended with Place of Interest switching. |
+
+| #   | Question                        | Decision                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| --- | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | **Image hosting**               | Hotlink from iNaturalist CDN. Show skeleton/placeholder while loading. Cache locally in browser after first load. No images stored in the repo.                                                                                                                                                                                                                                                                                   |
+| 2   | **Data population**             | Manual curation for all plant data, informed by Tallamy selection criteria. iNaturalist observation data fetched client-side at runtime, cached in localStorage with 7-day TTL.                                                                                                                                                                                                                                                   |
+| 3   | **Plant detail layout**         | Inline expansion only — no modal overlays anywhere on the site.                                                                                                                                                                                                                                                                                                                                                                   |
+| 4   | **Calendar view scope**         | Both: garden-wide "What's happening this month" is the primary view, with drill-down to per-plant detail.                                                                                                                                                                                                                                                                                                                         |
+| 5   | **Plant categories**            | Six categories: Large Tree, Large Shrub, Small Shrub, Herbaceous Perennial, Groundcover — Perennial, Groundcover — Annual. No vine or succulent categories.                                                                                                                                                                                                                                                                       |
+| 6   | **Wildlife images**             | Sourced from iNaturalist under Creative Commons, same hotlink + cache strategy as plant images.                                                                                                                                                                                                                                                                                                                                   |
+| 7   | **Multi-region architecture**   | One `places.json` for region metadata; one `plants-{place-id}.json` per region. Client-side JS loads the active region's data file and scopes all iNaturalist API calls to that region's geographic scope (`place_id` or bounding box).                                                                                                                                                                                           |
+| 10  | **Geographic scoping**          | Each Place of Interest can define its area via an iNaturalist `place_id` (integer — preferred, uses curated polygon boundaries) or a bounding box (4 coordinates — fallback). If both are provided, `place_id` is used for API calls and the bounding box for the "View on iNaturalist" search URL. Both Auburn (95603) and Poway use bounding boxes; future regions may use `place_id` when a suitable iNaturalist place exists. |
+| 8   | **Plant selection methodology** | Tallamy-inspired: keystone species first, then wildlife-support count, then iNaturalist observation density. 3–5 species per structural category per region.                                                                                                                                                                                                                                                                      |
+| 9   | **Codebase**                    | Modeled after the [SD Habitat reference project](https://github.com/chetanddesai/sd-habitat) — same HTML/CSS/JS structure, card design, tab system, and garden calendar. Extended with Place of Interest switching.                                                                                                                                                                                                               |
+
 
 ---
 
@@ -619,19 +665,19 @@ The section should be brief and welcoming to non-technical users (GitHub issues 
 
 ## 12. Success Criteria
 
-- [ ] Poway, CA inventory: 20 plants populated with complete data
-- [ ] Auburn, CA inventory: 20 plants populated with complete data
-- [ ] Place of Interest selector switches all content and API calls correctly
-- [ ] Site shell (HTML/CSS/JS, excluding off-site images) loads in < 500 KB
-- [ ] Plant and wildlife images display skeleton placeholders while loading and cache in browser after first load
-- [ ] Passes Lighthouse audits at target thresholds
-- [ ] Works on all target browsers (§2.1)
-- [ ] All plant and wildlife images properly attributed with Creative Commons compliance
-- [ ] Garden calendar provides actionable "this month" guidance scoped to the active region
-- [ ] A non-technical gardener can understand and use the site without instruction
-- [ ] iNaturalist observation data loads at runtime for all plants in both regions and caches correctly
-- [ ] Every plant in the inventory has a clear justification (keystone status or wildlife support count)
-- [ ] Each structural category (Large Tree through Groundcover) is represented in both regions
+- Poway, CA inventory: 20 plants populated with complete data
+- Auburn, CA inventory: 20 plants populated with complete data
+- Place of Interest selector switches all content and API calls correctly
+- Site shell (HTML/CSS/JS, excluding off-site images) loads in < 500 KB
+- Plant and wildlife images display skeleton placeholders while loading and cache in browser after first load
+- Passes Lighthouse audits at target thresholds
+- Works on all target browsers (§2.1)
+- All plant and wildlife images properly attributed with Creative Commons compliance
+- Garden calendar provides actionable "this month" guidance scoped to the active region
+- A non-technical gardener can understand and use the site without instruction
+- iNaturalist observation data loads at runtime for all plants in both regions and caches correctly
+- Every plant in the inventory has a clear justification (keystone status or wildlife support count)
+- Each structural category (Large Tree through Groundcover) is represented in both regions
 
 ---
 
@@ -643,3 +689,4 @@ The section should be brief and welcoming to non-technical users (GitHub issues 
 - [Calscape — California Native Plant Society](https://calscape.org/)
 - [iNaturalist API Documentation](https://api.inaturalist.org/v1/docs/)
 - [SD Habitat — Reference Implementation](https://github.com/chetanddesai/sd-habitat)
+
