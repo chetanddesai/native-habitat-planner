@@ -496,6 +496,7 @@ The following genera are designated as keystone by the National Wildlife Federat
 | 18  | *Bahiopsis laciniata*                | San Diego Sunflower   | Small Shrub             | No       | Long bloom season; important pollinator and seed source; local endemic                    |
 | 19  | *Acmispon glaber* var. *brevialatus* | Short-winged Deerweed | Groundcover — Perennial | No       | Nitrogen-fixer; caterpillar host for multiple butterfly species                           |
 | 20  | *Lupinus succulentus*                | Arroyo Lupine         | Groundcover — Annual    | Yes      | Keystone genus (*Lupinus*); nitrogen-fixer; butterfly host plant; spring wildflower       |
+| 21  | *Ceanothus tomentosus*               | Woollyleaf Ceanothus  | Large Shrub             | Yes      | Keystone genus (*Ceanothus*); 85 obs; 83 butterfly/moth spp; quintessential SD chaparral  |
 
 
 ### 6.2 Auburn, CA — Sierra Foothills Oak Woodland

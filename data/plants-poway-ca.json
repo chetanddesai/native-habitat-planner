@@ -9,7 +9,7 @@
     "category": "large-tree",
     "isKeystone": true,
     "wildlifeSpeciesSupported": 265,
-    "description": "A rare Southern California oak whose canopy and leaf litter anchor a massive insect base\u2014caterpillars in particular\u2014that feed nesting songbirds in Doug Tallamy\u2019s food-web framing. Acorns extend support into fall for jays, woodpeckers, and mammals.",
+    "description": "A rare Southern California oak whose canopy and leaf litter anchor a massive insect base—caterpillars in particular—that feed nesting songbirds in Doug Tallamy’s food-web framing. Acorns extend support into fall for jays, woodpeckers, and mammals.",
     "image": {
       "url": "",
       "attribution": "",
@@ -40,7 +40,7 @@
         "nov": 0,
         "dec": 0
       },
-      "wateringNotes": "Deep soak occasionally during the first 2\u20133 years; once established, avoid summer irrigation near the trunk to reduce Phytophthora risk.",
+      "wateringNotes": "Deep soak occasionally during the first 2–3 years; once established, avoid summer irrigation near the trunk to reduce Phytophthora risk.",
       "pruningMonths": [
         7,
         8
@@ -67,7 +67,7 @@
           10,
           11
         ],
-        "description": "Acorns mature in fall\u2014critical calories for scrub-jays, woodpeckers, and small mammals"
+        "description": "Acorns mature in fall—critical calories for scrub-jays, woodpeckers, and small mammals"
       },
       "ecologicalValue": "Oak-rich insect communities (especially caterpillars) drive chickadee and titmouse productivity; acorns propagate woodland patches used by raptors and mammals."
     },
@@ -148,7 +148,7 @@
     "category": "large-tree",
     "isKeystone": true,
     "wildlifeSpeciesSupported": 278,
-    "description": "An evergreen oak whose foliage supports a deep bench of native caterpillars\u2014the protein engine for spring nesting birds\u2014while acorns stitch together mammal and corvid food webs through winter.",
+    "description": "An evergreen oak whose foliage supports a deep bench of native caterpillars—the protein engine for spring nesting birds—while acorns stitch together mammal and corvid food webs through winter.",
     "image": {
       "url": "",
       "attribution": "",
@@ -162,7 +162,7 @@
     "plantingRequirements": {
       "sunExposure": "Full Sun to Partial Shade (seedlings appreciate afternoon shade)",
       "slopeRequirements": "Hillsides, ravine sides, and terrace sites with room for lateral roots",
-      "soilRequirements": "Deep, well-drained loam preferred; tolerates clay if drainage is adequate; pH roughly 4\u20138"
+      "soilRequirements": "Deep, well-drained loam preferred; tolerates clay if drainage is adequate; pH roughly 4–8"
     },
     "maintenance": {
       "wateringSchedule": {
@@ -287,7 +287,7 @@
     "category": "large-tree",
     "isKeystone": true,
     "wildlifeSpeciesSupported": 118,
-    "description": "Riparian willows stitch stream corridors into wildlife highways\u2014early pollen and soft leaves feed specialist bees, leaf-mining insects, and butterflies whose caterpillars fuel bird productivity.",
+    "description": "Riparian willows stitch stream corridors into wildlife highways—early pollen and soft leaves feed specialist bees, leaf-mining insects, and butterflies whose caterpillars fuel bird productivity.",
     "image": {
       "url": "",
       "attribution": "",
@@ -347,7 +347,7 @@
           5,
           6
         ],
-        "description": "Cottony wind-dispersed seeds release after catkins mature\u2014important early cover for riparian insects"
+        "description": "Cottony wind-dispersed seeds release after catkins mature—important early cover for riparian insects"
       },
       "ecologicalValue": "Catkins feed early bees; foliage hosts admiral and swallowtail larvae; dense stems shelter songbirds and dragonflies over water."
     },
@@ -426,7 +426,7 @@
     "category": "large-shrub",
     "isKeystone": true,
     "wildlifeSpeciesSupported": 96,
-    "description": "Evergreen backbone of coastal sage scrub and chaparral edges, toyon couples late nectar with winter berry crops that carry birds through lean months in Tallamy\u2019s emphasis on sequential resources.",
+    "description": "Evergreen backbone of coastal sage scrub and chaparral edges, toyon couples late nectar with winter berry crops that carry birds through lean months in Tallamy’s emphasis on sequential resources.",
     "image": {
       "url": "",
       "attribution": "",
@@ -465,7 +465,7 @@
       ],
       "pruningTask": "Thin interior stems and shorten long leaders after the heaviest berry drop",
       "pruningNotes": "Late-winter shaping keeps fruiting wood productive without removing developing flower buds.",
-      "specialNotes": "Avoid shearing into tight cubes\u2014open habit supports more birds and better air flow."
+      "specialNotes": "Avoid shearing into tight cubes—open habit supports more birds and better air flow."
     },
     "phenology": {
       "bloom": {
@@ -564,7 +564,7 @@
     "category": "large-shrub",
     "isKeystone": true,
     "wildlifeSpeciesSupported": 94,
-    "description": "Fast-growing deciduous shrub whose flat flower clusters become pollinator airports in spring, then blue berries fuel birds and small mammals\u2014classic Tallamy-style stacked resources in one plant.",
+    "description": "Fast-growing deciduous shrub whose flat flower clusters become pollinator airports in spring, then blue berries fuel birds and small mammals—classic Tallamy-style stacked resources in one plant.",
     "image": {
       "url": "",
       "attribution": "",
@@ -627,7 +627,7 @@
           "blue",
           "purple"
         ],
-        "description": "Waxy blue drupes ripen in early summer\u2014high-sugar food for songbirds and fruit bats"
+        "description": "Waxy blue drupes ripen in early summer—high-sugar food for songbirds and fruit bats"
       },
       "seed": null,
       "ecologicalValue": "Spring umbels aggregate hundreds of bee visits per hour; fruiting heads extend support into songbird migration."
@@ -742,7 +742,7 @@
         3
       ],
       "pruningTask": "Cut back rangy stems by half to encourage dense flowering wood",
-      "pruningNotes": "Rejuvenate before spring growth resumes; wear gloves\u2014sap can irritate skin.",
+      "pruningNotes": "Rejuvenate before spring growth resumes; wear gloves—sap can irritate skin.",
       "specialNotes": "Plant both male and female clones if you want maximum seed for finches; single-sex plantings still support pollinators."
     },
     "phenology": {
@@ -764,7 +764,7 @@
           11,
           12
         ],
-        "description": "Fluffy pappus carries achenes on wind\u2014finches pick at clusters for oil-rich seeds"
+        "description": "Fluffy pappus carries achenes on wind—finches pick at clusters for oil-rich seeds"
       },
       "ecologicalValue": "Late nectar supports migrating monarchs and resident bees; seeds attract goldfinches and sparrows after bloom."
     },
@@ -879,7 +879,7 @@
       ],
       "pruningTask": "Remove frost-nipped tips and thin crowded interior stems",
       "pruningNotes": "Minimal pruning preserves the iconic 'tent' silhouette and reduces entry points for pathogens.",
-      "specialNotes": "Volatile oils make it flammable\u2014situate with defensible space in wildfire-prone lots."
+      "specialNotes": "Volatile oils make it flammable—situate with defensible space in wildfire-prone lots."
     },
     "phenology": {
       "bloom": {
@@ -901,7 +901,7 @@
         "colors": [
           "white"
         ],
-        "description": "Sticky white drupes ripen before midsummer\u2014attractive to finches and fruit-eating mammals"
+        "description": "Sticky white drupes ripen before midsummer—attractive to finches and fruit-eating mammals"
       },
       "seed": null,
       "ecologicalValue": "Early-season nectar pairs with dense evergreen cover used by wrens and towhees escaping predators."
@@ -1154,7 +1154,7 @@
     "plantingRequirements": {
       "sunExposure": "Full Sun",
       "slopeRequirements": "Dry slopes, berms, and raised planters with sharp drainage",
-      "soilRequirements": "Sandy to gravelly loam; pH 5\u20138.5; intolerant of soggy clay bowls"
+      "soilRequirements": "Sandy to gravelly loam; pH 5–8.5; intolerant of soggy clay bowls"
     },
     "maintenance": {
       "wateringSchedule": {
@@ -1178,7 +1178,7 @@
       ],
       "pruningTask": "Shear off last year's spent flower heads to reveal fresh gray foliage",
       "pruningNotes": "Light haircut before spring growth removes thatch and discourages stem borers.",
-      "specialNotes": "Leave some rust-colored heads standing\u2014they hold seeds for finches well into winter."
+      "specialNotes": "Leave some rust-colored heads standing—they hold seeds for finches well into winter."
     },
     "phenology": {
       "bloom": {
@@ -1204,7 +1204,7 @@
           9,
           10
         ],
-        "description": "Small angled achenes mature inside persistent rusty involucres\u2014finch candy"
+        "description": "Small angled achenes mature inside persistent rusty involucres—finch candy"
       },
       "ecologicalValue": "Documented host for metalmark butterflies; seed heads extend forage after nectar peaks."
     },
@@ -1345,7 +1345,7 @@
           6,
           7
         ],
-        "description": "Nutlets mature after corollas drop\u2014finches and sparrows glean them from dry spikes"
+        "description": "Nutlets mature after corollas drop—finches and sparrows glean them from dry spikes"
       },
       "ecologicalValue": "High nectar value supports migrant hummingbirds and bumblebees; aromatic oils reduce herbivory pressure on neighboring plants."
     },
@@ -1458,7 +1458,7 @@
         "nov": 0,
         "dec": 0
       },
-      "wateringNotes": "No supplemental summer irrigation once established; a few deep soaks November\u2013March only the first year after planting.",
+      "wateringNotes": "No supplemental summer irrigation once established; a few deep soaks November–March only the first year after planting.",
       "pruningMonths": [
         10,
         11,
@@ -1488,7 +1488,7 @@
           8,
           9
         ],
-        "description": "Four nutlets mature in drying calyces\u2014finches and sparrows glean them after corollas fall"
+        "description": "Four nutlets mature in drying calyces—finches and sparrows glean them after corollas fall"
       },
       "ecologicalValue": "High-sugar nectar supports migrating hummingbirds and long-tongued bees; aromatic oils reduce mammal browsing pressure on neighboring seedlings."
     },
@@ -1568,7 +1568,7 @@
     "category": "small-shrub",
     "isKeystone": true,
     "wildlifeSpeciesSupported": 64,
-    "description": "Aromatic foundation shrub of coastal sage scrub whose wind-pollinated flowers still anchor late-season insect communities while dense twigs shelter ground-foraging birds\u2014classic structure-and-chemistry habitat that Tallamy links to persistent resident bird productivity.",
+    "description": "Aromatic foundation shrub of coastal sage scrub whose wind-pollinated flowers still anchor late-season insect communities while dense twigs shelter ground-foraging birds—classic structure-and-chemistry habitat that Tallamy links to persistent resident bird productivity.",
     "image": {
       "url": "",
       "attribution": "",
@@ -1607,7 +1607,7 @@
       ],
       "pruningTask": "Lightly thin dead twigs and shorten leggy leaders before winter rains",
       "pruningNotes": "Minimal cuts preserve the natural mound; avoid shearing into tight balls that sun-scald interior wood.",
-      "specialNotes": "Volatile oils are flammable\u2014maintain defensible space on fire-prone lots."
+      "specialNotes": "Volatile oils are flammable—maintain defensible space on fire-prone lots."
     },
     "phenology": {
       "bloom": {
@@ -1629,7 +1629,7 @@
           11,
           12
         ],
-        "description": "Tiny wind-dispersed achenes release after disc flowers mature\u2014finches pick at spent heads"
+        "description": "Tiny wind-dispersed achenes release after disc flowers mature—finches pick at spent heads"
       },
       "ecologicalValue": "Specialist leaf beetles recycle foliage biomass; seeds extend finch forage after spring wildflowers fade."
     },
@@ -1720,7 +1720,7 @@
     "category": "small-shrub",
     "isKeystone": false,
     "wildlifeSpeciesSupported": 43,
-    "description": "Fast-sprouting sunflower-family shrub whose bright yellow heads export pollen and nectar early in the dry season, helping generalist pollinators bridge the gap between winter rains and peak buckwheat bloom in Tallamy\u2019s calendar of stacked resources.",
+    "description": "Fast-sprouting sunflower-family shrub whose bright yellow heads export pollen and nectar early in the dry season, helping generalist pollinators bridge the gap between winter rains and peak buckwheat bloom in Tallamy’s calendar of stacked resources.",
     "image": {
       "url": "",
       "attribution": "",
@@ -1759,7 +1759,7 @@
       ],
       "pruningTask": "Cut back rangy stems by one-third after heaviest seed shed",
       "pruningNotes": "Late-winter rejuvenation encourages dense flowering wood before spring growth resumes.",
-      "specialNotes": "Self-sows freely on bare mineral soil\u2014ideal for erosion blankets but less ideal next to irrigated turf."
+      "specialNotes": "Self-sows freely on bare mineral soil—ideal for erosion blankets but less ideal next to irrigated turf."
     },
     "phenology": {
       "bloom": {
@@ -1781,7 +1781,7 @@
           7,
           8
         ],
-        "description": "Single-seeded achenes crowned with sparse pappus\u2014goldfinches and sparrows work dry heads"
+        "description": "Single-seeded achenes crowned with sparse pappus—goldfinches and sparrows work dry heads"
       },
       "ecologicalValue": "Composite inflorescences aggregate long-horned bees; foliage supports a specialist leaf-beetle guild that fuels insectivorous birds."
     },
@@ -1865,7 +1865,7 @@
     "category": "small-shrub",
     "isKeystone": false,
     "wildlifeSpeciesSupported": 38,
-    "description": "Sticky-flowered sage scrub shrub whose tubular red blooms favor long-tongued pollinators, tightening mutualisms between hummingbirds, large bees, and checkerspot caterpillars in the same Tallamy-style plant\u2013insect coupling seen across monkeyflower relatives.",
+    "description": "Sticky-flowered sage scrub shrub whose tubular red blooms favor long-tongued pollinators, tightening mutualisms between hummingbirds, large bees, and checkerspot caterpillars in the same Tallamy-style plant–insect coupling seen across monkeyflower relatives.",
     "image": {
       "url": "",
       "attribution": "",
@@ -1927,7 +1927,7 @@
           8,
           9
         ],
-        "description": "Capsules split to release dust-like seeds once pods brown\u2014natural reseeding in gravelly gaps"
+        "description": "Capsules split to release dust-like seeds once pods brown—natural reseeding in gravelly gaps"
       },
       "ecologicalValue": "Nectar tube morphology filters pollinator cast; foliage hosts checkerspot larvae that move bird energy up the food web."
     },
@@ -2009,7 +2009,7 @@
     "category": "herbaceous-perennial",
     "isKeystone": true,
     "wildlifeSpeciesSupported": 286,
-    "description": "A milkweed whose narrow leaves and umbels concentrate cardenolides, making it a linchpin host for monarch and queen larvae while still pumping nectar to dozens of bees and wasps\u2014an exemplar of Tallamy\u2019s specialist-host plants that disproportionately support arthropod diversity.",
+    "description": "A milkweed whose narrow leaves and umbels concentrate cardenolides, making it a linchpin host for monarch and queen larvae while still pumping nectar to dozens of bees and wasps—an exemplar of Tallamy’s specialist-host plants that disproportionately support arthropod diversity.",
     "image": {
       "url": "",
       "attribution": "",
@@ -2048,7 +2048,7 @@
       ],
       "pruningTask": "Cut dormant stems near the base once pods have opened and monarchs have eclosed",
       "pruningNotes": "Delay cutting until late winter so hollow stalks shelter overwintering beneficial insects.",
-      "specialNotes": "Expect aphids\u2014they support syrphids and lacewings that feed insectivorous birds."
+      "specialNotes": "Expect aphids—they support syrphids and lacewings that feed insectivorous birds."
     },
     "phenology": {
       "bloom": {
@@ -2071,7 +2071,7 @@
           10,
           11
         ],
-        "description": "Follicles split to release silk-borne seeds\u2014critical handoff to wind and goldfinches"
+        "description": "Follicles split to release silk-borne seeds—critical handoff to wind and goldfinches"
       },
       "ecologicalValue": "Umbels aggregate diverse pollinators; milky latex supports a recognizable milkweed insect guild that ripples up to swallows and flycatchers."
     },
@@ -2158,7 +2158,7 @@
     "category": "herbaceous-perennial",
     "isKeystone": false,
     "wildlifeSpeciesSupported": 36,
-    "description": "Summer-dry subshrub whose scarlet tubes open when many natives pause bloom, extending hummingbird and sphinx-moth energy into the hottest months\u2014precisely the kind of seasonal redundancy Tallamy emphasizes for resilient food webs.",
+    "description": "Summer-dry subshrub whose scarlet tubes open when many natives pause bloom, extending hummingbird and sphinx-moth energy into the hottest months—precisely the kind of seasonal redundancy Tallamy emphasizes for resilient food webs.",
     "image": {
       "url": "",
       "attribution": "",
@@ -2189,7 +2189,7 @@
         "nov": 0,
         "dec": 0
       },
-      "wateringNotes": "Optional monthly soak July\u2013August only if foliage shrivels; otherwise mimic dry-summer foothill regimes.",
+      "wateringNotes": "Optional monthly soak July–August only if foliage shrivels; otherwise mimic dry-summer foothill regimes.",
       "pruningMonths": [
         12,
         1,
@@ -2197,7 +2197,7 @@
       ],
       "pruningTask": "Cut stems to basal woody framework after frost browns foliage",
       "pruningNotes": "Hard winter haircut rejuvenates flowering wood without summer pathogens entering cuts.",
-      "specialNotes": "Spreads by underground rhizomes\u2014useful for stabilizing slopes but give it room from delicate neighbors."
+      "specialNotes": "Spreads by underground rhizomes—useful for stabilizing slopes but give it room from delicate neighbors."
     },
     "phenology": {
       "bloom": {
@@ -2302,7 +2302,7 @@
     "category": "herbaceous-perennial",
     "isKeystone": false,
     "wildlifeSpeciesSupported": 31,
-    "description": "Aromatic everlasting mats throw flat yellow heads that behave like airport hubs for small bees and butterflies, while foliage hosts checkerspot and lady relatives\u2014low stature but high leverage in Tallamy\u2019s ground-layer insect economy.",
+    "description": "Aromatic everlasting mats throw flat yellow heads that behave like airport hubs for small bees and butterflies, while foliage hosts checkerspot and lady relatives—low stature but high leverage in Tallamy’s ground-layer insect economy.",
     "image": {
       "url": "",
       "attribution": "",
@@ -2362,7 +2362,7 @@
           8,
           9
         ],
-        "description": "Achenes crowned with short pappus release from brown disc heads\u2014finch forage"
+        "description": "Achenes crowned with short pappus release from brown disc heads—finch forage"
       },
       "ecologicalValue": "Sunflower-family architecture aggregates small native bees; hairy leaves reduce rabbit pressure on neighboring forbs."
     },
@@ -2444,7 +2444,7 @@
     "category": "small-shrub",
     "isKeystone": false,
     "wildlifeSpeciesSupported": 34,
-    "description": "Coastal scrub sunflower with resinous leaves and long-season yellow blooms that keeps small bees and flower flies on station, exporting pollen energy to insectivorous birds long after spring annuals finish in Tallamy\u2019s phenological framing.",
+    "description": "Coastal scrub sunflower with resinous leaves and long-season yellow blooms that keeps small bees and flower flies on station, exporting pollen energy to insectivorous birds long after spring annuals finish in Tallamy’s phenological framing.",
     "image": {
       "url": "",
       "attribution": "",
@@ -2475,12 +2475,12 @@
         "nov": 0,
         "dec": 0
       },
-      "wateringNotes": "Natural rainfall suffices; first-year plants accept occasional deep soak March\u2013May only.",
+      "wateringNotes": "Natural rainfall suffices; first-year plants accept occasional deep soak March–May only.",
       "pruningMonths": [
         3,
         4
       ],
-      "pruningTask": "Tip-prune winter-killed tips and shorten last season\u2019s flowering stems",
+      "pruningTask": "Tip-prune winter-killed tips and shorten last season’s flowering stems",
       "pruningNotes": "Light spring shaping opens the crown before new growth obscures cuts.",
       "specialNotes": "Resinous foliage is deer-resistant but can spot pavement with sticky drip after heavy aphid years."
     },
@@ -2504,7 +2504,7 @@
           7,
           8
         ],
-        "description": "Achenes mature in brown involucres\u2014goldfinches and sparrows glean late-summer heads"
+        "description": "Achenes mature in brown involucres—goldfinches and sparrows glean late-summer heads"
       },
       "ecologicalValue": "Composite heads extend pollinator forage into early summer; seeds support granivorous songbirds."
     },
@@ -2588,7 +2588,7 @@
     "category": "groundcover-perennial",
     "isKeystone": false,
     "wildlifeSpeciesSupported": 49,
-    "description": "Nitrogen-fixing subshrub that greens up scrub after fire, converting atmospheric nitrogen into protein-rich foliage browsed by insects and then by insectivorous birds\u2014an underappreciated Tallamy-style connector between soil fertility and arthropod biomass.",
+    "description": "Nitrogen-fixing subshrub that greens up scrub after fire, converting atmospheric nitrogen into protein-rich foliage browsed by insects and then by insectivorous birds—an underappreciated Tallamy-style connector between soil fertility and arthropod biomass.",
     "image": {
       "url": "",
       "attribution": "",
@@ -2626,7 +2626,7 @@
       ],
       "pruningTask": "Lightly tip-prune rangy stems after yellow flower peak",
       "pruningNotes": "Avoid cutting to bare wood; light summer shaping encourages bushy resprout from latent buds.",
-      "specialNotes": "Host to native bruchid beetles\u2014interpret seed damage as food-web richness, not failure."
+      "specialNotes": "Host to native bruchid beetles—interpret seed damage as food-web richness, not failure."
     },
     "phenology": {
       "bloom": {
@@ -2648,7 +2648,7 @@
           7,
           8
         ],
-        "description": "Twisted legume pods split explosively\u2014rodents and quail cache seeds in scrub openings"
+        "description": "Twisted legume pods split explosively—rodents and quail cache seeds in scrub openings"
       },
       "ecologicalValue": "Pea flowers feed early bumblebees; foliage supports blue butterfly larvae that link legumes to aerial insectivores."
     },
@@ -2728,7 +2728,7 @@
     "category": "groundcover-annual",
     "isKeystone": true,
     "wildlifeSpeciesSupported": 72,
-    "description": "Spring annual that carpets disturbed sandy soils with nitrogen-rich tissue and pea-flowers, feeding pollen-specialist bees and lycaenid larvae whose populations ripple up to swallows and flycatchers in Tallamy\u2019s seasonal pulse of insect biomass.",
+    "description": "Spring annual that carpets disturbed sandy soils with nitrogen-rich tissue and pea-flowers, feeding pollen-specialist bees and lycaenid larvae whose populations ripple up to swallows and flycatchers in Tallamy’s seasonal pulse of insect biomass.",
     "image": {
       "url": "",
       "attribution": "",
@@ -2759,14 +2759,14 @@
         "nov": 1,
         "dec": 1
       },
-      "wateringNotes": "Sow with winter rains; irrigated gardens should mimic natural wet-dry cycle\u2014deep soak weekly February\u2013April, then dry down as pods mature.",
+      "wateringNotes": "Sow with winter rains; irrigated gardens should mimic natural wet-dry cycle—deep soak weekly February–April, then dry down as pods mature.",
       "pruningMonths": [
         5,
         6
       ],
       "pruningTask": "Pull or cut spent plants after pods split to reduce disease carryover",
       "pruningNotes": "Shake ripe pods over bare soil if you want a denser stand next spring.",
-      "specialNotes": "Fixes nitrogen\u2014pair with late-emerging perennials that benefit from enriched root zones."
+      "specialNotes": "Fixes nitrogen—pair with late-emerging perennials that benefit from enriched root zones."
     },
     "phenology": {
       "bloom": {
@@ -2845,6 +2845,159 @@
         "species": "Lesser Goldfinch",
         "activity": "eating-seeds",
         "notes": "Strips drying legume pods for protein-rich seeds before plants senesce.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "ceanothus-tomentosus",
+    "commonNames": [
+      "Woollyleaf Ceanothus",
+      "Woolly-leaf Ceanothus"
+    ],
+    "scientificName": "Ceanothus tomentosus",
+    "synonyms": [
+      "Ceanothus tomentosus var. olivaceus",
+      "Ceanothus tomentosus var. tomentosus"
+    ],
+    "category": "large-shrub",
+    "isKeystone": true,
+    "wildlifeSpeciesSupported": 83,
+    "description": "The quintessential chaparral Ceanothus of San Diego County — fast-growing evergreen shrub whose deep blue winter flowers can turn entire foothills and canyons blue. A keystone nitrogen-fixer supporting 83 butterfly and moth species, making it one of the most wildlife-productive shrubs in the Poway area. Its companion plants in nature — Mission Manzanita, Black Sage, White Sage, and Toyon — are all already in this garden plan.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Ceanothus-tomentosus-(Woollyleaf-Ceanothus)",
+    "iNaturalistData": {
+      "taxonId": 76199,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=76199&nelat=33.0652649&nelng=-116.9575429&swlat=32.899128&swlng=-117.103013"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun, Partial Shade",
+      "slopeRequirements": "Prefers slopes that retain slightly more moisture than average — north-facing slopes, slope bottoms, or east/west-facing slopes with heavier soils and rocks",
+      "soilRequirements": "Heavier or rockier soils on slopes, lighter soils on flats; pH 5–8; fast to medium drainage; intolerant of direct summer irrigation once established"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "No summer irrigation once established — direct summer water can kill it. Water regularly during the first year only. If planted adjacent to an irrigated area, indirect moisture is fine. Drops about half its leaves in summer and makes its own mulch.",
+      "pruningMonths": [
+        4,
+        5
+      ],
+      "pruningTask": "Light shaping after bloom; remove dead interior wood to improve air circulation",
+      "pruningNotes": "Avoid heavy pruning — Ceanothus species don't regenerate well from old wood. Shape lightly while young to establish form. Can be used as a hedge with careful training.",
+      "specialNotes": "Site selection is critical — if planted in soils that don't retain enough moisture, it will dry out and die. Best on north-facing or partially shaded slopes in Poway's inland heat. Fast growing to 6–12 ft."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          12,
+          1,
+          2,
+          3
+        ],
+        "colors": [
+          "blue",
+          "white"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          5,
+          6,
+          7
+        ],
+        "description": "Small lobed capsules ripen in late spring; sticky when fresh; seeds ejected explosively when dry"
+      },
+      "ecologicalValue": "Winter bloom provides critical early-season nectar for native bees and butterflies when almost nothing else flowers. Nitrogen-fixing root nodules (Frankia symbiosis) enrich soil for neighboring plants. Dense canopy provides year-round bird shelter."
+    },
+    "wildlife": [
+      {
+        "months": [
+          12,
+          1,
+          2,
+          3
+        ],
+        "species": "Anna's Hummingbird",
+        "activity": "nectar-pollen",
+        "notes": "Winter-blooming Ceanothus is one of the few nectar sources available during Anna's Hummingbird breeding season in Poway.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          12,
+          1,
+          2,
+          3
+        ],
+        "species": "Bombus vosnesenskii (Yellow-faced Bumble Bee)",
+        "activity": "nectar-pollen",
+        "notes": "Early-emerging queens depend heavily on Ceanothus flowers when few other nectar sources are available in the coastal sage scrub.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "species": "California Hairstreak",
+        "activity": "caterpillar-host",
+        "notes": "Satyrium californica larvae feed on Ceanothus foliage — one of the primary host genera for this and many other hairstreak butterflies.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "species": "Wrentit",
+        "activity": "shelter",
+        "notes": "Dense evergreen canopy is prime Wrentit habitat — this chaparral obligate nests and forages in Ceanothus thickets year-round.",
         "image": {
           "url": "",
           "attribution": "",
