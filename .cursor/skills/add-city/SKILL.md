@@ -224,6 +224,39 @@ PRIORITY 3 — iNaturalist observation count in the geographic scope
   count = more established local population = better candidate.
 ```
 
+> **CRITICAL — Hyperlocal Observation Validation (the "Mission Manzanita Rule")**
+>
+> Keystone genus status alone is NOT sufficient to select a species. You MUST verify
+> that the chosen species is actually **well-observed in the local bounding box**.
+> Follow these three rules:
+>
+> 1. **Within a keystone genus, always pick the species with the highest local
+>    observation count.** Do NOT blindly select a species just because it belongs to
+>    a keystone genus. Query iNaturalist for all species in the genus within the
+>    geographic scope and pick the one with the most observations:
+>    ```bash
+>    curl -s "https://api.inaturalist.org/v1/observations/species_counts?${GEO_PARAM}&taxon_name=GENUS&quality_grade=research&per_page=10" | python3 -c "
+>    import json, sys
+>    data = json.load(sys.stdin)
+>    for r in data.get('results', []):
+>        t = r.get('taxon', {})
+>        print(f'{r[\"count\"]:5d} obs | {t.get(\"name\",\"?\")} ({t.get(\"preferred_common_name\",\"?\")}) | taxon_id={t.get(\"id\",0)}')
+>    "
+>    ```
+>
+> 2. **Consider ecologically equivalent species from sister genera.** Some genera
+>    are closely related and fill the same ecological niche. For example,
+>    *Xylococcus* (Mission Manzanita) is in the same family (Ericaceae) as
+>    *Arctostaphylos* and serves the same ecological role — if it has 8× more
+>    local observations, it is the better hyperlocal pick. When a keystone genus
+>    candidate has < 100 observations, check the top-observed native species list
+>    for ecologically equivalent alternatives in the same family.
+>
+> 3. **Flag any candidate with < 50 local observations.** If a species has fewer
+>    than 50 research-grade observations in the geographic scope, it should be
+>    flagged and justified explicitly — either it's a rare endemic worth including,
+>    or there is a better-observed alternative that was missed.
+
 **Selection targets per category:**
 
 | Category | Target Count | Notes |
@@ -241,7 +274,8 @@ PRIORITY 3 — iNaturalist observation count in the geographic scope
 
 Before finalizing a species, verify:
 
-- [ ] Has at least 1 iNaturalist observation in the geographic scope (hyperlocal confirmation)
+- [ ] **Is the most-observed species of its genus locally** — query all species in the genus within the bounding box (see "Mission Manzanita Rule" above). If a congener has 3×+ more observations, switch to that species instead.
+- [ ] **Has at least 50 iNaturalist observations in the geographic scope** — if fewer, document why no better alternative exists (rare endemic, only representative of a keystone genus in the area, etc.)
 - [ ] Has a Calscape page with planting requirements, bloom data, and wildlife info
 - [ ] Has a valid iNaturalist taxon ID
 - [ ] Is not a cultivar or non-native variety
@@ -283,6 +317,8 @@ Before creating any data files, present the full candidate list to the user in t
 
 **Total: N plants**
 ```
+
+Flag any species with < 50 observations by adding a ⚠️ in the Rationale column with an explanation of why it was kept despite low observations.
 
 Wait for the user to:
 - Approve the list as-is

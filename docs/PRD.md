@@ -483,7 +483,7 @@ The following genera are designated as keystone by the National Wildlife Federat
 | 5   | *Sambucus nigra* subsp. *caerulea*   | Blue Elderberry       | Large Shrub             | Yes      | Keystone genus (*Sambucus*); berries are critical bird food; high wildlife support        |
 | 6   | *Baccharis sarothroides*             | Desert Broom          | Large Shrub             | Yes      | Keystone genus (*Baccharis*); late-season nectar source; high caterpillar support         |
 | 7   | *Malosma laurina*                    | Laurel Sumac          | Large Shrub             | No       | Extremely high wildlife support in coastal sage scrub; evergreen structure                |
-| 8   | *Arctostaphylos glandulosa*          | Eastwood Manzanita    | Large Shrub             | Yes      | Keystone genus (*Arctostaphylos*); early bloom for pollinators; berry food for birds      |
+| 8   | *Xylococcus bicolor*                 | Mission Manzanita     | Large Shrub             | Yes      | Dominant local manzanita (336 obs vs 39 for Eastwood); critical winter nectar; dense bird cover |
 | 9   | *Eriogonum fasciculatum*             | California Buckwheat  | Small Shrub             | Yes      | Keystone genus (*Eriogonum*); supports 50+ native bee species; top nectar source          |
 | 10  | *Salvia mellifera*                   | Black Sage            | Small Shrub             | Yes      | Keystone genus (*Salvia*); premier hummingbird and pollinator plant                       |
 | 11  | *Salvia apiana*                      | White Sage            | Small Shrub             | Yes      | Keystone genus; important pollinator plant; cultural significance                         |
@@ -510,19 +510,20 @@ The following genera are designated as keystone by the National Wildlife Federat
 | 5   | *Heteromeles arbutifolia*          | Toyon                      | Large Shrub             | Yes      | Keystone genus; berries feed 20+ bird species; adaptable across elevations                                        |
 | 6   | *Ceanothus cuneatus*               | Buck Brush                 | Large Shrub             | Yes      | Keystone genus (*Ceanothus*); nitrogen-fixer; major pollinator resource; high caterpillar host                    |
 | 7   | *Arctostaphylos viscida*           | Sticky Whiteleaf Manzanita | Large Shrub             | Yes      | Keystone genus; early bloom (Jan–Mar) critical for overwintering pollinators; berry food                          |
-| 8   | *Sambucus nigra* subsp. *caerulea* | Blue Elderberry            | Large Shrub             | Yes      | Keystone genus; berries are critical bird food; host for Valley Elderberry Longhorn Beetle (threatened species)   |
-| 9   | *Rhamnus ilicifolia*               | Hollyleaf Redberry         | Large Shrub             | No       | High wildlife support; berries eaten by many bird species; caterpillar host                                       |
+| 8   | *Baccharis pilularis*              | Coyote Brush               | Large Shrub             | Yes      | Keystone genus (*Baccharis*); 94 obs; critical late-season nectar (Sep–Dec); replaces Blue Elderberry (9 obs)     |
+| 9   | *Cercis occidentalis*              | Western Redbud             | Large Shrub             | No       | 94 obs; earliest spring pollinator resource (Feb–Apr); replaces Hollyleaf Redberry (15 obs)                       |
 | 10  | *Eriogonum nudum*                  | Naked Buckwheat            | Small Shrub             | Yes      | Keystone genus (*Eriogonum*); important pollinator plant in foothill habitats                                     |
 | 11  | *Epilobium canum*                  | California Fuchsia         | Small Shrub             | No       | Premier late-season hummingbird resource (55 obs in bbox); fills summer–fall nectar gap when nothing else blooms  |
 | 12  | *Artemisia douglasiana*            | Mugwort                    | Small Shrub             | Yes      | Keystone genus; caterpillar host for Painted Lady and other butterflies                                           |
 | 13  | *Eriodictyon californicum*         | Yerba Santa                | Small Shrub             | No       | High pollinator value; butterfly host plant; important foothill native                                            |
-| 14  | *Mimulus aurantiacus*              | Sticky Monkeyflower        | Small Shrub             | No       | Key hummingbird plant; long bloom season; Buckeye butterfly host                                                  |
+| 14  | *Diplacus grandiflorus*            | Largeflower Bush Monkeyflower | Small Shrub          | No       | 28 obs (2× Sticky Monkeyflower); Sierra foothill endemic; key hummingbird + Checkerspot host                     |
 | 15  | *Asclepias cordifolia*             | Heart-leaf Milkweed        | Herbaceous Perennial    | Yes      | Keystone genus; dominant foothill Monarch host (93 obs vs 15 for narrowleaf); far more hyperlocal                 |
 | 16  | *Iris macrosiphon*                 | Bowltube Iris              | Herbaceous Perennial    | No       | 6th most observed native in bbox (130 obs); spring nectar for emerging pollinators; no *Solidago* present in area |
 | 17  | *Lupinus albifrons*                | Silver Lupine              | Herbaceous Perennial    | Yes      | Keystone genus; nitrogen-fixer; butterfly host; beautiful foothill native                                         |
 | 18  | *Clarkia unguiculata*              | Elegant Clarkia            | Groundcover — Annual    | No       | High pollinator value; important spring wildflower; easy to grow from seed                                        |
 | 19  | *Eschscholzia californica*         | California Poppy           | Groundcover — Annual    | No       | State flower; important pollinator resource; easy groundcover                                                     |
 | 20  | *Achillea millefolium*             | Common Yarrow              | Groundcover — Perennial | No       | High pollinator value; supports beneficial insects; excellent groundcover                                         |
+| 21  | *Pinus sabiniana*                  | Gray Pine                  | Large Tree              | Yes      | Keystone genus (*Pinus*); 169 obs (8th most observed native); massive seed cones feed woodpeckers, jays, squirrels |
 
 
 ---

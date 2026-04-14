@@ -978,30 +978,30 @@
     ]
   },
   {
-    "id": "arctostaphylos-glandulosa",
+    "id": "xylococcus-bicolor",
     "commonNames": [
-      "Eastwood Manzanita"
+      "Mission Manzanita"
     ],
-    "scientificName": "Arctostaphylos glandulosa",
+    "scientificName": "Xylococcus bicolor",
     "synonyms": [],
     "category": "large-shrub",
     "isKeystone": true,
-    "wildlifeSpeciesSupported": 58,
-    "description": "Leathery evergreen leaves and urn-shaped flowers sustain a distinctive guild of nectar feeders and hairstreak butterflies, tightening the mutualisms that define healthy coastal sage scrub.",
+    "wildlifeSpeciesSupported": 52,
+    "description": "The dominant manzanita of San Diego County's coastal sage scrub and chaparral — the 8th most observed native plant in the Poway area. Dense evergreen canopy provides year-round bird cover, while early winter blooms are critical nectar for overwintering hummingbirds and native bees when almost nothing else flowers. Berries feed thrushes and small mammals through summer.",
     "image": {
       "url": "",
       "attribution": "",
       "iNaturalistUrl": ""
     },
-    "calscapeUrl": "https://calscape.org/Arctostaphylos-glandulosa-(Eastwoods-Manzanita)",
+    "calscapeUrl": "https://calscape.org/Xylococcus-bicolor-(Mission-Manzanita)",
     "iNaturalistData": {
-      "taxonId": 53353,
-      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=53353&nelat=33.0652649&nelng=-116.9575429&swlat=32.899128&swlng=-117.103013"
+      "taxonId": 79543,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=79543&nelat=33.0652649&nelng=-116.9575429&swlat=32.899128&swlng=-117.103013"
     },
     "plantingRequirements": {
       "sunExposure": "Full Sun",
-      "slopeRequirements": "Slopes and mounds on fast-draining granitic or decomposed granite soils",
-      "soilRequirements": "Acidic, low-nutrient soils; intolerant of summer root rot from organic mulch piled against stems"
+      "slopeRequirements": "Slopes and hillsides on fast-draining soils; excellent on south-facing chaparral exposures",
+      "soilRequirements": "Well-drained sandy or decomposed granite soils; intolerant of summer irrigation near the crown"
     },
     "maintenance": {
       "wateringSchedule": {
@@ -1018,30 +1018,31 @@
         "nov": 0,
         "dec": 0
       },
-      "wateringNotes": "No irrigation after establishment; if needed the first year, soak deeply only November\u2013March.",
+      "wateringNotes": "No irrigation after establishment — summer water causes root rot. If needed the first year, soak deeply only during the cool season (November–March).",
       "pruningMonths": [
         6,
         7
       ],
-      "pruningTask": "Snip dead twigs and lightly shape after bloom",
-      "pruningNotes": "Avoid heavy shearing\u2014manzanitas compartmentalize wounds slowly; remove only clearly dead material.",
-      "specialNotes": "Keep gravel or bare mineral soil within 12 inches of the crown to mimic natural nurse-plant conditions."
+      "pruningTask": "Remove dead wood and lightly shape after bloom; thin crossing branches to improve air circulation",
+      "pruningNotes": "Avoid heavy shearing — manzanitas compartmentalize wounds slowly. Remove only clearly dead material.",
+      "specialNotes": "Maintain a gravel or bare-soil zone around the crown base. Do not pile organic mulch against stems — it promotes Phytophthora."
     },
     "phenology": {
       "bloom": {
         "months": [
+          12,
           1,
           2,
-          3,
-          4
+          3
         ],
         "colors": [
-          "pink",
-          "white"
+          "white",
+          "pink"
         ]
       },
       "berry": {
         "months": [
+          5,
           6,
           7,
           8
@@ -1050,22 +1051,22 @@
           "red",
           "brown"
         ],
-        "description": "Mealy 'apples' ripen through summer, eaten by thrushes and small mammals"
+        "description": "Mealy berry-like drupes ripen through late spring and summer, eaten by thrushes, mockingbirds, and small mammals"
       },
       "seed": null,
-      "ecologicalValue": "Winter bloom bridges the hummingbird calendar; berries extend fruit resources after spring wildflowers fade."
+      "ecologicalValue": "Critical winter nectar source when almost nothing else blooms; dense canopy shelters nesting birds year-round; berries extend fruit resources through the dry season."
     },
     "wildlife": [
       {
         "months": [
+          12,
           1,
           2,
-          3,
-          4
+          3
         ],
         "species": "Anna's Hummingbird",
         "activity": "nectar-pollen",
-        "notes": "Territorial males defend clusters of pink urn-shaped flowers.",
+        "notes": "Territorial males defend winter-blooming manzanita clusters — one of the few nectar sources during the cool season.",
         "image": {
           "url": "",
           "attribution": "",
@@ -1080,7 +1081,7 @@
         ],
         "species": "Brown Elfin butterfly",
         "activity": "caterpillar-host",
-        "notes": "Caterpillars mine or chew fresh manzanita foliage before pupating in duff.",
+        "notes": "Larvae feed on manzanita foliage and flower buds; adults emerge to nectar on the same shrubs.",
         "image": {
           "url": "",
           "attribution": "",
@@ -1089,13 +1090,14 @@
       },
       {
         "months": [
+          5,
           6,
           7,
           8
         ],
-        "species": "Hermit Thrush",
+        "species": "California Thrasher",
         "activity": "eating-berries",
-        "notes": "Picks ripe pomes when migrating through foothill scrub.",
+        "notes": "Uses its curved bill to probe among manzanita branches for ripe berries and ground-dwelling invertebrates in the leaf litter below.",
         "image": {
           "url": "",
           "attribution": "",
@@ -1119,7 +1121,7 @@
         ],
         "species": "Wrentit",
         "activity": "shelter",
-        "notes": "Uses stiff branching for nest platforms hidden deep inside shrubs.",
+        "notes": "Dense manzanita canopy provides year-round nesting and roosting habitat for this chaparral obligate.",
         "image": {
           "url": "",
           "attribution": "",

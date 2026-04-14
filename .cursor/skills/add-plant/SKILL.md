@@ -70,16 +70,31 @@ Gather this information (Calscape, iNaturalist, and web search are the primary s
 | Ecological value | 1 sentence on what the blooms/berries/seeds support (pollinators, birds, etc.) |
 | Wildlife visitors | 2–4 entries of **specific, named species** that interact with this plant. Generic groups like "Native bees" or "Hover flies" belong in the description/ecologicalValue, NOT as wildlife entries. Species names must resolve on iNaturalist — they're used for both **image loading** AND **observation data fetching** in the Garden Calendar (see below). See **Wildlife Species Naming Rules** below and Activity Enums at the end. |
 
-### Step 3: Find the iNaturalist Taxon ID
+### Step 3: Find the iNaturalist Taxon ID and Verify Local Presence
 
 1. Search `https://api.inaturalist.org/v1/taxa?q=SCIENTIFIC_NAME&per_page=1&is_active=true`
 2. The `results[0].id` is the `taxonId`.
 3. Verify the returned `name` matches the expected scientific name.
-4. Build the search URL using the region's geographic scope:
+4. **Verify the species is well-observed locally** — query its observation count in the geographic scope:
+   ```bash
+   curl -s "https://api.inaturalist.org/v1/observations/species_counts?${GEO_PARAM}&taxon_id=TAXON_ID&quality_grade=research" | python3 -c "
+   import json, sys
+   data = json.load(sys.stdin)
+   r = data.get('results', [])
+   count = r[0]['count'] if r else 0
+   print(f'Local observations: {count}')
+   if count < 50:
+       print('⚠️ LOW OBSERVATION COUNT — verify this is the best representative of its genus locally.')
+       print('   Query all species in the genus to check for better alternatives:')
+       print('   curl \"https://api.inaturalist.org/v1/observations/species_counts?\${GEO_PARAM}&taxon_name=GENUS&quality_grade=research&per_page=10\"')
+   "
+   ```
+   If the species has < 50 observations **and** a congener or ecologically equivalent species has 3×+ more observations locally, stop and recommend the better-observed alternative to the user before proceeding.
+5. Build the search URL using the region's geographic scope:
    - If the place has `iNaturalistPlaceId`: `https://www.inaturalist.org/observations?taxon_id=TAXON_ID&place_id=PLACE_ID`
    - If using bounding box: `https://www.inaturalist.org/observations?taxon_id=TAXON_ID&nelat=NELAT&nelng=NELNG&swlat=SWLAT&swlng=SWLNG`
    - If the place has both, prefer `place_id` for the search URL as it shows observations within the polygon boundary
-5. Build the Calscape URL: `https://calscape.org/GENUS-SPECIES-(Common-Name)` (hyphens between words, parentheses around common name).
+6. Build the Calscape URL: `https://calscape.org/GENUS-SPECIES-(Common-Name)` (hyphens between words, parentheses around common name).
 
 ### Step 4: Build the JSON Entry
 
