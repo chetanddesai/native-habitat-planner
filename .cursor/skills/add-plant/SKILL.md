@@ -27,12 +27,13 @@ Copy this checklist and track progress:
 ```
 - [ ] Step 1: Identify the Place of Interest and its bounding box
 - [ ] Step 2: Research the plant
-- [ ] Step 3: Find the iNaturalist taxon ID
+- [ ] Step 3: Find the iNaturalist taxon ID and verify local presence
 - [ ] Step 4: Build the JSON entry
 - [ ] Step 5: Insert into data/plants-{place-id}.json
-- [ ] Step 6: Update plant counts across the site
-- [ ] Step 7: Verify wildlife image & observation searchability
-- [ ] Step 8: Verify locally
+- [ ] Step 6: Bump DATA_VERSION in js/app.js
+- [ ] Step 7: Update plant counts across the site
+- [ ] Step 8: Verify wildlife image & observation searchability
+- [ ] Step 9: Verify locally
 ```
 
 ---
@@ -198,7 +199,15 @@ Both lookups must succeed. The first two words (or the name minus parenthetical 
 2. Append the new entry to the array (before the closing `]`).
 3. Plants are loosely grouped by category in the file but the JS sorts dynamically, so exact position doesn't matter — appending to the end is fine.
 
-### Step 6: Update Plant Counts
+### Step 6: Bump `DATA_VERSION` in `js/app.js`
+
+**Required.** The app uses a `DATA_VERSION` constant as a cache-busting query parameter on all data `fetch()` calls. After modifying any `data/*.json` file, increment `DATA_VERSION` at the top of `js/app.js` so mobile and cached browsers pick up the new data without a hard refresh:
+
+```javascript
+const DATA_VERSION = '3';  // was '2' — bump on every data change
+```
+
+### Step 7: Update Plant Counts
 
 The total plant count for each region appears in several locations. Search for the old count and increment to the new count:
 
@@ -208,7 +217,7 @@ The total plant count for each region appears in several locations. Search for t
 
 **`docs/PRD.md`** — Plant inventory tables and success criteria
 
-### Step 7: Verify Wildlife Image & Observation Searchability
+### Step 8: Verify Wildlife Image & Observation Searchability
 
 **Before** starting the dev server, validate that every wildlife `species` name resolves on iNaturalist for both images and observations. For each wildlife entry in the new plant, run:
 
@@ -255,7 +264,7 @@ else:
 "
 ```
 
-### Step 8: Verify Locally
+### Step 9: Verify Locally
 
 1. Start the local dev server if not running: `npx http-server . -p 8090 -c-1`
 2. Switch to the target Place of Interest in the header selector

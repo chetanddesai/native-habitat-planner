@@ -398,7 +398,15 @@ Process plants in category order (Large Tree → Large Shrub → Small Shrub →
 
 ### Phase 7: Site Updates
 
-After all plants are added, update references across the site:
+After all plants are added, update references across the site.
+
+#### `js/app.js` — Bump `DATA_VERSION`
+
+**Required.** The app uses a `DATA_VERSION` constant as a cache-busting query parameter on all `fetch()` calls for `places.json` and `plants-*.json`. After changing any data file, increment `DATA_VERSION` at the top of `js/app.js` so mobile and cached browsers pick up the new data without a hard refresh:
+
+```javascript
+const DATA_VERSION = '3';  // was '2' — bump on every data change
+```
 
 #### `docs/PRD.md`
 
