@@ -555,12 +555,15 @@
     ]
   },
   {
-    "id": "sambucus-nigra-subsp-caerulea",
+    "id": "sambucus-mexicana",
     "commonNames": [
       "Blue Elderberry"
     ],
-    "scientificName": "Sambucus nigra subsp. caerulea",
-    "synonyms": [],
+    "scientificName": "Sambucus mexicana",
+    "synonyms": [
+      "Sambucus cerulea",
+      "Sambucus nigra subsp. caerulea"
+    ],
     "category": "large-shrub",
     "isKeystone": true,
     "wildlifeSpeciesSupported": 94,
@@ -570,7 +573,7 @@
       "attribution": "",
       "iNaturalistUrl": ""
     },
-    "calscapeUrl": "https://calscape.org/Sambucus-cerulea-(Blue-Elderberry)",
+    "calscapeUrl": "https://calscape.org/Sambucus-mexicana-(Blue-Elderberry)",
     "iNaturalistData": {
       "taxonId": 143799,
       "searchUrl": "https://www.inaturalist.org/observations?taxon_id=143799&nelat=33.0652649&nelng=-116.9575429&swlat=32.899128&swlng=-117.103013"

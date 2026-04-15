@@ -480,7 +480,7 @@ The following genera are designated as keystone by the National Wildlife Federat
 | 2   | *Quercus agrifolia*                  | Coast Live Oak        | Large Tree              | Yes      | Keystone genus; evergreen oak providing year-round habitat; massive wildlife support      |
 | 3   | *Salix lasiolepis*                   | Arroyo Willow         | Large Tree              | Yes      | Keystone genus (*Salix*); supports 300+ caterpillar species; riparian anchor              |
 | 4   | *Heteromeles arbutifolia*            | Toyon                 | Large Shrub             | Yes      | Keystone genus; berries feed 20+ bird species; caterpillar host                           |
-| 5   | *Sambucus nigra* subsp. *caerulea*   | Blue Elderberry       | Large Shrub             | Yes      | Keystone genus (*Sambucus*); berries are critical bird food; high wildlife support        |
+| 5   | *Sambucus mexicana*                  | Blue Elderberry       | Large Shrub             | Yes      | Keystone genus (*Sambucus*); berries are critical bird food; high wildlife support        |
 | 6   | *Baccharis sarothroides*             | Desert Broom          | Large Shrub             | Yes      | Keystone genus (*Baccharis*); late-season nectar source; high caterpillar support         |
 | 7   | *Malosma laurina*                    | Laurel Sumac          | Large Shrub             | No       | Extremely high wildlife support in coastal sage scrub; evergreen structure                |
 | 8   | *Xylococcus bicolor*                 | Mission Manzanita     | Large Shrub             | Yes      | Dominant local manzanita (336 obs vs 39 for Eastwood); critical winter nectar; dense bird cover |

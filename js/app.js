@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  const DATA_VERSION = '2';
+  const DATA_VERSION = '3';
 
   const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   const MONTH_KEYS = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
