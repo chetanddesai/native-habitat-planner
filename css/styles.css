@@ -360,6 +360,7 @@ select, input { font: inherit; }
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
+  min-width: 0;
   transition: box-shadow var(--transition);
 }
 .plant-card:hover { box-shadow: var(--shadow-lg); }
@@ -503,6 +504,8 @@ select, input { font: inherit; }
   display: none;
   border-top: 1px solid var(--c-border);
   padding: 0 16px 16px;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 .plant-card.expanded .plant-detail { display: block; }
 
@@ -538,7 +541,7 @@ select, input { font: inherit; }
   margin-top: 4px;
 }
 .plant-detail-hero .attribution a { color: var(--c-text-light); text-decoration: underline; }
-.plant-detail-body { flex: 1; min-width: 200px; }
+.plant-detail-body { flex: 1; min-width: 0; overflow-wrap: break-word; word-break: break-word; }
 .plant-detail-desc {
   margin-bottom: 12px;
   line-height: 1.7;
@@ -670,6 +673,8 @@ select, input { font: inherit; }
   color: var(--c-text-light);
   line-height: 1.5;
   margin: 4px 0 16px;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* --- Phenology tab --- */

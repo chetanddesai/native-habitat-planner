@@ -625,7 +625,8 @@
       <h5 style="font-size:.85rem;margin-bottom:8px;color:#6b4c3b">💧 Watering</h5>
       <div class="watering-grid">${waterCells}</div>
       <p class="maintenance-note">${p.maintenance.wateringNotes}</p>
-      <h5 style="font-size:.85rem;margin-bottom:8px;color:#6b4c3b">✂ Pruning${p.maintenance.pruningTask ? ` — ${p.maintenance.pruningTask}` : ''}</h5>
+      <h5 style="font-size:.85rem;margin-bottom:4px;color:#6b4c3b">✂ Pruning</h5>
+      ${p.maintenance.pruningTask ? `<p class="maintenance-note" style="margin-top:0;margin-bottom:8px"><strong>${p.maintenance.pruningTask}</strong></p>` : ''}
       <div class="watering-grid">${pruneCells}</div>
       <p class="maintenance-note">${p.maintenance.pruningNotes}</p>
       ${p.maintenance.specialNotes ? `<p class="maintenance-note"><strong>Notes:</strong> ${p.maintenance.specialNotes}</p>` : ''}`;
