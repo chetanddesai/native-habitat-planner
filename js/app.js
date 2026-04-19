@@ -372,7 +372,6 @@
   function renderHero(place) {
     document.getElementById('hero-title').textContent = 'Native Habitat Garden';
     document.getElementById('hero-subtitle').textContent = `${place.name} · ${place.ecosystem}`;
-    document.getElementById('hero-desc').textContent = place.heroDescription;
   }
 
   function renderAbout(place) {
