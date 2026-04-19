@@ -400,13 +400,20 @@ Process plants in category order (Large Tree → Large Shrub → Small Shrub →
 
 After all plants are added, update references across the site.
 
-#### `js/app.js` — Bump `DATA_VERSION`
+#### Cache-Busting — Bump Version Strings
 
-**Required.** The app uses a `DATA_VERSION` constant as a cache-busting query parameter on all `fetch()` calls for `places.json` and `plants-*.json`. After changing any data file, increment `DATA_VERSION` at the top of `js/app.js` so mobile and cached browsers pick up the new data without a hard refresh:
+**Required.** The site uses version query parameters to bust browser caches on mobile. After changing any data, JS, or CSS file, increment **both**:
 
-```javascript
-const DATA_VERSION = '3';  // was '2' — bump on every data change
-```
+1. **`js/app.js`** — `DATA_VERSION` constant (busts JSON data caches):
+   ```javascript
+   const DATA_VERSION = '4';  // was '3' — bump on every data change
+   ```
+
+2. **`index.html`** — `?v=` query params on the CSS and JS `<link>`/`<script>` tags (busts asset caches):
+   ```html
+   <link rel="stylesheet" href="css/styles.css?v=3">
+   <script src="js/app.js?v=3"></script>
+   ```
 
 #### `docs/PRD.md`
 
