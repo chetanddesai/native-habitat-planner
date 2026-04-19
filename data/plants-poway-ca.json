@@ -3008,5 +3008,404 @@
         }
       }
     ]
+  },
+  {
+    "id": "eschscholzia-californica",
+    "commonNames": [
+      "California Poppy"
+    ],
+    "scientificName": "Eschscholzia californica",
+    "synonyms": [],
+    "category": "groundcover-annual",
+    "isKeystone": false,
+    "wildlifeSpeciesSupported": 31,
+    "description": "California's state flower paints lean, fast-draining soils with sheets of orange-gold cups each spring. Self-sowing and nearly care-free, it feeds native bees, syrphid flies, and small blue and metalmark butterfly larvae — an easy entry point for any habitat garden.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Eschscholzia-californica-(California-Poppy)",
+    "iNaturalistData": {
+      "taxonId": 48225,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=48225&nelat=33.0652649&nelng=-116.9575429&swlat=32.899128&swlng=-117.103013"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun",
+      "slopeRequirements": "Open grassy places, sunny openings in chaparral, valley grassland",
+      "soilRequirements": "Lean sandy to loamy soils with fast drainage; thrives in poor soil — avoid rich compost"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 1,
+        "feb": 1,
+        "mar": 1,
+        "apr": 1,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 1
+      },
+      "wateringNotes": "Sow with winter rains; once established, no summer irrigation needed. In irrigated gardens, reduce water as plants go dormant in late spring.",
+      "pruningMonths": [
+        7,
+        8
+      ],
+      "pruningTask": "Cut dried plants to ground after summer die-back; leave some to self-sow",
+      "pruningNotes": "Pull excess volunteers if you want to limit spread. Shake spent seed heads over bare soil for denser stands the following spring.",
+      "specialNotes": "Self-sows readily in bare disturbed soil — pair with other spring annuals and late-emerging perennials."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "colors": [
+          "orange",
+          "gold",
+          "yellow"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          5,
+          6,
+          7
+        ],
+        "description": "Slender pod-like capsules split to scatter tiny seeds; persistent soil seed bank"
+      },
+      "ecologicalValue": "Early spring bloom feeds native bees emerging from winter dormancy; foliage hosts small blues and metalmark caterpillars."
+    },
+    "wildlife": [
+      {
+        "months": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "species": "Mormon Metalmark",
+        "activity": "caterpillar-host",
+        "notes": "Larvae feed on poppy foliage in open, sunny chaparral clearings.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "species": "Acmon Blue",
+        "activity": "caterpillar-host",
+        "notes": "Small lycaenid whose larvae use poppy and buckwheat foliage in Poway grasslands.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "species": "Bombus vosnesenskii (Yellow-faced Bumble Bee)",
+        "activity": "nectar-pollen",
+        "notes": "Queens and workers forage heavily on poppy pollen in spring mornings.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          5,
+          6,
+          7
+        ],
+        "species": "Lesser Goldfinch",
+        "activity": "eating-seeds",
+        "notes": "Feeds on ripening poppy seed capsules as plants senesce in late spring.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "phacelia-cicutaria",
+    "commonNames": [
+      "Caterpillar Scorpionweed",
+      "Caterpillar Phacelia"
+    ],
+    "scientificName": "Phacelia cicutaria",
+    "synonyms": [],
+    "category": "groundcover-annual",
+    "isKeystone": false,
+    "wildlifeSpeciesSupported": 9,
+    "description": "A chaparral fire-follower whose pale lavender coiling flower stems resemble caterpillars — hence the name. Thrives in lean, rocky, fast-draining soils and self-sows into naturalistic ground layers among other drought-tolerant natives, feeding bees and hosting several moth species.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Phacelia-cicutaria-(Caterpillar-Phacelia)",
+    "iNaturalistData": {
+      "taxonId": 50857,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=50857&nelat=33.0652649&nelng=-116.9575429&swlat=32.899128&swlng=-117.103013"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun, Partial Shade",
+      "slopeRequirements": "Sandy, gravelly, or rocky slopes; openings in chaparral; post-fire clearings",
+      "soilRequirements": "Fast-draining sandy or gravelly soil; pH 5.3–8.2; intolerant of heavy clay or summer moisture"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 1,
+        "feb": 1,
+        "mar": 1,
+        "apr": 1,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "Germinate with winter rains; no summer irrigation once plants finish blooming. Overwatering in summer causes root rot.",
+      "pruningMonths": [
+        5,
+        6
+      ],
+      "pruningTask": "Pull spent plants after seeds mature; leave some stems for self-sowing",
+      "pruningNotes": "If you want a neater look, cut back after bloom. For naturalizing, leave seed heads to drop in place.",
+      "specialNotes": "Fire-follower — charcoal or smoke treatment dramatically improves seed germination. Pair with other post-fire annuals for a naturalistic display."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          3,
+          4,
+          5
+        ],
+        "colors": [
+          "lavender",
+          "cream",
+          "white"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          5,
+          6
+        ],
+        "description": "Tiny seeds ripen in coiled clusters; persist in soil seed bank; fire-adapted germination"
+      },
+      "ecologicalValue": "Spring bloom draws native bees and flower-visiting flies; foliage hosts several moth species tied to chaparral habitats."
+    },
+    "wildlife": [
+      {
+        "months": [
+          3,
+          4,
+          5
+        ],
+        "species": "Stamnodes albiapicata",
+        "activity": "caterpillar-host",
+        "notes": "Confirmed Phacelia-specialist moth whose larvae develop on foliage in spring.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          3,
+          4,
+          5
+        ],
+        "species": "Amblyptilia pica (Geranium Plume Moth)",
+        "activity": "caterpillar-host",
+        "notes": "Plume moth larvae likely feed on Phacelia and related Boraginaceae in chaparral openings.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          3,
+          4,
+          5
+        ],
+        "species": "Bombus vosnesenskii (Yellow-faced Bumble Bee)",
+        "activity": "nectar-pollen",
+        "notes": "Queens and workers visit the coiled flower clusters for pollen and nectar in spring.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "phacelia-parryi",
+    "commonNames": [
+      "Parry's Phacelia",
+      "Parry's Scorpion-weed"
+    ],
+    "scientificName": "Phacelia parryi",
+    "synonyms": [],
+    "category": "groundcover-annual",
+    "isKeystone": false,
+    "wildlifeSpeciesSupported": 9,
+    "description": "One of the most garden-worthy native annuals — deep-purple bell-shaped flowers on hairy stems create a striking spring display in lean, fast-draining soils. A powerful pollinator magnet that draws hummingbirds, native bees, and syrphid flies during the peak spring bloom season.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://www.calscape.org/Phacelia-parryi-(Parry's-Phacelia)",
+    "iNaturalistData": {
+      "taxonId": 56753,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=56753&nelat=33.0652649&nelng=-116.9575429&swlat=32.899128&swlng=-117.103013"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun",
+      "slopeRequirements": "Open slopes in coastal sage scrub and chaparral; recently burned or disturbed ground",
+      "soilRequirements": "Lean, fast-draining sandy or gravelly soil; avoid rich compost; pH 5.5–8.0"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 1,
+        "feb": 1,
+        "mar": 1,
+        "apr": 1,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "Germinate with winter rains; no summer irrigation once plants finish blooming. Overwatering causes leggy growth and root rot.",
+      "pruningMonths": [
+        5,
+        6
+      ],
+      "pruningTask": "Deadhead fading stems or remove dried plants once seed has shed",
+      "pruningNotes": "Leave some spent plants to self-sow if you want a naturalized display the following year. Wear gloves — leaf hairs can irritate skin.",
+      "specialNotes": "Pairs beautifully with California Poppies, Arroyo Lupine, and other spring annuals for a wildflower meadow effect."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          3,
+          4,
+          5
+        ],
+        "colors": [
+          "purple",
+          "violet"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          5,
+          6
+        ],
+        "description": "Small seeds ripen as flowers fade; can persist in soil seed bank"
+      },
+      "ecologicalValue": "Deep-purple bell flowers are among the most attractive to native bees and hummingbirds in spring; foliage hosts several moth species."
+    },
+    "wildlife": [
+      {
+        "months": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "species": "Anna's Hummingbird",
+        "activity": "nectar-pollen",
+        "notes": "Probes the deep bell-shaped flowers for nectar during spring breeding season.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          3,
+          4,
+          5
+        ],
+        "species": "Painted Lady butterfly",
+        "activity": "nectar-pollen",
+        "notes": "Spring migrants visit the purple blooms as a nectar source during mass northward flights.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          3,
+          4,
+          5
+        ],
+        "species": "Funereal Duskywing",
+        "activity": "nectar-pollen",
+        "notes": "Small skipper butterfly nectars on Phacelia flowers in open chaparral and sage scrub.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          5,
+          6
+        ],
+        "species": "Lesser Goldfinch",
+        "activity": "eating-seeds",
+        "notes": "Feeds on ripening Phacelia seeds as plants dry down in late spring.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
   }
 ]

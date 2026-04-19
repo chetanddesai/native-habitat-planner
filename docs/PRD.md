@@ -497,6 +497,9 @@ The following genera are designated as keystone by the National Wildlife Federat
 | 19  | *Acmispon glaber* var. *brevialatus* | Short-winged Deerweed | Groundcover — Perennial | No       | Nitrogen-fixer; caterpillar host for multiple butterfly species                           |
 | 20  | *Lupinus succulentus*                | Arroyo Lupine         | Groundcover — Annual    | Yes      | Keystone genus (*Lupinus*); nitrogen-fixer; butterfly host plant; spring wildflower       |
 | 21  | *Ceanothus tomentosus*               | Woollyleaf Ceanothus  | Large Shrub             | Yes      | Keystone genus (*Ceanothus*); 85 obs; 83 butterfly/moth spp; quintessential SD chaparral  |
+| 22  | *Eschscholzia californica*           | California Poppy      | Groundcover — Annual    | No       | State flower; 273 obs; 31 wildlife spp; critical early spring pollinator resource         |
+| 23  | *Phacelia cicutaria*                 | Caterpillar Scorpionweed | Groundcover — Annual | No       | 217 obs; 9 butterfly/moth hosts; chaparral fire-follower; bee magnet                      |
+| 24  | *Phacelia parryi*                    | Parry's Phacelia      | Groundcover — Annual    | No       | 192 obs; 9 wildlife spp; stunning purple blooms; top pollinator plant                     |
 
 
 ### 6.2 Auburn, CA — Sierra Foothills Oak Woodland
