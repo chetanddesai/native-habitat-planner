@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Native Habitat Planner</title>
+  <title>Native Habitat Gardening</title>
   <meta name="description" content="Our yards are larger than every national park combined. This planner curates the native keystone species that matter most for your region — backed by NWF data and iNaturalist observations — so you can rebuild the food web from your own garden.">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Native Habitat Planner">
+  <meta property="og:title" content="Native Habitat Gardening">
   <meta property="og:description" content="A chickadee needs 9,000 caterpillars to raise one clutch. Our yards, taken together, are larger than every national park in America. What you plant next matters. Start here.">
   <meta property="og:type" content="website">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Native Habitat Planner">
+  <meta name="twitter:title" content="Native Habitat Gardening">
   <meta name="twitter:description" content="A chickadee needs 9,000 caterpillars to raise one clutch. Our yards, taken together, are larger than every national park in America. What you plant next matters. Start here.">
 
   <meta name="theme-color" content="#4a7c59">
@@ -24,16 +24,16 @@
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <link rel="stylesheet" href="css/styles.css?v=7">
+  <link rel="stylesheet" href="css/styles.css?v=10">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
 
   <header class="site-header" role="banner">
     <nav class="nav" aria-label="Main navigation">
-      <a href="#" class="nav-logo" aria-label="Native Habitat Planner home">
+      <a href="#" class="nav-logo" aria-label="Native Habitat Gardening home">
         <span class="nav-logo-icon" aria-hidden="true">🌿</span>
-        <span>Native Habitat</span>
+        <span>Native Habitat Gardening</span>
       </a>
       <div class="place-selector-wrap">
         <label for="place-selector" class="sr-only">Select a region</label>
@@ -55,18 +55,20 @@
   <main id="main">
     <section class="hero" aria-label="Garden introduction">
       <div class="hero-content">
-        <h1 id="hero-title">Native Habitat Garden</h1>
-        <p class="hero-subtitle" id="hero-subtitle"></p>
+        <h1 id="hero-title">Native Habitat Gardening</h1>
         <p class="hero-desc" id="hero-desc">A chickadee needs 9,000 caterpillars to raise one clutch of chicks. Those caterpillars can only eat the native plants they evolved with over millennia. When we filled our yards with lawns and ornamentals, we didn't just change the scenery — we broke the food web that every songbird, butterfly, and pollinator depends on. But here's what Tallamy wants us to see: our residential landscapes, taken together, are larger than every national park in America. The most important conservation decision you'll make isn't a vote or a donation. It's what you plant next.</p>
         <p class="hero-desc">This planner makes it simple. For each region, I've curated a short list of the native plants that matter most — keystone species identified by the National Wildlife Federation, ranked by the wildlife they support, and grounded in hyperlocal iNaturalist observation data so you know they thrive right where you live. Start with a few. The birds and butterflies will come.</p>
-        <a href="#inventory" class="btn btn-primary">Explore Plants</a>
-        <a href="#calendar" class="btn btn-secondary">This Month</a>
+        <div class="hero-buttons">
+          <a href="#inventory" class="btn btn-primary">Explore Plants</a>
+          <a href="#calendar" class="btn btn-secondary">This Month</a>
+        </div>
       </div>
     </section>
 
     <section id="inventory" class="section" aria-label="Plant inventory">
       <div class="container">
         <h2 class="section-title">Plant Inventory</h2>
+        <p class="inventory-subtitle" id="inventory-subtitle"></p>
         <p class="section-desc" id="inventory-desc"></p>
         <div class="filters" role="search" aria-label="Filter plants">
           <input type="search" id="plant-search" class="filter-search" placeholder="Search by name…" aria-label="Search plants by name">
@@ -180,7 +182,7 @@
         <span id="cache-status" class="cache-status">iNaturalist data: not yet fetched</span>
         <button type="button" id="refresh-cache-btn" class="refresh-cache-btn" title="Clear cached data and re-fetch from iNaturalist">↻ Refresh Data</button>
       </div>
-      <p class="footer-copy">&copy; 2026 Native Habitat Planner. Plant and wildlife images used under Creative Commons licenses from iNaturalist contributors.</p>
+      <p class="footer-copy">&copy; 2026 Native Habitat Gardening. Plant and wildlife images used under Creative Commons licenses from iNaturalist contributors.</p>
     </div>
   </footer>
 
@@ -188,6 +190,6 @@
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
   </button>
 
-  <script src="js/app.js?v=7"></script>
+  <script src="js/app.js?v=10"></script>
 </body>
 </html>

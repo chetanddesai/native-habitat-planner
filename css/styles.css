@@ -178,21 +178,35 @@ select, input { font: inherit; }
 .hero {
   background: linear-gradient(135deg, var(--c-sage-dark) 0%, var(--c-sage) 60%, var(--c-sage-light) 100%);
   color: var(--c-white);
-  padding: 80px 20px 60px;
+  padding: 48px 20px 40px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 56px);
+  min-height: calc(100dvh - 56px);
 }
-.hero-content { max-width: 680px; margin: 0 auto; }
+.hero-content {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-height: 100%;
+}
+.hero-buttons { margin-top: auto; padding-top: 24px; }
 .hero h1 {
   font-family: var(--font-heading);
   font-size: clamp(2rem, 5vw, 3.2rem);
   line-height: 1.2;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 }
-.hero-subtitle {
+.inventory-subtitle {
   font-size: 1.15rem;
-  opacity: 0.85;
-  margin-bottom: 16px;
+  color: var(--c-sage);
   font-style: italic;
+  margin-bottom: 4px;
 }
 .hero-desc {
   font-size: 1.05rem;
@@ -1263,7 +1277,10 @@ select, input { font: inherit; }
     box-shadow: var(--shadow-lg);
   }
   .nav-links.open { display: flex; }
-  .hero { padding: 50px 20px 40px; }
+  .hero { padding: 32px 16px 28px; }
+  .hero-desc { font-size: 0.95rem; line-height: 1.6; }
+  .hero h1 { margin-bottom: 12px; }
+  .nav-logo span:last-child { display: none; }
   .btn-secondary { margin-left: 0; margin-top: 8px; }
   .section { padding: 40px 0; }
   .category-plants { grid-template-columns: 1fr; }

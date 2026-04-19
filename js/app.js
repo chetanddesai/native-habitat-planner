@@ -1,5 +1,5 @@
 /* ============================================================
-   Native Habitat Planner — Application
+   Native Habitat Gardening — Application
    Multi-region support with Tallamy-inspired plant selection
    ============================================================ */
 (function () {
@@ -370,8 +370,7 @@
   }
 
   function renderHero(place) {
-    document.getElementById('hero-title').textContent = 'Native Habitat Garden';
-    document.getElementById('hero-subtitle').textContent = `${place.name} · ${place.ecosystem}`;
+    document.getElementById('hero-title').textContent = 'Native Habitat Gardening';
   }
 
   function renderAbout(place) {
@@ -398,6 +397,8 @@
   }
 
   function updateInventoryDesc(place) {
+    const sub = document.getElementById('inventory-subtitle');
+    if (sub) sub.textContent = `${place.name} · ${place.ecosystem}`;
     const el = document.getElementById('inventory-desc');
     if (el) el.textContent = `${state.plants.length} California native plants selected for wildlife value, drought tolerance, and beauty in ${place.shortName}. Click any plant to explore its care requirements, bloom schedule, and wildlife visitors.`;
   }
