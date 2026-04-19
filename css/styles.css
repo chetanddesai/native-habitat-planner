@@ -33,12 +33,11 @@
 
 /* --- Reset --- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
   font-family: var(--font-body);
   color: var(--c-text);
   background: var(--c-sand);
-  overflow-x: hidden;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -281,7 +280,7 @@ select, input { font: inherit; }
   font-size: 0.8rem;
   color: var(--c-text-light);
   text-align: right;
-  flex-shrink: 0;
+  flex-shrink: 1;
   margin-left: 12px;
 }
 
