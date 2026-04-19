@@ -30,7 +30,7 @@ Copy this checklist and track progress:
 - [ ] Step 3: Find the iNaturalist taxon ID and verify local presence
 - [ ] Step 4: Build the JSON entry
 - [ ] Step 5: Insert into data/plants-{place-id}.json
-- [ ] Step 6: Bump version strings (DATA_VERSION + index.html asset versions)
+- [ ] Step 6: Bump ?v= in index.html (CSS + JS tags)
 - [ ] Step 7: Update plant counts across the site
 - [ ] Step 8: Verify wildlife image & observation searchability
 - [ ] Step 9: Verify locally
@@ -199,20 +199,16 @@ Both lookups must succeed. The first two words (or the name minus parenthetical 
 2. Append the new entry to the array (before the closing `]`).
 3. Plants are loosely grouped by category in the file but the JS sorts dynamically, so exact position doesn't matter — appending to the end is fine.
 
-### Step 6: Bump Version Strings
+### Step 6: Bump `?v=` in `index.html`
 
-**Required.** The site uses version query parameters to bust browser caches on mobile. After changing any data, JS, or CSS file, increment **both**:
+**Required.** The site uses `?v=N` query parameters to bust browser caches on mobile. There is ONE place to update — the `?v=` values in **`index.html`**:
 
-1. **`js/app.js`** — `DATA_VERSION` constant (busts JSON data caches):
-   ```javascript
-   const DATA_VERSION = '4';  // was '3' — bump on every data change
-   ```
+```html
+<link rel="stylesheet" href="css/styles.css?v=4">   <!-- bump -->
+<script src="js/app.js?v=4"></script>                <!-- bump -->
+```
 
-2. **`index.html`** — `?v=` query params on the CSS and JS `<link>`/`<script>` tags (busts asset caches):
-   ```html
-   <link rel="stylesheet" href="css/styles.css?v=3">
-   <script src="js/app.js?v=3"></script>
-   ```
+`app.js` auto-reads its version from its own `<script>` tag URL and applies it to all JSON data fetches — no separate constant to maintain. Bump the `?v=` on **both** the CSS and JS tags whenever you change any data, JS, or CSS file.
 
 ### Step 7: Update Plant Counts
 

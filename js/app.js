@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  const DATA_VERSION = '3';
+  const SITE_VERSION = new URL(document.currentScript.src).searchParams.get('v') || '1';
 
   const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   const MONTH_KEYS = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
@@ -311,7 +311,7 @@
   // ============================================================
   async function init() {
     try {
-      const res = await fetch(`data/places.json?v=${DATA_VERSION}`);
+      const res = await fetch(`data/places.json?v=${SITE_VERSION}`);
       state.places = await res.json();
     } catch {
       document.getElementById('plant-grid').innerHTML = '<p style="color:red">Failed to load region data.</p>';
@@ -348,7 +348,7 @@
       state.plants = state.plantsByRegion[placeId];
     } else {
       try {
-        const resp = await fetch(`data/${place.plantDataFile}?v=${DATA_VERSION}`);
+        const resp = await fetch(`data/${place.plantDataFile}?v=${SITE_VERSION}`);
         state.plants = await resp.json();
         state.plantsByRegion[placeId] = state.plants;
       } catch {
