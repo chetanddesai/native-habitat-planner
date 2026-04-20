@@ -136,6 +136,29 @@
   const INAT_HIST_API = 'https://api.inaturalist.org/v1/observations/histogram';
   const LOOKBACK_YEARS = 5;
 
+  // Throttle observation API calls to avoid 429 rate limits from iNaturalist.
+  // When rate-limited, iNaturalist returns an error response WITHOUT CORS headers,
+  // which browsers misreport as a CORS error. Keep concurrency low (iNat recommends ~1/sec).
+  const OBS_CONCURRENCY = 3;
+  let obsActiveFetches = 0;
+  const obsQueue = [];
+  function obsFetch(url) {
+    return new Promise((resolve, reject) => {
+      obsQueue.push({ url, resolve, reject });
+      processObsQueue();
+    });
+  }
+  function processObsQueue() {
+    while (obsActiveFetches < OBS_CONCURRENCY && obsQueue.length > 0) {
+      const { url, resolve, reject } = obsQueue.shift();
+      obsActiveFetches++;
+      fetch(url).then(resolve, reject).finally(() => {
+        obsActiveFetches--;
+        processObsQueue();
+      });
+    }
+  }
+
   let wlObsCache = (() => { try { return JSON.parse(localStorage.getItem(WL_OBS_CACHE_KEY)) || {}; } catch { return {}; } })();
   let plantObsCache = (() => { try { return JSON.parse(localStorage.getItem(PLANT_OBS_CACHE_KEY)) || {}; } catch { return {}; } })();
 
@@ -148,7 +171,7 @@
     if (!isCacheExpired() && wlObsCache[cacheKey]) return wlObsCache[cacheKey];
     try {
       const geoParams = buildGeoParams(state.activePlace);
-      const resp = await fetch(`${INAT_HIST_API}?taxon_name=${encodeURIComponent(cleanName)}&${geoParams}&interval=month_of_year&d1=${obsD1()}`);
+      const resp = await obsFetch(`${INAT_HIST_API}?taxon_name=${encodeURIComponent(cleanName)}&${geoParams}&interval=month_of_year&d1=${obsD1()}`);
       if (!resp.ok) throw new Error('API error');
       const data = await resp.json();
       const monthly = data.results?.month_of_year || {};
@@ -173,8 +196,8 @@
       const d1 = obsD1();
       const geoParams = buildGeoParams(state.activePlace);
       const [monthResp, yearResp] = await Promise.all([
-        fetch(`${INAT_HIST_API}?taxon_id=${taxonId}&${geoParams}&interval=month_of_year&d1=${d1}`),
-        fetch(`${INAT_HIST_API}?taxon_id=${taxonId}&${geoParams}&interval=year&d1=${d1}`)
+        obsFetch(`${INAT_HIST_API}?taxon_id=${taxonId}&${geoParams}&interval=month_of_year&d1=${d1}`),
+        obsFetch(`${INAT_HIST_API}?taxon_id=${taxonId}&${geoParams}&interval=year&d1=${d1}`)
       ]);
       if (!monthResp.ok || !yearResp.ok) throw new Error('API error');
       const [monthData, yearData] = await Promise.all([monthResp.json(), yearResp.json()]);
