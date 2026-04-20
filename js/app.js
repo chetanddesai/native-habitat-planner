@@ -399,8 +399,6 @@
   function updateInventoryDesc(place) {
     const sub = document.getElementById('inventory-subtitle');
     if (sub) sub.textContent = `${place.name} · ${place.ecosystem}`;
-    const el = document.getElementById('inventory-desc');
-    if (el) el.textContent = `${state.plants.length} California native plants selected for wildlife value, drought tolerance, and beauty in ${place.shortName}. Click any plant to explore its care requirements, bloom schedule, and wildlife visitors.`;
   }
 
   // ---- Events ----
