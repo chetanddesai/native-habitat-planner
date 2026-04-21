@@ -259,7 +259,6 @@ select, input { font: inherit; }
 }
 .section-desc {
   color: var(--c-text-light);
-  max-width: 700px;
   margin-bottom: 28px;
   line-height: 1.7;
 }
@@ -1284,7 +1283,7 @@ select, input { font: inherit; }
   }
   .nav-links.open { display: flex; }
   .hero { padding: 32px 16px 28px; }
-  .hero-desc { font-size: 0.95rem; line-height: 1.6; }
+  .hero-desc { font-size: 1.25rem; line-height: 1.75; }
   .hero h1 { margin-bottom: 12px; }
   .nav-logo span:last-child { display: none; }
   .btn-secondary { margin-left: 0; margin-top: 8px; }
