@@ -500,6 +500,7 @@ The following genera are designated as keystone by the National Wildlife Federat
 | 22  | *Eschscholzia californica*           | California Poppy      | Groundcover — Annual    | No       | State flower; 273 obs; 31 wildlife spp; critical early spring pollinator resource         |
 | 23  | *Phacelia cicutaria*                 | Caterpillar Scorpionweed | Groundcover — Annual | No       | 217 obs; 9 butterfly/moth hosts; chaparral fire-follower; bee magnet                      |
 | 24  | *Phacelia parryi*                    | Parry's Phacelia      | Groundcover — Annual    | No       | 192 obs; 9 wildlife spp; stunning purple blooms; top pollinator plant                     |
+| 25  | *Penstemon spectabilis*              | Showy Penstemon       | Herbaceous Perennial    | No       | 134 obs; 13 wildlife spp; dual hummingbird + bumblebee magnet; fills spring nectar gap    |
 
 
 ### 6.2 Auburn, CA — Sierra Foothills Oak Woodland

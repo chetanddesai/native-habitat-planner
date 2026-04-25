@@ -3407,5 +3407,130 @@
         }
       }
     ]
+  },
+  {
+    "id": "penstemon-spectabilis",
+    "commonNames": [
+      "Showy Penstemon"
+    ],
+    "scientificName": "Penstemon spectabilis",
+    "synonyms": [],
+    "category": "herbaceous-perennial",
+    "isKeystone": false,
+    "wildlifeSpeciesSupported": 13,
+    "description": "Showy Penstemon's wide-mouthed violet tubes are a rare dual-pollinator resource — perfectly shaped for both hummingbird bills and long-tongued bumblebees, linking flower structure to the animals that keep Poway's chaparral food web moving. Its March–May bloom fills a critical spring nectar gap before summer-flowering natives take over, and the broader Penstemon guild supports a documented suite of butterfly and moth larvae. Short-lived (5–10 years) but readily self-sowing, it refreshes patches without asking for keystone credentials.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Penstemon-spectabilis-(Showy-Penstemon)",
+    "iNaturalistData": {
+      "taxonId": 78423,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=78423&nelat=33.0652649&nelng=-116.9575429&swlat=32.899128&swlng=-117.103013"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun (afternoon light inland)",
+      "slopeRequirements": "Banks, bed edges, and loamy pockets with sharp surface drainage; avoid low spots that stay wet in warm weather",
+      "soilRequirements": "Sandy to clayey loam if it drains; tolerates many soils; avoid prolonged heavy winter saturation"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 1,
+        "feb": 1,
+        "mar": 1,
+        "apr": 1,
+        "may": 0,
+        "jun": 0,
+        "jul": 0,
+        "aug": 0,
+        "sep": 0,
+        "oct": 0,
+        "nov": 1,
+        "dec": 1
+      },
+      "wateringNotes": "Soak once monthly November–April while young or after transplant; established plants stay dry May–October except brief rescue water if crowns wilt. Optional monthly summer water boosts bloom but can shorten clump life — match summer-dry native regimes when longevity matters.",
+      "pruningMonths": [
+        6
+      ],
+      "pruningTask": "Remove spent inflorescences after the spring flush wanes",
+      "pruningNotes": "Cut old flowering stems in June to tidy self-sown clumps, prevent moisture-trapping tangles, and encourage basal shoots; avoid early spring cuts that remove developing buds.",
+      "specialNotes": "Deer usually leave the foliage; seed capsules support finches and reseed openings — leave some stems if you want fill-in. Typical lifespan 5–10 years, so let volunteers replace parent plants. Calscape lists companions including Artemisia californica, Encelia californica, Eriogonum fasciculatum, manzanitas, scrub oaks, and California poppy."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "colors": [
+          "purple",
+          "violet"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          5,
+          6,
+          7
+        ],
+        "description": "Dried capsules release fine seed into gaps — supports light self-sowing in lean soils"
+      },
+      "ecologicalValue": "Spring tubular flowers pair hummingbird and large-bee visitation with a documented lepidopteran host role, stacking nectar and caterpillar value in a single compact forb."
+    },
+    "wildlife": [
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "species": "Anna's Hummingbird",
+        "activity": "nectar-pollen",
+        "notes": "Gleans nectar from the wide, royal-violet corolla tubes on territorial display flights and feeding circuits through Poway's foothill edges.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "species": "Bombus vosnesenskii (Yellow-faced Bumble Bee)",
+        "activity": "nectar-pollen",
+        "notes": "Queens and workers work spring penstemon for pollen and deep nectar, complementing the shorter corolla path used by smaller native bees.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "species": "Endothenia hebesana (Verbena Bud Moth)",
+        "activity": "caterpillar-host",
+        "notes": "A Calscape-listed small tortricid that completes development on host tissues — an example of the hidden lepidopteran diversity penstemons support.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
   }
 ]
