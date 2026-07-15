@@ -20,8 +20,9 @@ This site curates native plant inventories for specific geographic regions, sele
 
 | Region | Ecosystem | Plants | Geographic Scope |
 |---|---|---|---|
-| **Auburn, CA** (95603) | Sierra Foothills Oak Woodland / Chaparral | 20 | Bounding box |
-| **Poway, CA** | Coastal Sage Scrub | 20 | Bounding box |
+| **Auburn, CA** (95603) | Sierra Foothills Oak Woodland / Chaparral | 21 | Bounding box |
+| **Poway, CA** | Coastal Sage Scrub | 25 | Bounding box |
+| **Mira Mesa, CA** | Coastal Sage Scrub / Southern Maritime Chaparral | 19 | Bounding box |
 
 ## Features
 
@@ -39,8 +40,9 @@ This site curates native plant inventories for specific geographic regions, sele
 ```
 data/
 ├── places.json              # Place of Interest metadata (geographic scope, ecosystem, display text)
-├── plants-auburn-ca.json    # Auburn plant inventory (20 plants)
-└── plants-poway-ca.json     # Poway plant inventory (20 plants)
+├── plants-auburn-ca.json    # Auburn plant inventory (21 plants)
+├── plants-poway-ca.json     # Poway plant inventory (25 plants)
+└── plants-mira-mesa-ca.json # Mira Mesa plant inventory (19 plants)
 ```
 
 - **`places.json`** — one entry per region with geographic scope (`iNaturalistPlaceId` and/or `boundingBox`), ecosystem description, and about-section text

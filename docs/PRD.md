@@ -115,8 +115,9 @@ A Place of Interest may specify **both** — the `place_id` is used for API call
 
 | Place ID    | Display Name               | Ecosystem                                 | iNaturalist Place ID | Bounding Box                                                                 |
 | ----------- | -------------------------- | ----------------------------------------- | -------------------- | ---------------------------------------------------------------------------- |
-| `poway-ca`  | Poway, California          | Coastal Sage Scrub                        | —                    | nelat: 33.0652649, nelng: -116.9575429, swlat: 32.899128, swlng: -117.103013 |
-| `auburn-ca` | Auburn, California (95603) | Sierra Foothills Oak Woodland / Chaparral | —                    | nelat: 38.986542, nelng: -120.9610799, swlat: 38.831071, swlng: -121.191049  |
+| `poway-ca`     | Poway, California          | Coastal Sage Scrub                              | —                    | nelat: 33.0652649, nelng: -116.9575429, swlat: 32.899128, swlng: -117.103013   |
+| `auburn-ca`    | Auburn, California (95603) | Sierra Foothills Oak Woodland / Chaparral       | —                    | nelat: 38.986542, nelng: -120.9610799, swlat: 38.831071, swlng: -121.191049    |
+| `mira-mesa-ca` | Mira Mesa, California      | Coastal Sage Scrub / Southern Maritime Chaparral | —                    | nelat: 32.944632, nelng: -117.1084073, swlat: 32.8945071, swlng: -117.1744779  |
 
 
 ### 3.1 Plant Inventory
@@ -531,6 +532,31 @@ The following genera are designated as keystone by the National Wildlife Federat
 | 21  | *Pinus sabiniana*                  | Gray Pine                  | Large Tree              | Yes      | Keystone genus (*Pinus*); 169 obs (8th most observed native); massive seed cones feed woodpeckers, jays, squirrels |
 
 
+### 6.3 Mira Mesa, CA — Coastal Sage Scrub / Southern Maritime Chaparral
+
+| #   | Scientific Name              | Common Name(s)          | Category                | Keystone | Selection Rationale                                                                                    |
+| --- | ---------------------------- | ----------------------- | ----------------------- | -------- | ----------------------------------------------------------------------------------------------------- |
+| 1   | *Quercus agrifolia*          | Coast Live Oak          | Large Tree              | Yes      | Keystone oak; 140 obs; highest wildlife support (278 spp); anchors the canyon food web                 |
+| 2   | *Platanus racemosa*          | Western Sycamore        | Large Tree              | No       | 104 obs; riparian caterpillar host; cavity-nesting shelter for owls and woodpeckers                    |
+| 3   | *Salix lasiolepis*           | Arroyo Willow           | Large Tree              | Yes      | Keystone *Salix*; ⚠️ 29 obs — only keystone willow present; top-tier caterpillar host                  |
+| 4   | *Rhus integrifolia*          | Lemonade Berry          | Large Shrub             | No       | 182 obs (most-observed shrub); coastal signature; tart red berries feed birds; evergreen screen        |
+| 5   | *Heteromeles arbutifolia*    | Toyon                   | Large Shrub             | Yes      | Keystone; 141 obs; red winter berries feed birds                                                       |
+| 6   | *Quercus dumosa*             | Nuttall's Scrub Oak     | Large Shrub             | Yes      | Keystone oak in shrub form; 88 obs; SD-endemic; huge caterpillar guild (166 spp)                       |
+| 7   | *Xylococcus bicolor*         | Mission Manzanita       | Large Shrub             | Yes      | Keystone (Ericaceae); 57 obs; SD-endemic chaparral evergreen                                           |
+| 8   | *Sambucus mexicana*          | Blue Elderberry         | Large Shrub             | Yes      | Keystone; 51 obs; berries for birds; classic hedgerow                                                  |
+| 9   | *Eriogonum fasciculatum*     | California Buckwheat     | Small Shrub             | Yes      | Keystone; 324 obs — most-observed native in the bbox; premier pollinator plant                         |
+| 10  | *Salvia mellifera*           | Black Sage              | Small Shrub             | Yes      | Keystone sage; 103 obs; top pollinator support                                                         |
+| 11  | *Artemisia californica*      | California Sagebrush     | Small Shrub             | Yes      | Keystone; 63 obs; defines coastal sage scrub; gnatcatcher habitat                                      |
+| 12  | *Salvia apiana*              | White Sage              | Small Shrub             | Yes      | Keystone; ⚠️ 40 obs — kept for high wildlife value (86 spp) + keystone status                          |
+| 13  | *Encelia californica*        | Bush Sunflower          | Small Shrub             | No       | 129 obs; long bloom; heavily observed coastal scrub daisy                                              |
+| 14  | *Asclepias fascicularis*     | Narrowleaf Milkweed     | Herbaceous Perennial    | Yes      | Keystone; ⚠️ 15 obs — **required** Monarch host; only *Asclepias* present (286 wildlife spp)           |
+| 15  | *Datura wrightii*            | Sacred Datura           | Herbaceous Perennial    | No       | 178 obs; night-blooming hawkmoth host + pollinator; dramatic white trumpets                            |
+| 16  | *Sisyrinchium bellum*        | Western Blue-eyed Grass | Herbaceous Perennial    | No       | 51 obs; spring meadow forb; native-bee resource; lawn-alternative for swales                           |
+| 17  | *Eriophyllum confertiflorum* | Golden Yarrow           | Herbaceous Perennial    | No       | ⚠️ 44 obs; reliable summer bloom for pollinators                                                       |
+| 18  | *Acmispon glaber*            | Deerweed                | Groundcover — Perennial | No       | 72 obs; nitrogen-fixer; butterfly host; slope stabilizer                                               |
+| 19  | *Eschscholzia californica*   | California Poppy        | Groundcover — Annual    | No       | 80 obs; self-sowing spring wildflower; early-season pollinator resource                                |
+
+
 ---
 
 ## 7. Site Map & Navigation
@@ -673,6 +699,7 @@ The section should be brief and welcoming to non-technical users (GitHub issues 
 
 - Poway, CA inventory: 20 plants populated with complete data
 - Auburn, CA inventory: 20 plants populated with complete data
+- Mira Mesa, CA inventory: 19 plants populated with complete data
 - Place of Interest selector switches all content and API calls correctly
 - Site shell (HTML/CSS/JS, excluding off-site images) loads in < 500 KB
 - Plant and wildlife images display skeleton placeholders while loading and cache in browser after first load
@@ -681,9 +708,9 @@ The section should be brief and welcoming to non-technical users (GitHub issues 
 - All plant and wildlife images properly attributed with Creative Commons compliance
 - Garden calendar provides actionable "this month" guidance scoped to the active region
 - A non-technical gardener can understand and use the site without instruction
-- iNaturalist observation data loads at runtime for all plants in both regions and caches correctly
+- iNaturalist observation data loads at runtime for all plants in all regions and caches correctly
 - Every plant in the inventory has a clear justification (keystone status or wildlife support count)
-- Each structural category (Large Tree through Groundcover) is represented in both regions
+- Each structural category (Large Tree through Groundcover) is represented in all regions
 
 ---
 

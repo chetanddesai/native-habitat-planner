@@ -40,5 +40,26 @@
       "ecosystem": "Poway sits within San Diego County's coastal sage scrub ecosystem — one of the most endangered habitats in the United States. Less than 15% remains, making backyard habitat gardens a meaningful act of conservation for species like the California Gnatcatcher and Crotch's Bumblebee.",
       "getStarted": "Begin with 3–5 keystone species: California Buckwheat, Black Sage, Toyon, and a native oak. Visit Calscape.org to find plants native to your zip code and local nurseries that carry them. Remove your lawn, stop irrigating in summer, and watch the wildlife arrive."
     }
+  },
+  {
+    "id": "mira-mesa-ca",
+    "name": "Mira Mesa, California",
+    "shortName": "Mira Mesa, CA",
+    "ecosystem": "Coastal Sage Scrub / Southern Maritime Chaparral",
+    "ecosystemDescription": "Mira Mesa sits on a coastal mesa in San Diego, where coastal sage scrub grades into southern maritime chaparral along the canyon rims of Los Peñasquitos and its tributaries. These fragmented but biodiverse habitats shelter the California Gnatcatcher, native bees, and rare vernal-pool endemics — making backyard habitat a meaningful bridge between protected canyon preserves.",
+    "iNaturalistPlaceId": null,
+    "boundingBox": {
+      "nelat": 32.944632,
+      "nelng": -117.1084073,
+      "swlat": 32.8945071,
+      "swlng": -117.1744779
+    },
+    "plantDataFile": "plants-mira-mesa-ca.json",
+    "heroDescription": "A chickadee needs nine thousand caterpillars to raise one clutch of chicks. Those caterpillars can only eat the native plants they evolved with over millennia. When we filled our yards with lawns and ornamentals, we didn't just change the scenery — we broke the food web that every songbird, butterfly, and pollinator depends on. But here's what Tallamy wants us to see: our residential landscapes, taken together, are larger than every national park in America. The most important conservation decision you'll make isn't a vote or a donation. It's what you plant next.",
+    "aboutSections": {
+      "whyNative": "California's native plants have co-evolved with local wildlife for thousands of years. They require less water, no fertilizers, and no pesticides — while supporting 10–50× more wildlife than non-native alternatives. A single native oak supports over 300 species of insects, birds, and mammals.",
+      "ecosystem": "Mira Mesa sits on a coastal mesa in San Diego, where coastal sage scrub grades into southern maritime chaparral along the canyon rims of Los Peñasquitos and its tributaries. These fragmented but biodiverse habitats shelter the California Gnatcatcher, native bees, and rare vernal-pool endemics — but are squeezed by development, making backyard habitat a meaningful bridge between protected canyon preserves.",
+      "getStarted": "Begin with 3–5 keystone species: California Buckwheat, Black Sage, Toyon, and Coast Live Oak. Visit Calscape.org to find plants native to your zip code and local nurseries that carry them. Remove your lawn, stop irrigating in summer, and watch the wildlife arrive."
+    }
   }
 ]
