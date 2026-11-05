@@ -21,12 +21,12 @@ This site curates native plant inventories for specific geographic regions, sele
 | Region | Ecosystem | Plants | Geographic Scope |
 |---|---|---|---|
 | **Auburn, CA** (95603) | Sierra Foothills Oak Woodland / Chaparral | 21 | Bounding box |
-| **Poway, CA** | Coastal Sage Scrub | 25 | Bounding box |
+| **Poway, CA** | Coastal Sage Scrub | 26 | Bounding box |
 | **Mira Mesa, CA** | Coastal Sage Scrub / Southern Maritime Chaparral | 19 | Bounding box |
 
 ## Features
 
-- **Curated plant inventory** — 15–25 native species per region, grouped by structural category (canopy → understory → shrub → groundcover), with keystone badges and wildlife support counts
+- **Curated plant inventory** — 15–30 native species per region, grouped by structural category (canopy → understory → shrub → groundcover), with keystone badges and wildlife support counts
 - **Maintenance schedules** — 12-month watering and pruning calendars for every plant
 - **Bloom & phenology timelines** — color-coded bloom, berry, and seed phenology with a garden-wide chart
 - **Wildlife interactions** — specific named wildlife species per plant with activity type, seasonality, and live images from iNaturalist
@@ -41,7 +41,7 @@ This site curates native plant inventories for specific geographic regions, sele
 data/
 ├── places.json              # Place of Interest metadata (geographic scope, ecosystem, display text)
 ├── plants-auburn-ca.json    # Auburn plant inventory (21 plants)
-├── plants-poway-ca.json     # Poway plant inventory (25 plants)
+├── plants-poway-ca.json     # Poway plant inventory (26 plants)
 └── plants-mira-mesa-ca.json # Mira Mesa plant inventory (19 plants)
 ```
 

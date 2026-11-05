@@ -3532,5 +3532,143 @@
         }
       }
     ]
+  },
+  {
+    "id": "helianthus-gracilentus",
+    "commonNames": [
+      "Slender Sunflower"
+    ],
+    "scientificName": "Helianthus gracilentus",
+    "synonyms": [],
+    "category": "herbaceous-perennial",
+    "isKeystone": true,
+    "wildlifeSpeciesSupported": 37,
+    "description": "A taprooted chaparral perennial that sends rough-haired stems two to seven feet up and crowns them with golden ray flowers through late spring. Helianthus is a keystone genus in Mediterranean California — host to 58 caterpillar species and the sole pollen source for 41 specialist bees — so a single clump converts sunlight into the insect biomass Tallamy's food web runs on, then hands the leftovers to seed-eating finches.",
+    "image": {
+      "url": "",
+      "attribution": "",
+      "iNaturalistUrl": ""
+    },
+    "calscapeUrl": "https://calscape.org/Helianthus-gracilentus-(Slender-Sunflower)",
+    "iNaturalistData": {
+      "taxonId": 77356,
+      "searchUrl": "https://www.inaturalist.org/observations?taxon_id=77356&nelat=33.0652649&nelng=-116.9575429&swlat=32.899128&swlng=-117.103013"
+    },
+    "plantingRequirements": {
+      "sunExposure": "Full Sun",
+      "slopeRequirements": "Flat ground to gentle slopes with slightly more moisture than open scrub; back of border where tall stems can lean",
+      "soilRequirements": "Prefers sand but tolerates garden soil; fast drainage essential"
+    },
+    "maintenance": {
+      "wateringSchedule": {
+        "jan": 0,
+        "feb": 0,
+        "mar": 0,
+        "apr": 0,
+        "may": 0,
+        "jun": 1,
+        "jul": 1,
+        "aug": 1,
+        "sep": 1,
+        "oct": 0,
+        "nov": 0,
+        "dec": 0
+      },
+      "wateringNotes": "Low water once established — no more than one deep soak per month through summer. Extra water produces floppy stems that need staking.",
+      "pruningMonths": [
+        10,
+        11
+      ],
+      "pruningTask": "Cut spent stems back to basal growth after seed drop",
+      "pruningNotes": "Wait until finches have worked the dried heads before cutting. Removing stems too early forfeits the seed crop and the hollow stubs that small native bees nest in.",
+      "specialNotes": "Taprooted — site it once and leave it; transplanting established clumps rarely succeeds."
+    },
+    "phenology": {
+      "bloom": {
+        "months": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "colors": [
+          "yellow"
+        ]
+      },
+      "berry": null,
+      "seed": {
+        "months": [
+          8,
+          9,
+          10
+        ],
+        "description": "Flat achenes ripen in the brown disc heads — high-oil forage for finches and small mammals"
+      },
+      "ecologicalValue": "Large composite heads feed generalist bumble bees and the pollen-specialist bees tied to Helianthus, while the rough foliage carries a long roster of lady-butterfly and looper caterpillars."
+    },
+    "wildlife": [
+      {
+        "months": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "species": "Bombus vosnesenskii (Yellow-faced Bumble Bee)",
+        "activity": "nectar-pollen",
+        "notes": "Queens and workers buzz the broad disc florets through the main bloom.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "species": "Painted Lady butterfly",
+        "activity": "caterpillar-host",
+        "notes": "Larvae feed in silked leaf shelters on the rough foliage; adults nectar on the same heads.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          5,
+          6,
+          7
+        ],
+        "species": "Hyles lineata (White-lined Sphinx Moth)",
+        "activity": "nectar-pollen",
+        "notes": "Hovers at dusk to drain nectar from freshly opened heads.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      },
+      {
+        "months": [
+          8,
+          9,
+          10
+        ],
+        "species": "Lesser Goldfinch",
+        "activity": "eating-seeds",
+        "notes": "Clings sideways to drying heads and shells the oily achenes.",
+        "image": {
+          "url": "",
+          "attribution": "",
+          "iNaturalistUrl": ""
+        }
+      }
+    ]
   }
 ]

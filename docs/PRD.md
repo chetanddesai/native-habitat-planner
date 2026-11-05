@@ -9,7 +9,7 @@
 
 ## 1. Overview
 
-A static informational website that helps gardeners build **maximum-impact native habitat gardens** by recommending hyperlocal plant selections backed by real ecological data. The site supports multiple **Places of Interest** — regions defined by either an **iNaturalist `place_id`** (a named, polygon-bounded place like a city, park, or recreation area) or a **manual bounding box** (latitude/longitude coordinates). For each region, the site presents a curated inventory of 15–25 native plants selected using Doug Tallamy's keystone-species framework: **keystone species first, then highest wildlife support**.
+A static informational website that helps gardeners build **maximum-impact native habitat gardens** by recommending hyperlocal plant selections backed by real ecological data. The site supports multiple **Places of Interest** — regions defined by either an **iNaturalist `place_id`** (a named, polygon-bounded place like a city, park, or recreation area) or a **manual bounding box** (latitude/longitude coordinates). For each region, the site presents a curated inventory of 15–30 native plants selected using Doug Tallamy's keystone-species framework: **keystone species first, then highest wildlife support**.
 
 All content is data-driven (JSON-backed, one file per Place of Interest) so that adding or editing plants requires no code changes. Observation and wildlife data is fetched client-side at runtime from iNaturalist and cached locally.
 
@@ -502,6 +502,7 @@ The following genera are designated as keystone by the National Wildlife Federat
 | 23  | *Phacelia cicutaria*                 | Caterpillar Scorpionweed | Groundcover — Annual | No       | 217 obs; 9 butterfly/moth hosts; chaparral fire-follower; bee magnet                      |
 | 24  | *Phacelia parryi*                    | Parry's Phacelia      | Groundcover — Annual    | No       | 192 obs; 9 wildlife spp; stunning purple blooms; top pollinator plant                     |
 | 25  | *Penstemon spectabilis*              | Showy Penstemon       | Herbaceous Perennial    | No       | 134 obs; 13 wildlife spp; dual hummingbird + bumblebee magnet; fills spring nectar gap    |
+| 26  | *Helianthus gracilentus*             | Slender Sunflower     | Herbaceous Perennial    | Yes      | Keystone genus (*Helianthus*); 92 obs (30× *H. annuus* locally); 58 caterpillar spp, 41 specialist bees |
 
 
 ### 6.2 Auburn, CA — Sierra Foothills Oak Woodland
